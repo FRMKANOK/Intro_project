@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&display=swap" rel="stylesheet">
-    <title>Login</title>
+    <title>Register</title>
 </head>
 <body>
     <div class="grid-container">
@@ -22,11 +22,14 @@
 
         <div class="right">
                 <form>
-                    <div class="icon">
-                        <img src="../image/user_login.png" alt="Avatar" class="avatar">
-                    </div>
+                   <p>ลงทะเบียน</p>
 
                     <div class="form-login">
+                        <label for="uname"><b>ชื่อ - นามสกุล</b></label>
+                        <div class="input-icon">
+                            <input type="text" placeholder="ป้อนชื่อ - นามสกุล" name="uname" required>
+                        </div>
+
                         <label for="email"><b>อีเมล</b></label>
                         <div class="input-icon">
                             <input type="email" placeholder="ป้อนอีเมล" name="email" required>
@@ -38,14 +41,28 @@
                             <input type="password" placeholder="ป้อนรหัสผ่าน" name="psw" required>
                             <img src="../image/off_pwd.png" alt="Lock Password" class="toggle-password">
                         </div>
+
+                        <label for="con_psw"><b>ยืนยันรหัสผ่าน</b></label>
+                        <div class="input-icon">
+                            <input type="password" placeholder="ป้อนรหัสผ่านอีกครั้ง" name="con_psw" required>
+                            <img src="../image/off_pwd.png" alt="Lock Password" class="toggle-password">
+                        </div>
                                                     
-                        <label class="checkbox-label">
-                            <input type="checkbox" checked="checked" name="psw">ลืมรหัสผ่าน
-                        </label>
+                        <label for="con_psw"><b>สถานะผู้ใช้งาน</b></label>
+                        <div class="input-icon">
+                            <select name="status" required>
+                                <option value="" disabled selected>เลือกสถานะผู้ใช้งาน</option> <!-- placeholder -->
+                                <option value="1">นักศึกษา</option>
+                                <option value="2">อาจารย์ที่ปรึกษา</option>
+                                <option value="3">อาจารย์ที่ปรึกษาร่วม</option>
+                                <option value="4">กรรมการ</option>
+                                <option value="5">อาจารย์ประจำวิชา</option>
+                            </select>
+                            <span class="custom-arrow">▼</span> <!-- ลูกศรเฉพาะ select -->
+                        </div>
 
                         <div class="buttons">
-                            <button type="submit" class="login-btn">เข้าสู่ระบบ</button>
-                            <a href="register.html" class="register-btn">ลงทะเบียน</a>
+                            <button type="submit" class="register2-btn">ลงทะเบียน</button>
                         </div>
                     </div>
 
@@ -70,5 +87,6 @@
             }
         });
     </script>
+
 </body>
 </html>

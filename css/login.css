@@ -60,7 +60,7 @@ body{
 
 form {
     background: #ffffff;
-    padding: 40px 50px;
+    padding: 30px 50px;
     width: 500px;
 }
 
@@ -68,7 +68,7 @@ form {
 .icon {
     display: flex;
     justify-content: center;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 
 .icon img {
@@ -125,21 +125,20 @@ form {
 }
 
 /* Buttons */
-.form-login .buttons {
-    display: flex;
-    gap: 15px;
-    margin-top: 10px;
+.form-login .buttons{
+    display:flex;
+    gap:10px;
 }
-
-.form-login button {
-    flex: 1;
-    padding: 12px 0;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: 0.3s;
+.login-btn, .register-btn{
+    flex:1;
+    padding:10px;
+    border:none;
+    border-radius:8px;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    text-align:center;
+    text-decoration:none;
     font-family: "Noto Sans Thai", sans-serif;
 }
 
@@ -169,4 +168,69 @@ form {
     align-items: center;
     gap: 5px;
     cursor: pointer;
+}
+
+/* Register */
+.right p{
+    color: #FA4616;
+    font-size: 32px;
+    font-weight: 700;
+}
+.input-icon select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: "Noto Sans Thai", sans-serif;
+    background-color: #fff;
+    appearance: none; /* ลบลูกศรดีฟอลต์ของ browser */
+    cursor: pointer;
+    transition: 0.3s;
+    position: relative;
+}
+
+/* Placeholder ของ select */
+.input-icon select option:disabled {
+    color: #ccc; /* สีเทาอ่อน */
+}
+
+.input-icon select:focus {
+    border-color: #FA4616;
+    outline: none;
+    box-shadow: 0 0 6px rgba(250, 70, 22, 0.4);
+}
+
+/* ลูกศรเฉพาะ select */
+.input-icon select + .custom-arrow {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #555;
+    font-size: 12px;
+}
+
+.register2-btn{
+    flex:1;
+    padding:10px;
+    border:none;
+    border-radius:8px;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    text-align:center;
+    text-decoration:none;
+    font-family: "Noto Sans Thai", sans-serif;
+    margin-top: 10px;
+}
+
+.register2-btn {
+    background-color: #3B90FF;
+    color: white;
+}
+
+.register2-btn:hover {
+    background-color: #2472d9;
 }

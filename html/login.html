@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&display=swap" rel="stylesheet">
+    <title>Login</title>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="left">
+            <div class="image_login">
+                <img src="../image/kmutnb.png" alt="Avatar" class="avatar">
+            </div>
+            <p>ระบบการจัดการข้อมูลโครงงานพิเศษ</p>
+            <p>และโครงงานสหกิจ</p>
+            <p>ภาควิชาเทคโนโลยีสารสนเทศ</p>
+        </div>
+
+        <div class="right">
+                <form action="/action_page.php" method="post">
+                    <div class="icon">
+                        <img src="../image/user_login.png" alt="Avatar" class="avatar">
+                    </div>
+
+                    <div class="form-login">
+                        <label for="email"><b>อีเมล</b></label>
+                        <div class="input-icon">
+                            <input type="email" placeholder="ป้อนอีเมล" name="email" required>
+                            <img src="../image/email.png" alt="Email Icon">
+                        </div>
+
+                        <label for="psw"><b>รหัสผ่าน</b></label>
+                        <div class="input-icon">
+                            <input type="password" placeholder="ป้อนรหัสผ่าน" name="psw" required>
+                            <img src="../image/off_pwd.png" alt="Lock Password" class="toggle-password">
+                        </div>
+                                                    
+                        <label class="checkbox-label">
+                            <input type="checkbox" checked="checked" name="psw">ลืมรหัสผ่าน
+                        </label>
+
+                        <div class="buttons">
+                            <button type="submit" class="login-btn">เข้าสู่ระบบ</button>
+                            <button type="delete" class="register-btn">ลงทะเบียน</button>
+                        </div>
+                    </div>
+
+                </form>
+        </div>
+
+    </div>
+
+    <script>
+        const togglePassword = document.querySelector('.toggle-password');
+        const passwordInput = document.querySelector('input[name="psw"]');
+
+        togglePassword.addEventListener('click', () => {
+            const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordInput.setAttribute('type', type);
+
+            // เปลี่ยนไอคอน ถ้าต้องการ
+            if(type === 'text'){
+                togglePassword.src = '../image/show_pwd.png'; // ไอคอนเปิดตา
+            } else {
+                togglePassword.src = '../image/off_pwd.png'; // ไอคอนปิดตา
+            }
+        });
+    </script>
+</body>
+</html>

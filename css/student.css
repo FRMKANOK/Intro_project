@@ -1,0 +1,84 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: "Noto Sans Thai", sans-serif;
+    margin: 0;
+    background-color: #f5f5f5;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 250px 1fr;   /* sidebar 250px + content ยืดเต็ม */
+    grid-template-rows: 210px 50px 1fr;  /* header 80px + navbar 40px + content */
+    grid-template-areas: 
+        "header header"
+        "navbar navbar"
+        "sidebar content";
+    height: 100vh;
+}
+
+/* Header */
+.header {
+    grid-area: header;
+    background-color: #FA4616; /* สีส้มแดง */
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    color: white;
+    font-weight: bold;
+}
+
+.header-logo {
+    height: 190px; /* ปรับขนาดโลโก้ */
+    filter: brightness(0) invert(1);
+}
+
+.header-text {
+    margin-left: auto;  /* ดันข้อความไปชิดขวา */
+    text-align: right;  /* ชิดขวาในแต่ละบรรทัด */
+    font-size: 26px;
+    line-height: 1.5;
+    font-weight: bold;
+}
+
+.header-text hr {
+    border: 1px solid white;   /* สีเส้น */
+    width: 100%;               /* กำหนดความกว้าง (เช่น 80% ของกล่องข้อความ) */
+    margin: 15px auto;         /* auto ทำให้เส้นอยู่ตรงกลาง */
+}
+
+.header-text div {
+    margin: 8px 0;  /* ช่องไฟบน-ล่างเท่ากัน */
+}
+
+.line3 {
+    font-size: 22px;
+}
+
+/* Navbar */
+.navbar {
+    grid-area: navbar;
+    background-color: #454545; /* เทาอ่อน */
+    display: flex;
+    justify-content: flex-end; /* ปุ่มอยู่ขวา */
+    align-items: center;
+    padding: 0 20px;
+}
+
+/* Sidebar */
+.sidebar {
+    grid-area: sidebar;
+    background-color: #969696; /* เทาเข้ม */
+    color: white;
+    padding: 20px;
+}
+
+/* Content */
+.content {
+    grid-area: content;
+    background-color: #ffffff; /* ขาว */
+    padding: 20px;
+    overflow-y: auto;
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.1);
+}

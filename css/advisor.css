@@ -156,9 +156,6 @@ body{
     justify-content: center;   /* กึ่งกลางแนวนอน */
     align-items: center;       /* กึ่งกลางแนวตั้ง */
 }
-.sidebar .load:hover{
-    background-color: #FA4616;
-}
 
 /* Content */
 .content {

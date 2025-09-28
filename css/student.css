@@ -87,6 +87,9 @@ body{
     font-family: "Noto Sans Thai", sans-serif;
     text-decoration: none;
     color:  black;
+
+    margin: 0;
+    font-size: 18px;
 }
 /* กล่องรวม Avatar + Username + Logout อยู่ขวา */
 .navbar .user-logout {
@@ -101,6 +104,7 @@ body{
     align-items: center;        /* จัดให้อยู่กึ่งกลางในแนวตั้ง */
     gap: 20px;                  /* เว้นช่องว่างระหว่างแต่ละอัน */
 }
+
 .user img{
     height: 30px;
     color: white;
@@ -113,9 +117,10 @@ body{
 /* ชื่อผู้ใช้ */
 .navbar .username {
     margin: 0;
-    font-size: 16px;
+    font-size: 18px;
     color: white; /* ต้องกำหนดสี */
     white-space: nowrap; /* ป้องกันตัดบรรทัด */
+    font-size: 16px;
 }
 
 /* ปุ่ม Logout */
@@ -128,10 +133,14 @@ body{
     cursor: pointer;
     font-weight: bold;
     font-size: 18px;
+    font-family: "Noto Sans Thai", sans-serif;
     height: 40px;
     width: 150px;
 }
-
+.navbar p{
+    font-size: 16px;
+    font-family: "Noto Sans Thai", sans-serif;
+}
 
 /* Sidebar */
 .sidebar {

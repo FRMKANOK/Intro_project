@@ -39,7 +39,121 @@
                <a href="#" class="load">ดาวน์โหลด ทก.01(.pdf)</a>
         </div>
 
-        <div class="content">
+        <div class="content-present">
+            <form>
+                <div class="head-form">เสนอหัวข้อโครงงาน</div>
+                    <div class="form-section">
+                        <!-- แถวที่ 1 -->
+                        <div>
+                            <label>รหัสนักศึกษาผู้จัดทำ *</label>
+                            <input type="text" placeholder="ป้อนรหัสนักศึกษา" required>
+                        </div>
+                        <div>
+                            <label>ชื่อนักศึกษาผู้จัดทำ *</label>
+                            <input type="text" placeholder="ป้อนชื่อนักศึกษา" required>
+                        </div>
+                        <div>
+                            <label>เบอร์โทรศัพท์</label>
+                            <input type="text" placeholder="ป้อนเบอร์โทรศัพท์">
+                        </div>
+                        <!-- แถวที่ ว่าง -->
+                        <div>
+                            <label style="color: #969696;">กรอกข้อมูลสำหรับผู้จัดทำคนที่ 2 (ถ้ามี)</label>
+                        </div>
+                        <div></div>
+                        <div></div>
+                        <!-- แถวที่ 2 -->
+                        <div>
+                            <label>รหัสนักศึกษาผู้จัดทำ</label>
+                            <input type="text" placeholder="ป้อนรหัสนักศึกษาคนที่สอง (ไม่บังคับ)">
+                        </div>
+                        <div>
+                            <label>ชื่อนักศึกษาผู้จัดทำ</label>
+                            <input type="text" placeholder="ป้อนชื่อนักศึกษาคนที่สอง (ไม่บังคับ)">
+                        </div>
+                        <div>
+                            <label>เบอร์โทรศัพท์</label>
+                            <input type="text" placeholder="ป้อนเบอร์โทรศัพท์">
+                        </div>
+
+                        <!-- แถวที่ 3 -->
+                        <div>
+                            <label>ชื่อโครงงาน *</label>
+                            <input type="text" required placeholder="ป้อนชื่อโครงงาน">
+                        </div>
+                        <div>
+                            <label>ชื่อโครงงาน(ภาษาอังกฤษ) *</label>
+                            <input type="text" required placeholder="ป้อนชื่อโครงงานภาษาอังกฤษ">
+                        </div>
+                        <div>
+                            <label>ประเภทโครงงาน *</label>
+                            <select required>
+                                <option value="" disabled selected>เลือกโครงงาน</option>
+                                <option value="1">ทั้งหมด</option>
+                                <option value="2">โครงงานพิเศษ</option>
+                                <option value="3">โครงงานสหกิจ</option>
+                            </select>
+                        </div>
+                        <!-- แถวที่ 4 -->
+                        <div>
+                            <label>กรณีศึกษา</label>
+                            <input type="text" placeholder="ป้อนรายละเอียด">
+                        </div>
+                        <div>
+                            <label>กรณีศึกษา(ภาษาอังกฤษ)</label>
+                            <input type="text" placeholder="ป้อนรายละเอียดภาษาอังกฤษ">
+                        </div>
+                        <div>
+                            <label>ปีการศึกษา/ภาคเรียน</label>
+                            <div class="inline-inputs">
+                                <select>
+                                    <option value="" disabled selected>ปีการศึกษา</option>
+                                    <option value="1">2567</option>
+                                    <option value="2">2568</option>
+                                </select>
+                                <select>
+                                    <option value="" disabled selected>ภาคเรียน</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- แถวที่ 5 -->
+                        <div>
+                            <label>อาจารย์ที่ปรึกษา*</label>
+                            <select required>
+                            </select>
+                        </div>
+                        <div>
+                            <label>อาจารย์ที่ปรึกษาร่วม</label>
+                            <select>
+                            </select>
+                        </div>
+                        <div>
+                        </div>
+                        <!-- แถวที่ 6 -->
+                        <div>
+                            <label>อีเมลผู้จัดทำ</label>
+                            <input type="text" placeholder="ป้อนอีเมลล์ (example@gmail.com)">
+                        </div>
+                        <div class="address">
+                            <label>ที่อยู่ผู้จัดทำ</label>
+                            <textarea rows="5" placeholder="ป้อนรายละเอียดที่อยู่"></textarea>
+                        </div>
+                        <!-- แถวที่ 7 -->
+                        <div>
+                            <button class="add-file">แนบไฟล์ กท.01(.pdf)</button>
+                        </div>
+                        <div>
+                            <button type="submit" class="save">บันทึก</button>
+                        </div>
+                        <div>
+                            <button type="reset" class="cancel">ล้าง</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
                
         </div>
 

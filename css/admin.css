@@ -9,8 +9,8 @@ body{
 
 .grid-container {
     display: grid;
-    grid-template-columns: 320px 1fr;   /* sidebar 250px + content ยืดเต็ม */
-    grid-template-rows: 230px 50px 1fr;  /* header 80px + navbar 40px + content */
+    grid-template-columns: 20% 80%;   /* sidebar 250px + content ยืดเต็ม */
+    grid-template-rows: 210px 50px;  /* header 80px + navbar 40px + content */
     grid-template-areas: 
         "header header"
         "navbar navbar"
@@ -142,7 +142,7 @@ body{
 }
 
 .sidebar a {
-    height: 12%;
+    height: 60px;
     display: flex;              /* เปลี่ยนเป็น Flexbox */
     padding: 10px 15px;
     margin: 15px 10px 15px 10px;

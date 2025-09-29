@@ -277,3 +277,8 @@ textarea {
     background-color: white; 
     color: black;
 }
+.add-file:active{
+    transform: scale(0.98); 
+    background-color: white; 
+    color: black;
+}

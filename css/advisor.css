@@ -164,12 +164,15 @@ body{
     padding: 20px;
     overflow-y: auto; 
 }
-/* โครงงานที่ดูแล */
+
+/* หัวข้อทุกลิงค์ */
 .head {
     font-size: 20px;
     font-weight: bold;
     padding-bottom: 5px;
 }
+
+/* ตรวจสอบ / อนุมัติโครงงาน */
 .box {
     display: flex;       /* เรียงแนวนอน */
     gap: 20px;           /* ระยะห่างระหว่างกล่อง */
@@ -188,6 +191,7 @@ body{
     font-weight: 500;
     display: flex;           /* ทำให้เป็น flex container */
     flex-direction: column;  /* จัดแนวตั้งสำหรับเนื้อหา */
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.3);
 }
 
 .box-content p {
@@ -222,23 +226,11 @@ body{
     padding: 20px;
     border-radius: 10px;
     width: 800px;
+    height: 600px;
     text-align: left;
     display: flex;
     flex-direction: column;
     position: relative;
-}
-
-.box-left {
-    flex: 1; /* กว้างเท่า ๆ กัน */
-    background-color: #F3F3F3;
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.box-right {
-    flex: 1; /* กว้างเท่า ๆ กัน */
-    padding: 15px;
-    border-radius: 10px;
 }
 
 .box-popup {
@@ -247,11 +239,83 @@ body{
     margin: 5px;
 }
 
-.box-right .advisor{
-    flex: 1; /* กว้างเท่า ๆ กัน */
-    background-color: #D4E8F2;
-    padding: 15px;
+.box-left {
+    flex: 1.3; /* กว้างเท่า ๆ กัน */
+    background-color: #FFFFFF;
+    padding: 3px;
     border-radius: 10px;
+    line-height: 1.3; 
+}
+
+.box-left .title {
+    margin: 1px 30px ; 
+    color: #969696;
+}
+
+.box-left p strong {
+    margin: 20px;
+}
+
+.box-left p a {
+    margin: 20px;
+}
+
+.box-right {
+    flex: 1; /* กว้างเท่า ๆ กัน */
+    border-radius: 10px;
+}
+
+.box-right .advisor,
+.box-right .instuctor,
+.box-right .student{
+    width: 300px;
+    background-color: #D4E8F2;
+    padding: 3px;
+    margin: 8px;
+    border-radius: 10px;
+    line-height: 0.7; 
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.3);
+}
+
+.box-right .advisor p,
+.box-right .instuctor p,
+.box-right .student p{
+    padding: 1px 10px 0px 15px; /* top right bottom left */
+}
+
+.status-choice {
+    width: 300px;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.action-buttons {
+   text-align: center;
+   margin-top: 40px;
+}
+
+button.submit {
+    background-color: #3B90FF; 
+    border: none;
+    border-radius: 6px;
+    padding: 6px 14px;
+    font-size: 14px;
+    color: #ffffff;
+    cursor: pointer;
+    margin-right: 10px; 
+}
+
+button.edit{
+  background-color: #ff9800; /* สีส้ม */
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-left: 10px;
 }
 
 /* ปุ่มปิด Popup */
@@ -262,3 +326,59 @@ body{
     cursor: pointer;
 }
 
+/* ตรวจสอบความก้าวหน้าโครงงาน */
+.content-progress {
+    grid-area: content;
+    background-color: #ffffff;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.box-progress {
+    display: flex;
+    gap: 20px; /* ระยะห่างระหว่างฝั่งซ้ายและขวา */
+    margin: 5px;
+}
+.project {
+    flex: 4;
+    display: flex;          /* เพิ่ม flex */
+    flex-direction: column; /* เรียงลูกเป็นแนวตั้ง */
+    gap: 20px;              /* ระยะห่างระหว่าง main-project */ 
+}
+
+.main-project {
+    border: 1px solid #D2D2D2;
+    border-radius: 10px;
+    display: flex; 
+    height: 200px; 
+}
+    
+.report-project {
+    flex: 1; 
+    border-radius: 10px;
+    border: 1px solid #D2D2D2;
+    height: 360px;
+}
+
+.report-project p{
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.report-project .report-box1,
+.report-project .report-box,
+.report-project .report-box{
+    width: 280px;
+    height: 80px;
+    border: 1px solid #D2D2D2;
+    padding: 3px;
+    margin: 10px 20px 10px 20px;
+    border-radius: 10px;
+    font-size: 18px;
+    display: flex;
+    text-align: center;
+    align-items: center;    /* แนวตั้ง*/
+    justify-content: center;  /* แนวนอน */
+    
+}

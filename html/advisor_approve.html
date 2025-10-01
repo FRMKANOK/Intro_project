@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&display=swap" rel="stylesheet">
-    <title>ตรวจสอบ/อนุมัติข้อโครงงาน</title>
+    <title>โครงงานที่ดูแล</title>
 </head>
 <body>
     <div class="grid-container">
@@ -31,20 +31,116 @@
         </div>
 
         <div class="sidebar">
-               <a href="#" style="background-color: #FA4616;">ตรวจสอบ / อนุมัติข้อโครงงาน</a>
+               <a href="#" style="background-color: #FA4616;">โครงงานที่ดูแล</a>
                <a href="advisor_progress.html">ตรวจสอบความก้าวหน้าโครงงาน</a>
                <a href="advisor_topic.html">ตรวจสอบการสอบหัวข้อ</a>
                <a href="advisor_exam.html">ตรวจสอบการสอบจบ</a>
                <a href="advisor_status.html">ระบุสถานะโครงงาน</a>
         </div>
 
-        <div class="content">
-               
+        <div class="content-project">
+            <div class="head">โครงงานที่ดูแล</div>
+                <div class="box">
+                    <div class="box-content">
+                        <p><strong>ชื่อโครงงาน :</strong> การสร้างเกมเพื่อการเรียนรู้ด้วยเทคโนโลยี AR</p>
+                        <p><strong>สถานะสอบหัวข้อ :</strong> ผ่าน</p>
+                        <p><strong>สถานะสอบจบ : </strong>กำลังดำเนินการ</p>
+                        <p><strong>ความก้าวหน้า : </strong>60%</p>
+                        <button class="detail">ดูรายละเอียด</button>
+                    </div>
+
+                    <div class="box-content">
+                        <p><strong>ชื่อโครงงาน :</strong> การสร้างเกมเพื่อการเรียนรู้ด้วยเทคโนโลยี AR</p>
+                        <p><strong>สถานะสอบหัวข้อ :</strong> ผ่าน</p>
+                        <p><strong>สถานะสอบจบ : </strong>กำลังดำเนินการ</p>
+                        <p><strong>ความก้าวหน้า : </strong>60%</p>
+                        <button class="detail">ดูรายละเอียด</button>
+                    </div>
+
+                    <div class="box-content">
+                        <p><strong>ชื่อโครงงาน :</strong> การสร้างเกมเพื่อการเรียนรู้ด้วยเทคโนโลยี AR</p>
+                        <p><strong>สถานะสอบหัวข้อ :</strong> ผ่าน</p>
+                        <p><strong>สถานะสอบจบ : </strong>กำลังดำเนินการ</p>
+                        <p><strong>ความก้าวหน้า : </strong>60%</p>
+                        <button class="detail">ดูรายละเอียด</button>
+                    </div>
+
+                    <div class="box-content">
+                        <p><strong>ชื่อโครงงาน :</strong> การสร้างเกมเพื่อการเรียนรู้ด้วยเทคโนโลยี AR</p>
+                        <p><strong>สถานะสอบหัวข้อ :</strong> ผ่าน</p>
+                        <p><strong>สถานะสอบจบ : </strong>กำลังดำเนินการ</p>
+                        <p><strong>ความก้าวหน้า : </strong>60%</p>
+                        <button class="detail">ดูรายละเอียด</button>
+                    </div>
+                </div>
+
+                <!-- Popup -->
+                <div id="projectPopup" class="popup">
+                    <div class="popup-content">
+                        <span class="close">&times;</span>
+                        <h2>รายละเอียดโครงงาน</h2>
+
+                        <div class="box-popup">
+                            <div class="box-left">
+                                <p>รหัสโครงงาน</p>
+                                <p>682032</p>
+                                <p>ชื่อโครงงาน (ภาษาไทย)</p>
+                                <p>การสร้างเกมเพื่อการเรียนรู้ด้วยเทคโนโลยี AR</p>
+                                <p>ชื่อโครงงาน (ภาษาอังกฤษ)</p>
+                                <p>AR-Based Educational Game Development</p>
+                                <p>ประเภทโครงงาน</p>
+                                <p>โครงงานสหกิจ</p>
+                                <p>ปีการศึกษา / ภาคเรียน</p>
+                                <p>2568 / 2</p>
+                            </div>
+
+                            <div class="box-right">
+                                <p class="advisor"><strong>อาจารย์ที่ปรึกษา</strong><br>
+                                    ผศ.ดร.นิภา ฉลาด
+                                </p>
+
+                                <p class="instuctor"><strong>อาจารย์ประจำวิชา</strong><br>
+                                    ผศ.ดร.นิภา ฉลาด
+                                </p>
+
+                                <p class="student"><strong>นักศึกษา</strong><br>
+                                    ผศ.ดร.นิภา ฉลาด
+                                </p>
+                            </div>
+
+                        </div>
+                        
+                        
+                    </div>
+                </div>
         </div>
-
-
+        
     </div>
 
-    
+    <script>
+        const popup = document.getElementById("projectPopup");
+        const openBtns = document.querySelectorAll(".detail"); // เลือกทุกปุ่ม
+        const closeBtn = document.querySelector(".popup .close");
+
+        // เพิ่ม event ให้ทุกปุ่ม
+        openBtns.forEach(btn => {
+            btn.addEventListener("click", () => {
+                popup.style.display = "flex";
+            });
+        });
+
+        // ปิด popup
+        closeBtn.addEventListener("click", () => {
+            popup.style.display = "none";
+        });
+
+        // ปิด popup เมื่อคลิกนอกเนื้อหา
+        window.addEventListener("click", (e) => {
+            if (e.target === popup) {
+                popup.style.display = "none";
+            }
+        });
+    </script>
+
 </body>
 </html>

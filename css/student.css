@@ -1,8 +1,8 @@
 *{
     box-sizing: border-box;
+    font-family: "Noto Sans Thai", sans-serif;
 }
 body{
-    font-family: "Noto Sans Thai", sans-serif;
     margin: 0;
     background-color: #f5f5f5;
 }
@@ -15,9 +15,8 @@ body{
         "header header"
         "navbar navbar"
         "sidebar content";
-    height: 950px;
+    height: 100vh;
 }
-
 /* Header */
 .header {
     grid-area: header;
@@ -179,6 +178,7 @@ body{
   flex-direction: column;
   gap: 20px;
   box-sizing: border-box;
+  overflow-y: auto;
 }
 
 .content h2 {
@@ -206,13 +206,13 @@ body{
     gap: 4px;
 }
 .head-form{
-    font-size: 20px;
+    font-size: 25px;
     font-weight: bold;
     padding-bottom: 5px;
 }
 .form-section label {
     font-weight: bold;
-    font-size: 14px;
+    font-size: 17px;
 }
 
 .form-section input,
@@ -220,7 +220,7 @@ body{
     padding: 8px 10px;
     border: 1px solid #ccc;
     border-radius: 8px;
-    font-size: 14px;
+    font-size: 17px;
     width: 100%;
 }
 .inline-inputs {
@@ -243,7 +243,7 @@ textarea {
     padding: 8px 10px;
     border: 1px solid #ccc;
     border-radius: 8px;
-    font-size: 14px;
+    font-size: 17px;
     resize: vertical; /* ให้ผู้ใช้ปรับความสูงเองได้ */
 }
 .add-file{
@@ -251,7 +251,7 @@ textarea {
     border: 1px solid #ccc;
     background-color: white;
     border-radius: 8px;
-    font-size: 14px;
+    font-size: 16px;
     width: 100%;
 }
 .save{
@@ -260,7 +260,7 @@ textarea {
     background-color: #FA4616;
     color: white;
     border-radius: 8px;
-    font-size: 14px;
+    font-size: 16px;
     width: 100%;
 }
 .cancel{
@@ -269,7 +269,7 @@ textarea {
     background-color: #454545;
     color: white;
     border-radius: 8px;
-    font-size: 14px;
+    font-size: 16px;
     width: 100%;
 }
 .cancel:active ,.save:active{
@@ -282,3 +282,173 @@ textarea {
     background-color: white; 
     color: black;
 }
+.content-topic {
+    width: 100%;                  /* ให้ความกว้างชัดเจน */
+    margin-left: auto;           /* ดันให้ชิดขวา */
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+.head-topic{
+    font-size: 25px;
+    font-weight: bold;
+    padding-bottom: 5px;
+    margin: 0px;
+}
+.head-select label{
+    font-weight: bold;
+    font-size: 17px;
+    padding-left: 20px;
+}
+.head-select select {
+    color: #969696;
+    margin-left: 20px;
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 17px;
+    width: 20%;
+    margin-top: 10px;
+}
+table {
+    width: 95%;
+    border-collapse: collapse; /* รวมเส้น */
+    margin-top: 30px;
+    margin: 20px auto;
+}
+th, td {
+    text-align: center;
+    height: 55px;
+    border: 1px solid #333;
+    padding: 10px;
+}
+th {
+    background-color: #f2f2f2;
+}
+.text-table{
+    text-align: left;
+    padding-left: 20px;
+}
+.content-progress {
+    width: 100%;                  /* ให้ความกว้างชัดเจน */
+    margin-left: auto;           /* ดันให้ชิดขวา */
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+.head-progress{
+    display: flex;
+    align-items: center;  
+    font-size: 25px;
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+
+.form-progress label {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 17px;
+    padding-left: 20px;
+}
+.text-progress {
+    grid-column: 1;
+    grid-row: 2;
+}
+.form-progress {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    gap: 5px 20px;
+}
+.box-progress {
+    grid-column: 1;    
+    grid-row: 3 / span 2; 
+    min-height: 200px;
+    padding: 10px;
+    color: #969696;
+    margin-left: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 17px;
+    width: 85%;
+    height: 100%;
+}
+.up-file{
+    grid-column: 1;
+    grid-row: 5;
+}
+.progress-label{
+    grid-column: 2;
+    grid-row: 2;
+}
+.upload-progress {
+    color: #000000;
+    display: flex;
+    justify-content: center; /* จัดกลางแนวนอน */
+    align-items: center;     /* จัดกลางแนวตั้ง */
+    grid-column: 1;
+    grid-row: 6;
+    min-height: 80px;
+    margin-left: 20px;
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    background-color: white;
+    border-radius: 8px;
+    font-size: 16px;
+    width: 85%;
+}
+.upload-progress:active{
+    transform: scale(0.98); 
+    background-color: white; 
+    color: black;
+}
+.box-update {
+    color: #000000;
+    display: flex;
+    justify-content: center; 
+    align-items: center;   
+    grid-column: 2;
+    grid-row: 6;
+    min-height: 80px;
+    margin-left: 20px;
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    background-color: white;
+    border-radius: 8px;
+    font-size: 16px;
+    width: 85%;
+}
+.update-progress {
+  grid-column: 2;
+  grid-row: 5;
+  padding: 10px;
+}
+.progress {
+    grid-column: 2;
+    grid-row: 3 / span 2; /* กิน 2 แถว */
+    min-height: 80px;
+    margin-left: 20px;
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    background-color: white;
+    border-radius: 8px;
+    font-size: 16px;
+    width: 85%;
+}
+
+/* รายงานสรุป (อยู่คอลัมน์ขวา) */
+.summary {
+  grid-column: 3;
+  grid-row: 1 / span 3; /* กินสูง */
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+

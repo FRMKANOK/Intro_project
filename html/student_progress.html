@@ -40,33 +40,58 @@
         </div>
 
         <div class="content-progress">
-            <div class="form-progress">
-                <!-- <div class="head-progress">รายงานความก้าวหน้าของโครงงาน</div>
-                <div></div>
-                <label>รายงานสรุป</label>
-                <label>รายงานความก้าวหน้าของโครงงาน</label>
-                <label>ความก้าวหน้า</label>
-                <div class="box-comment"></div> -->
-
-
-                 <!-- ซ้าย -->
-                <div class="head-progress">รายงานความก้าวหน้าของโครงงาน</div>
-                <label class="text-progress">รายงานความก้าวหน้าของโครงงาน</label>
-                <div class="box-progress">รายละเอียด</div>
-                <label class="up-file">อัพโหลดไฟล์</label>
-                <label for="fileUpload" class="upload-progress">อัพโหลด</label>
-                <input type="file" id="fileUpload" style="display:none;">
+            <form>
+                <div class="form-progress">
+                    <!-- ซ้าย -->
+                    <div class="head-progress">รายงานความก้าวหน้าของโครงงาน</div>
+                    <label class="text-progress">รายงานความก้าวหน้าของโครงงาน</label>
+                    <div style="grid-column: 1; grid-row: 3 / span 2;">
+                        <textarea placeholder="รายละเอียด" required class="box-progress"></textarea>
+                    </div>
+                    <label class="up-file" style="align-self: end;">อัพโหลดไฟล์</label>
+                    <label for="fileUpload" class="upload-progress">อัพโหลด</label>
+                    <input type="file" id="fileUpload" style="display:none;">
                 
+                    <!-- กลาง -->
+                    <label class="progress-label">ความก้าวหน้า</label>
+                    <div class="progress">
+                        <div class="progress-circle">
+                            <div class="progress-circlein"><label>60%</label></div>
+                        </div>
+                    </div>
+                    <label class="update-progress" style="align-self: end;">อัพเดตล่าสุด</label>
+                    <div class="box-update">14 มกราคม 2568</div> 
+                    <div class="save-pro">
+                        <button type="submit" class="save-progress">บันทึก</button>
+                    </div>   
 
-                <!-- กลาง -->
-                <label class="progress-label">ความก้าวหน้า</label>
-                <div class="progress"></div>
-                <label class="update-progress">อัพเดตล่าสุด</label>
-                <div class="box-update">14 มกราคม 2568</div>
-
-                <!-- ขวา -->
-                <div class="summary">รายงานสรุป</div>
-            </div>
+                    <!-- ขวา -->
+                    <div class="comment1-text">รายงานสรุป</div>
+                    <div class="comment1-advisor">
+                        <label>ความคิดเห็นของอาจารย์ที่ปรึกษา</label>
+                        <div class="com1-in1">
+                            <label style="font-weight: normal;">เย่มม</label>
+                            <label style="font-weight: normal; padding-top: 15%; justify-content: right;">14 มกราคม 2568</label>
+                        </div>
+                        <div class="com1-in2">
+                            <label style="font-weight: normal;">เย่มม</label>
+                            <label style="font-weight: normal; padding-top: 15%; justify-content: right;">13 มกราคม 2568</label>
+                        </div>
+                    </div>
+                    <div class="comment2-advisor">
+                        <label>ความคิดเห็นของอาจารย์ประจำวิชา</label>
+                        <div class="com2-in1">
+                            <label style="font-weight: normal;">เย่มม</label>
+                            <label style="font-weight: normal; padding-top: 15%; justify-content: right;">14 มกราคม 2568</label>
+                        </div>
+                        <div class="com2-in2">
+                            <label style="font-weight: normal;">เย่มม</label>
+                            <label style="font-weight: normal; padding-top: 15%; justify-content: right;">14 มกราคม 2568</label>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            
             
         </div>
         </div>

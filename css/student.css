@@ -567,9 +567,8 @@ textarea {
     justify-content: center;
 }
 
-/* วงกลมด้านใน → ปรับขนาดเพื่อกำหนดความหนาของเส้น */
 .progress-inner {
-    width: 90%;   /* ยิ่งเล็ก เส้นยิ่งหนา / ยิ่งใหญ่ เส้นยิ่งบาง */
+    width: 90%;
     aspect-ratio: 1 / 1;
     border-radius: 50%;
     background: #fff;
@@ -586,8 +585,8 @@ textarea {
 
 .content-exam {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);  /* 2 คอลัมน์เท่ากัน */
-    grid-template-rows: repeat(8, 1fr);     /* 3 แถวเท่ากัน */
+    grid-template-columns: repeat(2, 1fr); 
+    grid-template-rows: repeat(8, 1fr);     
     gap: 5px 20px;
     overflow-y: auto;
 }
@@ -616,7 +615,7 @@ textarea {
     font-weight: bold;
 }
 .exam-circle {
-    width: 200px;             
+    width: 180px;             
     aspect-ratio: 1 / 1;      
     border-radius: 50%;       
     background-color: #FA4616;

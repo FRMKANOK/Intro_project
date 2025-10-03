@@ -114,26 +114,27 @@
                                 </div>
                                 
                                 <div  class="student">
-                                <p><strong>นักศึกษา</strong></p>
-                                <p>ภาคินทร์ ศิริวัฒนะ</p>
-                                <p>ทิวากร เจริญยิ่งรัตน์</p>
+                                    <p><strong>นักศึกษา</strong></p>
+                                    <p>ภาคินทร์ ศิริวัฒนะ</p>
+                                    <p>ทิวากร เจริญยิ่งรัตน์</p>
                                 </div>
 
-                                <div class="status-choice">
-                                    <p><strong>ตรวจสอบ / อนุมัติหัวข้อโครงงาน</strong></p>
-                                    <label>
-                                        <input type="radio" name="status" value="approve"> อนุมัติ
-                                    </label>
-                                    <label>
-                                        <input type="radio" name="status" value="reject"> ไม่อนุมัติ
-                                    </label>
-                                </div>
+                                <form>
+                                    <div class="status-choice">
+                                        <p><strong>อาจารย์ประจำวิชา</strong></p>
+                                        <select name="approve">
+                                            <option value="" selected>-- เลือกสถานะ --</option>
+                                            <option value="yes">อนุมัติ</option>
+                                            <option value="no">ไม่อนุมัติ</option>
+                                        </select>
+                                    </div>
 
-                                <!-- button -->
-                                <div class="action-buttons">
-                                    <button type="reset" class="submit">บันทึก</button>
-                                    <button type="submit"class="edit">ยกเลิก</button>
-                                </div>
+                                    <!-- button -->
+                                    <div class="action-buttons">
+                                        <button type="submit" class="submit">บันทึก</button>
+                                        <button type="reset"class="edit">ยกเลิก</button>
+                                    </div>
+                                </form>
                             </div>
 
                         </div>

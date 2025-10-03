@@ -132,7 +132,6 @@ body{
     width: 150px;
 }
 
-
 /* Sidebar */
 .sidebar {
     grid-area: sidebar;
@@ -182,7 +181,7 @@ body{
 
 .box-content {
     width: 45%;
-    min-width: 200px;    /* ขนาดเล็กสุดเพื่อ responsive */
+    min-width: 30%;    /* ขนาดเล็กสุดเพื่อ responsive */
     padding: 10px 15px;
     margin: 2px 0;
     color: #080808;
@@ -200,7 +199,7 @@ body{
 }
 
 .box-content .detail {
-    height: 30px;
+    height: 100%;
     border-radius: 5px;
     background-color: #FA4616;
     color: #ffffff;
@@ -225,8 +224,8 @@ body{
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
-    width: 800px;
-    height: 600px;
+    width: 50%;
+    height: 80%;
     text-align: left;
     display: flex;
     flex-direction: column;
@@ -268,7 +267,7 @@ body{
 .box-right .advisor,
 .box-right .instuctor,
 .box-right .student{
-    width: 300px;
+    width: 95%;
     background-color: #D4E8F2;
     padding: 3px;
     margin: 8px;
@@ -283,12 +282,26 @@ body{
     padding: 1px 10px 0px 15px; /* top right bottom left */
 }
 
-.status-choice {
-    width: 300px;
-    padding: 5px;
-    margin: 5px;
+.box-right .status-choice {
+    width: 95%;
+    padding: 3px;
+    margin: 8px;
     border-radius: 10px;
-    text-align: left;
+
+}
+
+.box-right .status-choice p {
+    padding: 1px 10px 0px 15px;
+}
+
+.box-right .status-choice select {
+    width: 100%;           
+    max-width: 100%;       
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    box-sizing: border-box;
 }
 
 .action-buttons {
@@ -371,6 +384,30 @@ button.edit{
     font-size: 14px;
 }
 
+.status-choice {
+  margin: 15px 0;
+  font-family: "Tahoma", sans-serif;
+}
+
+.status-choice p {
+  margin-bottom: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.status-choice select {
+  width: 220px;              /* ความกว้างของ dropdown */
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: #fff;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
 .main-project .student-list {
     display: flex;            /* เรียงแนวนอน */
     gap: 10px;                /* ระยะห่างระหว่างนักศึกษา */
@@ -428,7 +465,7 @@ button.edit{
 
 .btn-project button {
     height: 30px;
-    width: 120px;
+    width: 150px;
     border-radius: 10px;
     background-color: #EFEFEF;
     color: #000000;

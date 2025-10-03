@@ -555,27 +555,35 @@ textarea {
     margin-top: 5%;
 }
 .progress-circle {
-    width: 170px;       /* ขนาดวงกลมใหญ่ขึ้น */
-    aspect-ratio: 1 / 1; /* รักษาอัตราส่วน 1:1 */
-    border-radius: 50%;
-    background-color: #FA4616;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.progress-circlein {
-    width: 90%;
+    width: 170px;
     aspect-ratio: 1 / 1;
     border-radius: 50%;
-    background-color: #fff;
+    background: conic-gradient(
+        #FA4616 0% 60%,
+        #ddd 60% 100%
+    );
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.progress-circlein label{
-    color: #FA4616;
-    font-size: 30px;
+
+/* วงกลมด้านใน → ปรับขนาดเพื่อกำหนดความหนาของเส้น */
+.progress-inner {
+    width: 90%;   /* ยิ่งเล็ก เส้นยิ่งหนา / ยิ่งใหญ่ เส้นยิ่งบาง */
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+.progress-inner label {
+    font-size: 30px;
+    color: #FA4616;
+    font-weight: bold;
+}
+
 .content-exam {
     display: grid;
     grid-template-columns: repeat(2, 1fr);  /* 2 คอลัมน์เท่ากัน */

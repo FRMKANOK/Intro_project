@@ -1,10 +1,10 @@
 *{
     box-sizing: border-box;
+    font-family: "Noto Sans Thai", sans-serif;
 }
 body{
-    font-family: "Noto Sans Thai", sans-serif;
     margin: 0;
-    background-color: #f5f5f5;
+    background-color: white;
 }
 
 .grid-container {
@@ -21,7 +21,7 @@ body{
 /* Header */
 .header {
     grid-area: header;
-    background-color: #FA4616; /* สีส้มแดง */
+    background-color: #FA4616;
     display: flex;
     align-items: center;
     padding: 0 20px;
@@ -88,18 +88,15 @@ body{
     text-decoration: none;
     color:  black;
 }
-/* กล่องรวม Avatar + Username + Logout อยู่ขวา */
 .navbar .user-logout {
     display: flex;
     align-items: center;
-    gap: 10px; /* ระยะห่างระหว่าง avatar, username, logout */
+    gap: 10px; 
 }
-
-/* User container */
 .user {
-    display: flex;              /* จัดให้อยู่ในแถวเดียวกัน */
-    align-items: center;        /* จัดให้อยู่กึ่งกลางในแนวตั้ง */
-    gap: 20px;                  /* เว้นช่องว่างระหว่างแต่ละอัน */
+    display: flex;         
+    align-items: center;
+    gap: 20px;                
 }
 .user img{
     height: 30px;
@@ -107,18 +104,15 @@ body{
 }
 
 .username {
-    margin: 0; /* เอา margin เริ่มต้นของ p ออก จะได้ไม่ดัน */
+    margin: 0;
 }
 
-/* ชื่อผู้ใช้ */
 .navbar .username {
     margin: 0;
     font-size: 16px;
-    color: white; /* ต้องกำหนดสี */
-    white-space: nowrap; /* ป้องกันตัดบรรทัด */
+    color: white; 
+    white-space: nowrap;
 }
-
-/* ปุ่ม Logout */
 .navbar button {
     background-color: #ffffff;
     color: rgb(0, 0, 0);
@@ -131,19 +125,15 @@ body{
     height: 40px;
     width: 150px;
 }
-
-
-/* Sidebar */
 .sidebar {
     grid-area: sidebar;
-    background-color: #969696; /* เทาเข้ม */
+    background-color: #969696;
     color: white;
     padding: 1%;
 }
-
 .sidebar a {
     height: 60px;
-    display: flex;              /* เปลี่ยนเป็น Flexbox */
+    display: flex;  
     padding: 10px 15px;
     margin: 15px 10px 15px 10px;
     text-decoration: none;
@@ -157,11 +147,203 @@ body{
     align-items: center;       /* กึ่งกลางแนวตั้ง */
 }
 
-/* Content */
 .content {
     grid-area: content;
     background-color: #ffffff;
     padding: 20px;
     overflow-y: auto;
-    max-height: calc(100vh - 260px); /* 210+50 = header+navbar */
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.stats {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.stat-box { 
+    text-decoration: none;
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    cursor: default;
+}
+.stat-total-1 {
+    background-color: #FA4616;
+    color: white;
+    border: 1px solid #ccc;
+}
+.stat-progress-1 {
+    background-color: #ffffff;
+    color: #000;
+    border: 1px solid #ccc;
+}
+.stat-complete-1 {
+    background-color: #ffffff;
+    color: black;
+        border: 1px solid #ccc;
+}
+.stat-total-2 {
+    background-color: white;
+    color: black;
+    border: 1px solid #ccc;
+}
+.stat-progress-2 {
+    background-color: #ffffff;
+    color: #000;
+    border: 1px solid #ccc;
+}
+.stat-complete-2 {
+    background-color: #FA4616;
+    color: white;
+        border: 1px solid #ccc;
+}
+.stat-total-3 {
+    background-color: white;
+    color: black;
+    border: 1px solid #ccc;
+}
+.stat-progress-3 {
+    background-color: #FA4616;
+    color: white;
+    border: 1px solid #ccc;
+}
+.stat-complete-3 {
+    background-color: #ffffff;
+    color: #000;
+        border: 1px solid #ccc;
+}
+.project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.project-item {
+    padding: 15px;
+    border: 1px solid #ccc;
+    background-color: white;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.project-header {
+    padding-left: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+.project-info {
+    padding-left: 40%;
+    font-size: 20px;
+    color: #969696;
+}
+.project-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.project-actions button {
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #eee;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.project-actions button:active {
+    transform: scale(0.98);
+    background-color: #eee;
+}
+.status {
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+.status-progress {
+    background-color: #FA4616;
+}
+.status-complete {
+    background-color: #0DBD00;
+}
+
+.popup-overlay {
+    position: fixed; display: none;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+.pop-box-comm {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    width: 70%; height: 60%;
+    font-size: 20px;
+    display: grid; align-items: center; justify-items: center;
+    grid-template-columns: repeat(2, 1fr);
+}
+.row1-comm {
+    grid-column: 1;
+    width: 90%; height: 90%;
+    display: grid; align-items: center; justify-items: left;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(11, 1fr); 
+}
+.row2-comm {
+    grid-column: 2;
+    width: 90%; height: 90%;
+    display: grid; align-items: center; justify-items: left;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(11, 1fr);
+}
+.row1-comm .label ,.row2-comm .label{
+    font-weight: bold;
+}
+.row1-comm .value ,.row2-comm .value{
+    padding-left: 3%;
+}
+.row2-comm .value textarea {
+    grid-row: 5 / span 4;   
+    width: 100%;   height: 100%;     
+    padding: 8px 10px;
+    resize: none;              /* ปิดการปรับขนาดด้วยมือ */
+    border: 1px solid #ccc; border-radius: 8px;
+    font-size: 20px;
+}
+
+.row2-comm .textarea-instr {
+    grid-row: 5 / span 4;    
+    width: 100%; height: 100%;         
+    padding: 8px 10px;
+    resize: none;
+}
+.row1-comm a{color: blue;}
+.close-btn {
+    grid-row: 11;
+    font-size: 20px; color: white;
+    background-color: #0DBD00;
+    width: 30%; height: 100%;  
+    justify-self: right; margin-right: 2%;
+    border: 1px solid #ccc; border-radius: 8px;
+}
+.close-btn:active {
+    transform: scale(0.98);
+    background-color: #0DBD00;
 }

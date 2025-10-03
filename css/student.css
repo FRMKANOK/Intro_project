@@ -207,13 +207,13 @@ body{
     gap: 4px;
 }
 .head-form{
-    font-size: 25px;
+    font-size: 20px;
     font-weight: bold;
     padding-bottom: 5px;
 }
 .form-section label {
     font-weight: bold;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .form-section input,
@@ -221,7 +221,7 @@ body{
     padding: 8px 10px;
     border: 1px solid #ccc;
     border-radius: 8px;
-    font-size: 20px;
+    font-size: 18px;
     width: 100%;
 }
 .inline-inputs {
@@ -244,7 +244,7 @@ textarea {
     padding: 8px 10px;
     border: 1px solid #ccc;
     border-radius: 8px;
-    font-size: 20px;
+    font-size: 18px;
     resize: vertical; /* ให้ผู้ใช้ปรับความสูงเองได้ */
 }
 .add-file{
@@ -265,7 +265,7 @@ textarea {
     color: white;
     border-radius: 8px;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 18px;
     width: 100%;
 }
 .cancel{
@@ -275,7 +275,7 @@ textarea {
     color: white;
     font-weight: bold;
     border-radius: 8px;
-    font-size: 20px;
+    font-size: 18px;
     width: 100%;
 }
 .cancel:active {
@@ -304,12 +304,12 @@ textarea {
     overflow-y: auto;
 }
 .head-topic{
-    font-size: 25px;
+    font-size: 20px;
     font-weight: bold;
     margin: 0px;
 }
 .content-topic p{
-    font-size: 20px; font-weight: bold;
+    font-size: 18px; font-weight: bold;
     padding-left: 20px;  margin: 0px;
     padding-bottom: 5px;
 }
@@ -354,10 +354,10 @@ textarea {
     box-sizing: border-box;
     overflow-y: auto;
 }
-.head-progress ,.head-exam,.head-follow{
+.head-progress ,.content-exam .head-exam ,.head-follow{
     display: flex;
     align-items: center;  
-    font-size: 25px;
+    font-size: 20px;
     font-weight: bold;
     padding-bottom: 5px;
 }
@@ -366,7 +366,7 @@ textarea {
     display: flex;
     align-items: center;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 18px;
     padding-left: 20px;
 }
 .text-progress {
@@ -387,7 +387,7 @@ textarea {
     margin-left: 20px;
     border: 1px solid #ccc;
     border-radius: 8px;
-    font-size: 20px;
+    font-size: 18px;
     width: 85%;
     height: 100%;
     text-align: left start;
@@ -487,7 +487,7 @@ textarea {
     align-items: center;
     color: #000000;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 18px;
     grid-column: 3;
     grid-row: 1;
 }   
@@ -497,7 +497,7 @@ textarea {
     background-color: #3B90FF;
     color: white;
     border-radius: 8px;
-    font-size: 20px;
+    font-size: 18px;
     width: 30%;
     height: 60%;
 }
@@ -555,27 +555,19 @@ textarea {
     margin-top: 5%;
 }
 .progress-circle {
-    width: 50%;
-    height: 85%;
-    border-radius: 80%;
-    background: conic-gradient(
-      #FA4616 0% 60%, /* สีส่วนที่แสดง progress */
-      #eee 60% 100%   /* สีพื้นหลังส่วนที่เหลือ */
-    );
+    width: 170px;       /* ขนาดวงกลมใหญ่ขึ้น */
+    aspect-ratio: 1 / 1; /* รักษาอัตราส่วน 1:1 */
+    border-radius: 50%;
+    background-color: #FA4616;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: bold;
-    font-size: 20px;
-    color: #FA4616;
 }
 .progress-circlein {
     width: 90%;
-    height: 90%;
-    background-color: #ffffff;
-    color: rgb(0, 0, 0);
-    font-size: 30px;
-    border-radius: 80%;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    background-color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -593,7 +585,7 @@ textarea {
 }
 .content-exam label{
     font-weight: bold;
-    font-size: 20px;
+    font-size: 18px;
 }
 .box-exam-progress{
     justify-self: center;
@@ -611,38 +603,41 @@ textarea {
 .box-bottom{
     grid-column: 1; grid-row: 6;
     justify-self: center;
-    font-size: 20px;
+    font-size: 18px;
     color: #FA4616;
     font-weight: bold;
 }
 .exam-circle {
-    width: 40%; height: 100%;
-    border-radius: 80%;
+    width: 200px;             
+    aspect-ratio: 1 / 1;      
+    border-radius: 50%;       
     background-color: #FA4616;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 18px;
 }
+
 .exam-circlein {
-    width: 90%; height: 90%;
+    width: 90%;
+    aspect-ratio: 1 / 1;    
     background-color: #ffffff;
-    color: rgb(0, 0, 0);
-    font-size: 30px;
-    border-radius: 80%;
+    color: #000;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.exam-circlein label{
+
+.exam-circlein label {
     color: #FA4616;
     font-size: 30px;
-} 
+}
 .exam-day{
     grid-column: 2; grid-row: 1;
     align-self: flex-end;
-    font-size: 20px;
+    font-size: 18px;
 }
 .exam-calender{
     width: 40%; height: 90%;
@@ -687,7 +682,7 @@ textarea {
 }
 .content-follow label{
     align-self: flex-end; margin-left: 20px;
-    font-size: 20px; font-weight: bold;
+    font-size: 18px; font-weight: bold;
 }
 .box1-follow{
     margin-left: 40px; justify-self: center;
@@ -699,7 +694,7 @@ textarea {
     align-self: center; align-items: center;
     background-color: white;
     padding-left: 25%;
-    font-size: 20px;
+    font-size: 18px;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(7, 1fr);  
@@ -720,7 +715,7 @@ textarea {
     align-self: center; align-items: center;
     background-color: white;
     padding-left: 25%;
-    font-size: 20px;
+    font-size: 18px;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(7, 1fr);  
@@ -742,7 +737,7 @@ textarea {
     display: flex; align-items: center; justify-content: center;
 }
 .box3-follow p{
-    font-size: 20px; color: #FA4616;
+    font-size: 18px; color: #FA4616;
     margin: 0px; margin-top: 1%;
 }
 .box4-follow p{color: black;}
@@ -751,7 +746,7 @@ textarea {
     width: 80%; height: 90%;
     border: 1px solid #ccc;
     background-color: white;
-    border-radius: 8px; font-size: 20px;
+    border-radius: 8px; font-size: 18px;
     display: grid; align-items: center; justify-items: center;
     grid-template-rows: repeat(2, 1fr);  
 }
@@ -761,7 +756,7 @@ textarea {
     background-color: #0DBD00; 
     color: white;
     border-radius: 8px;
-    font-weight: bold;font-size: 20px;
+    font-weight: bold;font-size: 18px;
     width: 48%;
 }
 .save1:active{
@@ -777,7 +772,7 @@ textarea {
     background-color: #3B90FF;
     color: white;
     border-radius: 8px;
-    font-weight: bold;font-size: 20px;
+    font-weight: bold;font-size: 18px;
 }
 .add-file1:active{
     transform: scale(0.98); 

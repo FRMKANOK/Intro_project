@@ -1,4 +1,0 @@
-[[redirets]]
-from = "/*"
-to = "/login.html"
-status = 200

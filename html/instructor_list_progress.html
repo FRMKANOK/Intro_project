@@ -53,7 +53,7 @@
                     อาจารย์ที่ปรึกษา ผศ.ดร.นิติการ นาคเจือทอง
                 </div>
                 <div class="project-actions">
-                    <button>รายละเอียด</button>
+                    <button onclick="openPopup('popup3')">รายละเอียด</button>
                     <button onclick="openPopup('popup2')">แสดงความคิดเห็น</button>
                 </div>
             </div>
@@ -62,6 +62,7 @@
             <!-- pop หน้าแสดงความคิดเห็น กำลังดำเนินการ -->
             <div class="popup-overlay" id="popup2">
                 <div class="pop-box-comm">
+                    <span class="close" onclick="closePopup('popup2')">&times;</span>
                     <!-- แถว 1 -->
                     <div class="row1-comm">
                         <div class="label">หัวข้อโครงงาน</div>
@@ -98,6 +99,54 @@
                 </div>
             </div>
 
+        <!-- pop detail -->
+            <div class="popup-overlay" id="popup3">
+                
+                <div class="pop-box-comm">
+                    <span class="close" onclick="closePopup('popup3')">&times;</span>
+                    <!-- แถว 1 -->
+                    <div class="row1-comm">
+                        <div class="label">หัวข้อโครงงาน</div>
+                        <div class="value">ชื่อโครงงานภาษาไทย : ***********</div>
+                        <div class="value">ชื่อโครงงานภาษาอังกฤษ : ************</div>
+                        <div class="value">กรณีศึกษา : -</div>
+                        <div class="value">ประเภท : โครงงานสหกิจ</div>
+                        <div class="value">ปีการศึกษา : 2567  ภาคเรียน : 1</div>
+
+                        <div class="label">อาจารย์ที่ปรึกษา</div>
+                        <div class="value">รศ.ดร.อนิราช มิ่งขวัญ  อาจารย์ที่ปรึกษา</div>
+                        <div class="value">ผศ.ดร.นิติการ นาคเจือทอง  อาจารย์ที่ปรึกษาร่วม</div>
+
+                        <div class="label">ไฟล์แนบ</div>
+                        <div class="value"><a href="#">ทก.01.pdf</a></div>
+                    </div>
+                    <!-- แถว 2 -->
+                    <div class="row2-comm">
+                        <div class="label">ผู้จัดทำโครงงาน</div>
+                        <div class="value">68060225190001 นายกอไก เกิดก่อน 092-999-9999</div>
+                        <div class="value">68060225190002 นายคอคน เกิกหลัง 092-999-8888</div>
+
+                        <div class="label">รายงานความคืบหน้า</div>
+                        <div class="value comm-progress">
+                            <div class="box-comm">
+                                <div class="value" style="grid-column: 1; grid-row: 1;">เย่มม</div>
+                                <div class="value" style="grid-column: 2; grid-row: 1; justify-self: right;">ล่าสุด</div>
+                                <div class="value" style="grid-column: 2; grid-row: 3; justify-self: right; color: #FA4616;">14 มกราคม 2568</div>
+                            </div>
+                        </div>
+                        
+
+                        <div class="label">ความคิดเห็นของอาจารย์ประจำวิชา</div>
+                        <div class="value comm-instr">
+                            <div class="box-comm">
+                                <div class="value" style="grid-column: 1; grid-row: 1;">เย่มม</div>
+                                <div class="value" style="grid-column: 2; grid-row: 1; justify-self: right;">ล่าสุด</div>
+                                <div class="value" style="grid-column: 2; grid-row: 3; justify-self: right; color: #FA4616;">14 มกราคม 2568</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
     </div>
 
 

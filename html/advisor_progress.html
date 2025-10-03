@@ -44,16 +44,94 @@
                 <div class="box-progress">
                     <div class="project">
                         <div class="main-project">
-                                <p><strong>ชื่อโครงงาน</strong></p>
+                            <div class="header-project">
+                                <p><strong>ชื่อโปรเจค</strong></p>
+                                <span class="status">กำลังดำเนินการ</span>
+                            </div>
+                                
+                            <div class="student-list">
+                                <p class="std-project">นักศึกษา 1 นางสาวสมใจ ยินดี รหัส 6806022510041</p>
+                                <p class="std-project">นักศึกษา 2 นายสมชาย ยินดี รหัส 6806022510050</p>
+                            </div>
+
+                            <div class="progress-header">
+                                <p>เปอร์เซ็นต์ความก้าวหน้า</p>
+                                <span class="progress-value">50%</span>
+                            </div>
+                                
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 50%;"></div>
+                            </div>
+
+                            <div class="btn-project">
+                                <button class="detail-progress" onclick="openPopup('popup1')">รายละเอียด</button>
+                                <button class="comment-progress" onclick="openPopup('popup2')">แสดงความคิดเห็น</button>
+                                <button class="update-progress" onclick="openPopup('popup3')">อัพเดตเปอร์เซ็นต์</button>
+                                <button class="approve-progress" onclick="openPopup('popup4')">ลงชื่อรับทราบ</button>
+                            </div>
+
+                            <!-- popup รายละเอียด -->
+                            <div id="popup1" class="popup">
+                                <div class="popup-project">
+                                    <span class="close" onclick="closePopup('popup1')">&times;</span>
+                                    <h2>รายละเอียดโครงงาน</h2>
+                                    <p>นี่คือรายละเอียดโครงงาน...</p>
+                                </div>
+                            </div>
+
+                            <!-- Popup แสดงความคิดเห็น -->
+                            <div id="popup2" class="popup">
+                                <div class="popup-project">
+                                    <span class="close" onclick="closePopup('popup2')">&times;</span>
+                                    <h2>แสดงความคิดเห็น</h2>
+                                    <textarea rows="5" cols="30" placeholder="พิมพ์ความคิดเห็นที่นี่..."></textarea>
+                                    <br><br>
+                                    <button>ส่งความคิดเห็น</button>
+                                </div>
+                            </div>
+
+                            <!-- Popup อัพเดตเปอร์เซ็นต์ -->
+                            <div id="popup3" class="popup">
+                                <div class="popup-project">
+                                    <span class="close" onclick="closePopup('popup3')">&times;</span>
+                                    <h2>อัพเดตเปอร์เซ็นต์</h2>
+                                    <input type="number" min="0" max="100" placeholder="ใส่ % ความก้าวหน้า"> %
+                                    <br><br>
+                                    <button>บันทึก</button>
+                                </div>
+                            </div>
+
+                            <!-- Popup ลงชื่อรับทราบ -->
+                            <div id="popup4" class="popup">
+                                <div class="popup-project">
+                                    <span class="close" onclick="closePopup('popup4')">&times;</span>
+                                    <h2>ลงชื่อรับทราบ</h2>
+                                    <p>คุณยืนยันการรับทราบความก้าวหน้าหรือไม่?</p>
+                                    <br>
+                                    <button>ยืนยัน</button>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="main-project">
+                                <div class="header-project">
+                                    <p><strong>ชื่อโปรเจค</strong></p>
+                                    <span class="status">รอสอบหัวข้อ</span>
+                                </div>
                                 
                                 <div class="student-list">
                                     <p class="std-project">นักศึกษา 1 นางสาวสมใจ ยินดี รหัส 6806022510041</p>
                                     <p class="std-project">นักศึกษา 2 นายสมชาย ยินดี รหัส 6806022510050</p>
                                 </div>
 
-                                <p>เปอร์เซ็นต์ความก้าวหน้า</p>
+                                <div class="progress-header">
+                                    <p>เปอร์เซ็นต์ความก้าวหน้า</p>
+                                    <span class="progress-value">0%</span>
+                                </div>
+
                                 <div class="progress-bar">
-                                    <div class="progress" style="width: 50%;">50%</div>
+                                    <div class="progress" style="width: 0%;"></div>
                                 </div>
 
 
@@ -66,38 +144,23 @@
                         </div>
 
                         <div class="main-project">
-                                <p><strong>ชื่อโครงงาน</strong></p>
+                                <div class="header-project">
+                                    <p><strong>ชื่อโปรเจค</strong></p>
+                                    <span class="status">กำลังดำเนินการ</span>
+                                </div>
                                 
                                 <div class="student-list">
                                     <p class="std-project">นักศึกษา 1 นางสาวสมใจ ยินดี รหัส 6806022510041</p>
                                     <p class="std-project">นักศึกษา 2 นายสมชาย ยินดี รหัส 6806022510050</p>
                                 </div>
 
-                                <p>เปอร์เซ็นต์ความก้าวหน้า</p>
+                                <div class="progress-header">
+                                    <p>เปอร์เซ็นต์ความก้าวหน้า</p>
+                                    <span class="progress-value">70%</span>
+                                </div>
+
                                 <div class="progress-bar">
-                                    <div class="progress" style="width: 50%;">50%</div>
-                                </div>
-
-
-                                <div class="btn-project">
-                                    <button class="detail-pprogress">รายละเอียด</button>
-                                    <button class="comment">แสดงความคิดเห็น</button>
-                                    <button class="update-pprogress">อัพเดตเปอร์เซ็นต์</button>
-                                    <button class="approve-progress">ลงชื่อรับทราบ</button>
-                                </div>
-                        </div>
-
-                        <div class="main-project">
-                                <p><strong>ชื่อโครงงาน</strong></p>
-                                
-                                <div class="student-list">
-                                    <p class="std-project">นักศึกษา 1 นางสาวสมใจ ยินดี รหัส 6806022510041</p>
-                                    <p class="std-project">นักศึกษา 2 นายสมชาย ยินดี รหัส 6806022510050</p>
-                                </div>
-
-                                <p>เปอร์เซ็นต์ความก้าวหน้า</p>
-                                <div class="progress-bar">
-                                    <div class="progress" style="width: 50%;">50%</div>
+                                    <div class="progress" style="width: 70%;"></div>
                                 </div>
 
 
@@ -114,11 +177,11 @@
                     <div class="report-project">
                         <p>รายงานสรุป</p>
                         <div class="report-box1">
-                            โครงงานทั้งหมด : 2
+                            โครงงานทั้งหมด : 3
                         </div>
 
                         <div class="report-box">
-                            กำลังดำเนินการ : 1
+                            กำลังดำเนินการ : 2
                         </div>
 
                         <div class="report-box">
@@ -131,6 +194,14 @@
 
     </div>
 
+    <script>
+        function openPopup(id) {
+            document.getElementById(id).style.display = "flex";
+        }
+        function closePopup(id) {
+            document.getElementById(id).style.display = "none";
+        }
+    </script>
     
 </body>
 </html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/instructor.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&display=swap" rel="stylesheet">
+    <title>รายชื่อโครงงาน</title>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="header">
+            <img src="../image/kmutnb.png" alt="โลโก้" class="header-logo">
+                <div class="header-text">
+                    <div class="line1">ระบบการจัดการข้อมูลโครงงานพิเศษและโครงงานสหกิจ</div>
+                    <div class="line2">ภาควิชาเทคโนโลยีสารสนเทศ</div>
+                    <hr><!-- เส้นคั่นระหว่างประโยค  -->
+                    <div class="line3">มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ</div>
+                </div>
+        </div>
+
+        <div class="navbar">
+              <p class="semester">ภาคเรียนที่ 1 ปีการศึกษา 2568</p>  
+              <div class="user">
+                    <img src="../image/person.png" alt="User">
+                    <p>Instructor</p>
+                    <button id="logout"><a href="login.html">ออกจากระบบ</a></button>
+              </div>
+        </div>
+
+        <div class="sidebar">
+               <a href="#" style="background-color: #FA4616;">รายชื่อโครงงาน</a>
+        </div>
+
+        <div class="main-content">
+        <div class="stats">
+            <a href="instructor_list_all.html" class="stat-box stat-total-3">โครงงานทั้งหมด<br>2</a>
+            <a href="#" class="stat-box stat-progress-3">กำลังดำเนินการ<br>1</a>
+            <a href="instructor_list_complete.html" class="stat-box stat-complete-3">เสร็จสิ้น<br>1</a>
+        </div>
+
+        <div class="project-list">
+            <div class="project-item">
+                <div class="project-header">
+                    ระบบจัดการ **********************
+                    <span class="status status-progress">กำลังดำเนินการ</span>
+                </div>
+                <div class="project-info">
+                    นักศึกษา 1 รหัส 68060xxxxxxx<br>
+                    นักศึกษา 2 รหัส 68060xxxxxxx<br>
+                    อาจารย์ที่ปรึกษา ผศ.ดร.นิติการ นาคเจือทอง
+                </div>
+                <div class="project-actions">
+                    <button>รายละเอียด</button>
+                    <button onclick="openPopup('popup2')">แสดงความคิดเห็น</button>
+                </div>
+            </div>
+        </div>
+
+            <!-- pop หน้าแสดงความคิดเห็น กำลังดำเนินการ -->
+            <div class="popup-overlay" id="popup2">
+                <div class="pop-box-comm">
+                    <!-- แถว 1 -->
+                    <div class="row1-comm">
+                        <div class="label">หัวข้อโครงงาน</div>
+                        <div class="value">ชื่อโครงงานภาษาไทย : ***********</div>
+                        <div class="value">ชื่อโครงงานภาษาอังกฤษ : ************</div>
+                        <div class="value">กรณีศึกษา : -</div>
+                        <div class="value">ประเภท : โครงงานสหกิจ</div>
+                        <div class="value">ปีการศึกษา : 2567  ภาคเรียน : 1</div>
+
+                        <div class="label">อาจารย์ที่ปรึกษา</div>
+                        <div class="value">รศ.ดร.อนิราช มิ่งขวัญ  อาจารย์ที่ปรึกษา</div>
+                        <div class="value">ผศ.ดร.นิติการ นาคเจือทอง  อาจารย์ที่ปรึกษาร่วม</div>
+
+                        <div class="label">ไฟล์แนบ</div>
+                        <div class="value"><a href="#">ทก.01.pdf</a></div>
+                    </div>
+                    <!-- แถว 2 -->
+                    <div class="row2-comm">
+                        <div class="label">ผู้จัดทำโครงงาน</div>
+                        <div class="value">68060225190001 นายกอไก เกิดก่อน 092-999-9999</div>
+                        <div class="value">68060225190002 นายคอคน เกิกหลัง 092-999-8888</div>
+
+                        <div class="label">ผู้จัดทำโครงงาน</div>
+                        <div class="value textarea-instr">
+                            <textarea class="value" placeholder="ป้อนรายละเอียดที่อยู่"></textarea>
+                        </div>
+                        <div class="label">ลงชื่อรับทราบ</div>
+                        <div class="value">
+                            <input type="checkbox" id="agree"/>
+                            <label for="agree">ยืนยัน</label>
+                        </div>
+                        <button class="close-btn" onclick="closePopup('popup2')">บันทึก</button>
+                    </div>
+                </div>
+            </div>
+
+    </div>
+
+
+    </div>
+
+    <script>
+        function openPopup(id) {
+            document.getElementById(id).style.display = "flex";
+            }
+
+            function closePopup(id) {
+            document.getElementById(id).style.display = "none";
+            }
+    </script>
+    
+</body>
+</html>

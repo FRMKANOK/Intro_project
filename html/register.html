@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="css/login.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&display=swap" rel="stylesheet">
@@ -13,7 +13,7 @@
     <div class="grid-container">
         <div class="left">
             <div class="image_login">
-                <img src="../image/kmutnb.png" alt="Avatar" class="avatar">
+                <img src="image/kmutnb.png" alt="Avatar" class="avatar">
             </div>
             <p>ระบบการจัดการข้อมูลโครงงานพิเศษ</p>
             <p>และโครงงานสหกิจ</p>
@@ -33,19 +33,19 @@
                         <label for="email"><b>อีเมล</b></label>
                         <div class="input-icon">
                             <input type="email" placeholder="ป้อนอีเมล" name="email" required>
-                            <img src="../image/email.png" alt="Email Icon">
+                            <img src="image/email.png" alt="Email Icon">
                         </div>
 
                         <label for="psw"><b>รหัสผ่าน</b></label>
                         <div class="input-icon">
                             <input type="password" placeholder="ป้อนรหัสผ่าน" name="psw" required>
-                            <img src="../image/off_pwd.png" alt="Lock Password" class="toggle-password">
+                            <img src="image/off_pwd.png" alt="Lock Password" class="toggle-password">
                         </div>
 
                         <label for="con_psw"><b>ยืนยันรหัสผ่าน</b></label>
                         <div class="input-icon">
                             <input type="password" placeholder="ป้อนรหัสผ่านอีกครั้ง" name="con_psw" required>
-                            <img src="../image/off_pwd.png" alt="Lock Password" class="toggle-password">
+                            <img src="image/off_pwd.png" alt="Lock Password" class="toggle-password">
                         </div>
                                                     
                         <label for="con_psw"><b>สถานะผู้ใช้งาน</b></label>
@@ -81,9 +81,9 @@
 
             // เปลี่ยนไอคอน ถ้าต้องการ
             if(type === 'text'){
-                togglePassword.src = '../image/show_pwd.png'; // ไอคอนเปิดตา
+                togglePassword.src = 'image/show_pwd.png'; // ไอคอนเปิดตา
             } else {
-                togglePassword.src = '../image/off_pwd.png'; // ไอคอนปิดตา
+                togglePassword.src = 'image/off_pwd.png'; // ไอคอนปิดตา
             }
         });
     </script>

@@ -692,6 +692,7 @@ button.submit-comment {
   text-align: center;
   font-size: 16px;
   background-color: #fff;
+  color: #000000;
 }
 
 .card strong {
@@ -704,29 +705,29 @@ button.submit-comment {
     font-size: 40px; /* ตัวเลขใหญ่ขึ้น */
 }
 
-.total {
-    color: #000000; /* ทั้งหมด */
+/* .total {
+    color: #000000; ทั้งหมด
 }
 
 .pass {
-    color: #0DBD00; /* ผ่าน*/
+    color: #0DBD00; ผ่าน
 }
 
 .fail {
-    color: #d90000; /* ไม่ผ่าน */
+    color: #d90000; ไม่ผ่าน
 }
 
 .revise {
-    color: #EB5406; /* แก้ไข */
+    color: #EB5406; แก้ไข
 }
 
 .pending {
- color: #FF8400;/* รอต่างๆ */
+ color: #FF8400;รอต่างๆ
 }
 
 .retake {
-    color: #065ef6;/* สอบใหม่*/
-}
+    color: #065ef6;สอบใหม่
+} */
 
 .filters {
   display: flex;

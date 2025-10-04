@@ -185,12 +185,13 @@ body{
     padding: 10px 15px;
     margin: 2px 0;
     color: #080808;
-    background-color: #F3F3F3;
+    background-color: #ffffff;
     border-radius: 10px;
     font-weight: 500;
     display: flex;           /* ทำให้เป็น flex container */
     flex-direction: column;  /* จัดแนวตั้งสำหรับเนื้อหา */
-    box-shadow: 2px 2px 2px rgba(0,0,0,0.3);
+    border-radius: 8px;
+    border: 1px solid #ccc;
 }
 
 .box-content p {
@@ -222,11 +223,11 @@ body{
 
 /* เนื้อหา Popup */
 .popup-content {
-     background: #fff;
+    background: #fff;
     padding: 20px;
     border-radius: 10px;
-    width: 80%;
-    max-width: 900px;
+    width: 55%;
+    height: 70%;
     display: flex;
     gap: 20px;
     position: relative;
@@ -281,12 +282,8 @@ body{
 .box-right .instuctor,
 .box-right .student{
     width: 95%;
-    background-color: #D4E8F2;
     padding: 3px;
     margin: 8px;
-    border-radius: 10px;
-    line-height: 0.7; 
-    box-shadow: 2px 2px 2px rgba(0,0,0,0.3);
 }
 
 .box-right .advisor p,
@@ -297,15 +294,9 @@ body{
 }
 
 .box-right .status-choice {
-    width: 95%;
-    padding: 3px;
-    margin: 8px;
-    border-radius: 10px;
+    width: 100%;
+    border-radius: 6px;
 
-}
-
-.box-right .status-choice p {
-    padding: 1px 10px 0px 15px;
 }
 
 .box-right .status-choice select {
@@ -527,17 +518,100 @@ button.edit{
     flex-direction: column;
 }
 
-.comment-textarea {
+/* ช่องเลือกเปอร์เซ็นต์ */
+.progress-update {
+  width: 100%;
+  max-width: 500px; 
+}
+
+.progress-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.progress-update label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.progress-bar {
+    background: #ddd;
+    height: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 5px 0;
+}
+
+.progress-fill {
+    background: #ff5722;
+    height: 100%;
+    width: 0%;
+    transition: width 0.3s ease;
+}
+
+#progressText {
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.action {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.action button {
+    background: #666;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+.action button:hover {
+  background: #444;
+}
+
+ textarea {
     width: 100%;
-    min-height: 100px;       /* ความสูงเริ่มต้น */
-    padding: 10px;           /* ระยะขอบภายใน */
-    border: 1px solid #ccc;  /* เส้นกรอบ */
-    border-radius: 6px;      /* มุมโค้ง */
+    min-height: 100px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
     font-size: 14px;
-    line-height: 1.5;
-    resize: vertical;        /* ปรับขนาดได้เฉพาะแนวตั้ง */
+    resize: vertical;
     box-sizing: border-box;
-    transition: border 0.2s, box-shadow 0.2s;
+    resize: none;       /* ❌ ปิดการ resize */
+    overflow: auto;     /* ✅ แสดง scrollbar เมื่อข้อความยาวเกิน */
+    box-sizing: border-box;
+}
+
+.date {
+    font-size: 0.9em;
+    color: #888;
+    text-align: right; /* วันที่อยู่ขวาล่าง */
+}
+
+.chk-box {
+    width: 18px;
+    height: 18px;
+    accent-color: green; /* กรอบเขียว */
+}
+
+button.submit-comment {
+    background-color: #FA4616; 
+    border: none;
+    border-radius: 6px;
+    padding: 6px 14px;
+    font-size: 14px;
+    color: #ffffff;
+    cursor: pointer;
+    margin-right: 10px; 
 }
 
 .report-project {

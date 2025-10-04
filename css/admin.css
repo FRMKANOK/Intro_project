@@ -337,7 +337,7 @@ h2 {
 
 .form-advi {
     display: grid;
-    grid-template-columns: 30% 1fr;
+    grid-template-columns: 33% 1fr;
     align-items: center;
     row-gap: 10px;
     column-gap: 10px;

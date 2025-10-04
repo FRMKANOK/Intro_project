@@ -31,19 +31,97 @@
         </div>
 
         <div class="sidebar">
-               <a href="advisor_approve.html">ตรวจสอบ / อนุมัติข้อโครงงาน</a>
+               <a href="advisor_approve.html">ตรวจสอบ / อนุมัติหัวข้อโครงงาน</a>
                <a href="advisor_progress.html">ตรวจสอบความก้าวหน้าโครงงาน</a>
                <a href="advisor_topic.html">ตรวจสอบการสอบหัวข้อ</a>
                <a href="advisor_exam.html">ตรวจสอบการสอบจบ</a>
-               <a href="#" style="background-color: #FA4616;">ระบุสถานะโครงงาน</a>
+               <a href="#" style="background-color: #FA4616;">สถานะโครงงานทั้งหมด</a>
         </div>
 
-        <div class="content">
-               
+        <div class="content-status">
+            <div class="head">สถานะโครงงานทั้งหมด</div>
+
+            <div class="filters">
+                    <div class="dropdown-project">ปีการศึกษา</div>
+                    <select>
+                        <option value="" selected disabled hidden>เลือกปีการศึกษา</option>
+                        <option value="2568">2568</option>
+                        <option value="2567">2567</option>
+                        <option value="2566">2566</option>
+                    </select>
+                    </แ>
+                    <div class="dropdown-project">ภาคการศึกษา</div>
+                    <select>
+                        <option value="" selected disabled hidden></option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                    </select>
+                    </label>
+            </div>
+            <div class="container">
+                <!-- ✅ ฝั่งซ้าย: โครงงานสอบหัวข้อ -->
+                <div class="section">
+                    <h3>โครงงาน - สอบหัวข้อ</h3>
+                    <div class="grid">
+                        <div class="card total">
+                            <strong>โครงงานทั้งหมด</strong>
+                            <span class="number">6</span>
+                        </div>
+                        <div class="card pass">
+                            <strong>ผ่าน</strong>
+                            <span class="number">0</span>
+                        </div>
+                        <div class="card fail">
+                            <strong>ไม่ผ่าน</strong>
+                            <span class="number">0</span>
+                        </div>
+                        <div class="card revise">
+                            <strong>ผ่านแบบแก้ไข</strong>
+                            <span class="number">0</span>
+                        </div>
+                        <div class="card pending">
+                            <strong>รออนุมัติหัวข้อ</strong>
+                            <span class="number">4</span>
+                        </div>
+                        <div class="card pending">
+                            <strong>รอสอบหัวข้อ</strong>
+                            <span class="number">0</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ✅ ฝั่งขวา: โครงงานสอบจบ -->
+                <div class="section">
+                    <h3>โครงงาน - สอบจบ</h3>
+                    <div class="grid">
+                        <div class="card total">
+                            <strong>โครงงานทั้งหมด</strong>
+                            <span class="number">6</span>
+                        </div>
+                        <div class="card pass">
+                            <strong>ผ่าน</strong>
+                            <span class="number">0</span>
+                        </div>
+                        <div class="card revise">
+                            <strong>ผ่านแบบแก้ไข</strong>
+                            <span class="number">0</span>
+                        </div>
+                        <div class="card fail">
+                            <strong>ไม่ผ่าน</strong>
+                            <span class="number">0</span>
+                        </div>
+                        <div class="card retake">
+                            <strong>สอบใหม่</strong>
+                            <span class="number">0</span>
+                        </div>
+                        <div class="card pending">
+                            <strong>รอผลสอบ</strong>
+                            <span class="number">0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-
-
-    </div>
 
     
 </body>

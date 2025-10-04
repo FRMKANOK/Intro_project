@@ -53,19 +53,19 @@
                     <option>INET</option>
                 </select>
                 </div>
-                <button class="add-btn-advi">เพิ่มอาจารย์</button>
+                <button class="add-btn-advi" onclick="openPopup('popup2')">เพิ่มอาจารย์</button>
             </div>
             <!-- การ์ดแสดงข้อมูล -->
             <div class="card-grid-advi">
                 <div class="teacher-card-advi">
-                <h3>รศ.ดร.อนิราช บังขวัญ</h3>
+                <h3>รศ.ดร.อนิราช มิ่งขวัญ</h3>
                 <p>example1@example.com</p>
                 <p>ภาควิชา : IT</p>
                 <p>ตำแหน่ง : อาจารย์ที่ปรึกษา</p>
                 <p class="status active">สถานะ : Active</p>
                 <div class="card-buttons-advi">
-                    <button class="edit-advi" id="openPopupBtn">แก้ไข</button>
-                    <button class="delete-advi">ลบ</button>
+                    <button class="edit-advi" onclick="openPopup('popup1')">แก้ไข</button>
+                    <button class="delete-advi" onclick="openPopup('deletePopup')">ลบ</button>
                 </div>
                 </div>
 
@@ -76,8 +76,8 @@
                 <p>ตำแหน่ง : อาจารย์ที่ปรึกษาร่วม</p>
                 <p class="status active">สถานะ : Active</p>
                 <div class="card-buttons-advi">
-                    <button class="edit-advi">แก้ไข</button>
-                    <button class="delete-advi">ลบ</button>
+                    <button class="edit-advi" onclick="openPopup('popup3')">แก้ไข</button>
+                    <button class="delete-advi" onclick="openPopup('deletePopup')">ลบ</button>
                 </div>
                 </div>
 
@@ -88,8 +88,8 @@
                 <p>ตำแหน่ง : อาจารย์ที่ปรึกษาร่วม</p>
                 <p class="status active">สถานะ : Active</p>
                 <div class="card-buttons-advi">
-                    <button class="edit-advi">แก้ไข</button>
-                    <button class="delete-advi">ลบ</button>
+                    <button class="edit-advi" onclick="openPopup('popup4')">แก้ไข</button>
+                    <button class="delete-advi" onclick="openPopup('deletePopup')">ลบ</button>
                 </div>
                 </div>
 
@@ -100,8 +100,8 @@
                 <p>ตำแหน่ง : อาจารย์ที่ปรึกษาร่วม</p>
                 <p class="status active">สถานะ : Active</p>
                 <div class="card-buttons-advi">
-                    <button class="edit-advi">แก้ไข</button>
-                    <button class="delete-advi">ลบ</button>
+                    <button class="edit-advi" onclick="openPopup('popup5')">แก้ไข</button>
+                    <button class="delete-advi" onclick="openPopup('deletePopup')">ลบ</button>
                 </div>
                 </div>
 
@@ -112,20 +112,20 @@
                 <p>ตำแหน่ง : กรรมการสอบ</p>
                 <p class="status active">สถานะ : Active</p>
                 <div class="card-buttons-advi">
-                    <button class="edit-advi">แก้ไข</button>
-                    <button class="delete-advi">ลบ</button>
+                    <button class="edit-advi" onclick="openPopup('popup6')">แก้ไข</button>
+                    <button class="delete-advi" onclick="openPopup('deletePopup')">ลบ</button>
                 </div>
                 </div>
 
                 <div class="teacher-card-advi">
                 <h3>ผศ.ดร.พนา พรหมภักดี</h3>
                 <p>example6@example.com</p>
-                <p>ภาควิชา : CS</p>
+                <p>ภาควิชา : IT</p>
                 <p>ตำแหน่ง : อาจารย์ที่ปรึกษา</p>
                 <p class="status inactive">สถานะ : Inactive</p>
                 <div class="card-buttons-advi">
-                    <button class="edit-advi">แก้ไข</button>
-                    <button class="delete-advi">ลบ</button>
+                    <button class="edit-advi" onclick="openPopup('popup7')">แก้ไข</button>
+                    <button class="delete-advi" onclick="openPopup('deletePopup')">ลบ</button>
                 </div>
                 </div>
             </div>
@@ -141,56 +141,411 @@
 
         </div>
 
-        <!-- popup -->
-        <div class="popup-advi" id="popupAdvi">
-        <div class="popup-content-advi">
+        <!-- popup box add -->
+        <div class="popup-advi" id="popup2">
+        <div class="popup-content-advi" >
             <h2>เพิ่ม/แก้ไข ข้อมูลอาจารย์</h2>
+            <span class="close" onclick="closePopup('popup2')">&times;</span>
+            <form>
+                <div class="form-advi">
+                <label>รหัสอาจารย์ :</label>
+                <input type="text" required>
 
-            <div class="form-advi">
-            <label>รหัสอาจารย์ :</label>
-            <input type="text" placeholder="T001">
+                <label>ตำแหน่งวิชาการ :</label>
+                <input type="text" required> 
 
-            <label>ตำแหน่งวิชาการ :</label>
-            <input type="text" placeholder="รองศาสตราจารย์">
+                <label>ชื่อ-นามสกุล :</label>
+                <input type="text" required>
 
-            <label>ชื่อ-นามสกุล :</label>
-            <input type="text" placeholder="รศ.ดร.อนิราช มิ่งขวัญ">
+                <label>อีเมล :</label>
+                <input type="email" required>
 
-            <label>อีเมล :</label>
-            <input type="email" placeholder="anirach@example.com">
+                <label>เบอร์โทร :</label>
+                <input type="text" required>
 
-            <label>เบอร์โทร :</label>
-            <input type="text" placeholder="098-999-9999">
+                <label>ภาควิชา :</label>
+                <select required>
+                    <option disabled selected>เลือกสาขาวิชา</option>
+                    <option>IT</option>
+                    <option>ITI</option>
+                    <option>INE</option>
+                    <option>INET</option>
+                </select>
 
-            <label>ภาควิชา :</label>
-            <select>
-                <option>เลือกสาขาวิชา</option>
-                <option>IT</option>
-                <option>ITI</option>
-                <option>INE</option>
-                <option>INET</option>
-            </select>
+                <label>ตำแหน่งในระบบ :</label>
+                <select required>
+                    <option disabled selected>เลือกตำแหน่ง</option>
+                    <option>ประธาน</option>
+                    <option>กรรมการ</option>
+                    <option>อาจารย์ที่ปรึกษา</option>
+                    <option>อาจารย์ที่ปรึกษาร่วม</option>
+                </select>
 
-            <label>ตำแหน่งในระบบ :</label>
-            <select>
-                <option>เลือกตำแหน่ง</option>
-                <option>ประธาน</option>
-                <option>กรรมการ</option>
-                <option>อาจารย์ที่ปรึกษา</option>
-                <option>อาจารย์ที่ปรึกษาร่วม</option>
-            </select>
+                <label>สถานะ :</label>
+                <div class="status-toggle-advi">
+                    <input type="checkbox" id="status-advi-1" checked>
+                    <label for="status-advi-1" class="switch-advi"></label>
+                    <span class="status-text-advi">Active</span>
+                </div>
+                </div>
 
-            <label>สถานะ :</label>
-            <div class="status-toggle-advi">
-                <input type="checkbox" id="status-advi" checked>
-                <label for="status-advi" class="switch-advi"></label>
-                <span class="status-text-advi">Active</span>
+                <div class="btn-area-advi">
+                <button class="cancel-advi" type="reset">ยกเลิก</button>
+                <button class="save-advi" type="submit">บันทึก</button>
+                </div>
+            </form>
+        </div>
+        </div>
+
+        <!-- popup box 1 -->
+        <div class="popup-advi" id="popup1">
+        <div class="popup-content-advi" >
+            <h2>เพิ่ม/แก้ไข ข้อมูลอาจารย์</h2>
+            <span class="close" onclick="closePopup('popup1')">&times;</span>
+            <form>
+                <div class="form-advi">
+                <label>รหัสอาจารย์ :</label>
+                <input type="text" placeholder="T001">
+
+                <label>ตำแหน่งวิชาการ :</label>
+                <input type="text" placeholder="รองศาสตราจารย์">
+
+                <label>ชื่อ-นามสกุล :</label>
+                <input type="text" placeholder="อนิราช มิ่งขวัญ">
+
+                <label>อีเมล :</label>
+                <input type="email" placeholder="example@example.com">
+
+                <label>เบอร์โทร :</label>
+                <input type="text" placeholder="098-999-9999">
+
+                <label>ภาควิชา :</label>
+                <select>
+                    <option disabled selected>เลือกสาขาวิชา</option>
+                    <option>IT</option>
+                    <option>ITI</option>
+                    <option>INE</option>
+                    <option>INET</option>
+                </select>
+
+                <label>ตำแหน่งในระบบ :</label>
+                <select>
+                    <option disabled selected>เลือกตำแหน่ง</option>
+                    <option>ประธาน</option>
+                    <option>กรรมการ</option>
+                    <option>อาจารย์ที่ปรึกษา</option>
+                    <option>อาจารย์ที่ปรึกษาร่วม</option>
+                </select>
+
+                <label>สถานะ :</label>
+                <div class="status-toggle-advi">
+                    <input type="checkbox" id="status-advi-2" checked>
+                    <label for="status-advi-2" class="switch-advi"></label>
+                    <span class="status-text-advi">Active</span>
+                </div>
+                </div>
+
+                <div class="btn-area-advi">
+                <button class="cancel-advi" type="reset">ยกเลิก</button>
+                <button class="save-advi" type="submit">บันทึก</button>
+                </div>
+            </form>
+        </div>
+        </div>
+
+        <!-- popup box 3 -->
+        <div class="popup-advi" id="popup3">
+        <div class="popup-content-advi" >
+            <h2>เพิ่ม/แก้ไข ข้อมูลอาจารย์</h2>
+            <span class="close" onclick="closePopup('popup3')">&times;</span>
+            <form>
+                <div class="form-advi">
+                <label>รหัสอาจารย์ :</label>
+                <input type="text" placeholder="T001">
+
+                <label>ตำแหน่งวิชาการ :</label>
+                <input type="text" placeholder="รองศาสตราจารย์">
+
+                <label>ชื่อ-นามสกุล :</label>
+                <input type="text" placeholder="อนิราช มิ่งขวัญ">
+
+                <label>อีเมล :</label>
+                <input type="email" placeholder="example@example.com">
+
+                <label>เบอร์โทร :</label>
+                <input type="text" placeholder="098-999-9999">
+
+                <label>ภาควิชา :</label>
+                <select>
+                    <option disabled selected>เลือกสาขาวิชา</option>
+                    <option>IT</option>
+                    <option>ITI</option>
+                    <option>INE</option>
+                    <option>INET</option>
+                </select>
+
+                <label>ตำแหน่งในระบบ :</label>
+                <select>
+                    <option disabled selected>เลือกตำแหน่ง</option>
+                    <option>ประธาน</option>
+                    <option>กรรมการ</option>
+                    <option>อาจารย์ที่ปรึกษา</option>
+                    <option>อาจารย์ที่ปรึกษาร่วม</option>
+                </select>
+
+                <label>สถานะ :</label>
+                <div class="status-toggle-advi">
+                    <input type="checkbox" id="status-advi-3" checked>
+                    <label for="status-advi-3" class="switch-advi"></label>
+                    <span class="status-text-advi">Active</span>
+                </div>
+                </div>
+
+                <div class="btn-area-advi">
+                <button class="cancel-advi" type="reset">ยกเลิก</button>
+                <button class="save-advi" type="submit">บันทึก</button>
+                </div>
+            </form>
+        </div>
+        </div>
+
+        <!-- popup box 4 -->
+        <div class="popup-advi" id="popup4">
+        <div class="popup-content-advi" >
+            <h2>เพิ่ม/แก้ไข ข้อมูลอาจารย์</h2>
+            <span class="close" onclick="closePopup('popup4')">&times;</span>
+            <form>
+                <div class="form-advi">
+                <label>รหัสอาจารย์ :</label>
+                <input type="text" placeholder="T001">
+
+                <label>ตำแหน่งวิชาการ :</label>
+                <input type="text" placeholder="รองศาสตราจารย์">
+
+                <label>ชื่อ-นามสกุล :</label>
+                <input type="text" placeholder="อนิราช มิ่งขวัญ">
+
+                <label>อีเมล :</label>
+                <input type="email" placeholder="example@example.com">
+
+                <label>เบอร์โทร :</label>
+                <input type="text" placeholder="098-999-9999">
+
+                <label>ภาควิชา :</label>
+                <select>
+                    <option disabled selected>เลือกสาขาวิชา</option>
+                    <option>IT</option>
+                    <option>ITI</option>
+                    <option>INE</option>
+                    <option>INET</option>
+                </select>
+
+                <label>ตำแหน่งในระบบ :</label>
+                <select>
+                    <option disabled selected>เลือกตำแหน่ง</option>
+                    <option>ประธาน</option>
+                    <option>กรรมการ</option>
+                    <option>อาจารย์ที่ปรึกษา</option>
+                    <option>อาจารย์ที่ปรึกษาร่วม</option>
+                </select>
+
+                <label>สถานะ :</label>
+                <div class="status-toggle-advi">
+                    <input type="checkbox" id="status-advi-4" checked>
+                    <label for="status-advi-4" class="switch-advi"></label>
+                    <span class="status-text-advi">Active</span>
+                </div>
+                </div>
+
+                <div class="btn-area-advi">
+                <button class="cancel-advi" type="reset">ยกเลิก</button>
+                <button class="save-advi" type="submit">บันทึก</button>
+                </div>
+            </form>
+        </div>
+        </div>
+
+        <!-- popup box 5 -->
+        <div class="popup-advi" id="popup5">
+        <div class="popup-content-advi" >
+            <h2>เพิ่ม/แก้ไข ข้อมูลอาจารย์</h2>
+            <span class="close" onclick="closePopup('popup5')">&times;</span>
+            <form>
+                <div class="form-advi">
+                <label>รหัสอาจารย์ :</label>
+                <input type="text" placeholder="T001">
+
+                <label>ตำแหน่งวิชาการ :</label>
+                <input type="text" placeholder="รองศาสตราจารย์">
+
+                <label>ชื่อ-นามสกุล :</label>
+                <input type="text" placeholder="อนิราช มิ่งขวัญ">
+
+                <label>อีเมล :</label>
+                <input type="email" placeholder="example@example.com">
+
+                <label>เบอร์โทร :</label>
+                <input type="text" placeholder="098-999-9999">
+
+                <label>ภาควิชา :</label>
+                <select>
+                    <option disabled selected>เลือกสาขาวิชา</option>
+                    <option>IT</option>
+                    <option>ITI</option>
+                    <option>INE</option>
+                    <option>INET</option>
+                </select>
+
+                <label>ตำแหน่งในระบบ :</label>
+                <select>
+                    <option disabled selected>เลือกตำแหน่ง</option>
+                    <option>ประธาน</option>
+                    <option>กรรมการ</option>
+                    <option>อาจารย์ที่ปรึกษา</option>
+                    <option>อาจารย์ที่ปรึกษาร่วม</option>
+                </select>
+
+                <label>สถานะ :</label>
+                <div class="status-toggle-advi">
+                    <input type="checkbox" id="status-advi-5" checked>
+                    <label for="status-advi-5" class="switch-advi"></label>
+                    <span class="status-text-advi">Active</span>
+                </div>
+                </div>
+
+                <div class="btn-area-advi">
+                <button class="cancel-advi" type="reset">ยกเลิก</button>
+                <button class="save-advi" type="submit">บันทึก</button>
+                </div>
+            </form>
+        </div>
+        </div>
+
+        <!-- popup box 6 -->
+        <div class="popup-advi" id="popup6">
+        <div class="popup-content-advi" >
+            <h2>เพิ่ม/แก้ไข ข้อมูลอาจารย์</h2>
+            <span class="close" onclick="closePopup('popup6')">&times;</span>
+            <form>
+                <div class="form-advi">
+                <label>รหัสอาจารย์ :</label>
+                <input type="text" placeholder="T001">
+
+                <label>ตำแหน่งวิชาการ :</label>
+                <input type="text" placeholder="รองศาสตราจารย์">
+
+                <label>ชื่อ-นามสกุล :</label>
+                <input type="text" placeholder="อนิราช มิ่งขวัญ">
+
+                <label>อีเมล :</label>
+                <input type="email" placeholder="example@example.com">
+
+                <label>เบอร์โทร :</label>
+                <input type="text" placeholder="098-999-9999">
+
+                <label>ภาควิชา :</label>
+                <select>
+                    <option disabled selected>เลือกสาขาวิชา</option>
+                    <option>IT</option>
+                    <option>ITI</option>
+                    <option>INE</option>
+                    <option>INET</option>
+                </select>
+
+                <label>ตำแหน่งในระบบ :</label>
+                <select>
+                    <option disabled selected>เลือกตำแหน่ง</option>
+                    <option>ประธาน</option>
+                    <option>กรรมการ</option>
+                    <option>อาจารย์ที่ปรึกษา</option>
+                    <option>อาจารย์ที่ปรึกษาร่วม</option>
+                </select>
+
+                <label>สถานะ :</label>
+                <div class="status-toggle-advi">
+                    <input type="checkbox" id="status-advi-6" checked>
+                    <label for="status-advi-6" class="switch-advi"></label>
+                    <span class="status-text-advi">Active</span>
+                </div>
+                </div>
+
+                <div class="btn-area-advi">
+                <button class="cancel-advi" type="reset">ยกเลิก</button>
+                <button class="save-advi" type="submit">บันทึก</button>
+                </div>
+            </form>
+        </div>
+        </div>
+
+        <!-- popup box 7 -->
+        <div class="popup-advi" id="popup7">
+        <div class="popup-content-advi" >
+            <h2>เพิ่ม/แก้ไข ข้อมูลอาจารย์</h2>
+            <span class="close" onclick="closePopup('popup7')">&times;</span>
+            <form>
+                <div class="form-advi">
+                <label>รหัสอาจารย์ :</label>
+                <input type="text" placeholder="T001">
+
+                <label>ตำแหน่งวิชาการ :</label>
+                <input type="text" placeholder="รองศาสตราจารย์">
+
+                <label>ชื่อ-นามสกุล :</label>
+                <input type="text" placeholder="อนิราช มิ่งขวัญ">
+
+                <label>อีเมล :</label>
+                <input type="email" placeholder="example@example.com">
+
+                <label>เบอร์โทร :</label>
+                <input type="text" placeholder="098-999-9999">
+
+                <label>ภาควิชา :</label>
+                <select>
+                    <option disabled selected>เลือกสาขาวิชา</option>
+                    <option>IT</option>
+                    <option>ITI</option>
+                    <option>INE</option>
+                    <option>INET</option>
+                </select>
+
+                <label>ตำแหน่งในระบบ :</label>
+                <select>
+                    <option disabled selected>เลือกตำแหน่ง</option>
+                    <option>ประธาน</option>
+                    <option>กรรมการ</option>
+                    <option>อาจารย์ที่ปรึกษา</option>
+                    <option>อาจารย์ที่ปรึกษาร่วม</option>
+                </select>
+
+                <label>สถานะ :</label>
+                <div class="status-toggle-advi">
+                    <input type="checkbox" id="status-advi-7" checked>
+                    <label for="status-advi-7" class="switch-advi"></label>
+                    <span class="status-text-advi">Active</span>
+                </div>
+                </div>
+
+                <div class="btn-area-advi">
+                <button class="cancel-advi" type="reset">ยกเลิก</button>
+                <button class="save-advi" type="submit">บันทึก</button>
+                </div>
+            </form>
+        </div>
+        </div>
+
+        <!-- Popup ยืนยันการลบ -->
+        <div class="delete-popup-advi" id="deletePopup">
+        <div class="delete-popup-content-advi">
+            <div class="delete-header">
+            &#9888; <span>ยืนยันการลบข้อมูล</span>
             </div>
+            <div class="delete-body-advi">
+            <p>คุณต้องการลบข้อมูลออกจากระบบหรือไม่?</p>
+            <p style="color:#FF4500;">*ข้อมูลที่ถูกลบจะไม่สามารถกู้คืนได้</p>
             </div>
-
-            <div class="btn-area-advi">
-            <button class="cancel-advi" id="closePopupBtn">ยกเลิก</button>
-            <button class="save-advi">บันทึก</button>
+            <div class="delete-buttons">
+            <button class="cancel-btn-advi" onclick="closePopup('deletePopup')">ยกเลิก</button>
+            <button class="confirm-btn-advi" onclick="closePopup('deletePopup')">ตกลง</button>
             </div>
         </div>
         </div>
@@ -198,34 +553,28 @@
     </div>
 
     <script>
-        document.getElementById("openPopupBtn").addEventListener("click", () => {
-        document.getElementById("popupAdvi").classList.add("show");
-        });
-        document.getElementById("closePopupBtn").addEventListener("click", () => {
-        document.getElementById("popupAdvi").classList.remove("show");
-        });
-        document.getElementById("popupAdvi").addEventListener("click", (e) => {
-        if (e.target.id === "popupAdvi") {
-            e.target.classList.remove("show");
-        }
-        });
+        function openPopup(id) {
+            document.getElementById(id).style.display = "flex";
+            }
+
+            function closePopup(id) {
+            document.getElementById(id).style.display = "none";
+            }
 
         // เปลี่ยนสถานะ Active/Inactive
-        const statusCheckbox = document.getElementById("status-advi");
-        const statusText = document.querySelector(".status-text-advi");
-
-        statusCheckbox.addEventListener("change", () => {
-        if (statusCheckbox.checked) {
-            statusText.textContent = "Active";
-            statusText.classList.remove("inactive");
-            statusText.style.color = "#0DBD00";
-        } else {
-            statusText.textContent = "Inactive";
-            statusText.classList.add("inactive");
-            statusText.style.color = "#999";
-        }
+        document.querySelectorAll('.status-advi').forEach((checkbox) => {
+            const statusText = checkbox.nextElementSibling.nextElementSibling;
+            checkbox.addEventListener('change', () => {
+                if (checkbox.checked) {
+                    statusText.textContent = "Active";
+                    statusText.style.color = "#0DBD00";
+                } else {
+                    statusText.textContent = "Inactive";
+                    statusText.style.color = "#999";
+                }
+            });
         });
-        </script>
+    </script>
     
 </body>
 </html>

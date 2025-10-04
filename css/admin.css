@@ -176,7 +176,7 @@ body{
 h2 {
     text-align: center;
     margin-bottom: 0px;
-    color: #333;
+    color: black;
 }
 .search-filter-advi {
     display: flex; justify-content: space-between; align-items: center;
@@ -222,7 +222,7 @@ h2 {
 }
 .teacher-card-advi h3 {
     margin: 1%;
-    color: #333;
+    color: black;
 }
 .teacher-card-advi p {
     margin: 1%;
@@ -275,161 +275,171 @@ h2 {
     padding: 6px 12px;
     cursor: pointer;
 }
-.page-btn:hover {
-    background-color: #eee;
-}
+.page-btn:hover {background-color: #eee;}
 .page-btn.active {
     background-color: #FA4616; color: white;
     border: none;
 }
-/* 🔘 ปุ่มเปิด popup */
 .add-btn-advi {
-  background-color: #FA4616;
-  color: white;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 8px;
-  font-weight: bold;
-  cursor: pointer;
+    background-color: #FA4616;color: white;
+    border: none;border-radius: 8px;
+    padding: 8px 16px;
+    font-weight: bold;
+    cursor: pointer;
 }
-.add-btn-advi:hover {
-  background-color: #d83c10;
-}
-
-/* 🔲 พื้นหลัง Popup */
+.add-btn-advi:hover {background-color: #d83c10;}
 .popup-advi {
-  position: fixed;
-  inset: 0;
-  background-color: rgba(0,0,0,0.4);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 100;
-  visibility: hidden;
-  opacity: 0;
-  transition: 0.3s;
+    display: none;
+    position: fixed;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5);
+    align-items: center;
+    justify-content: center;
 }
-
-/* แสดง popup */
 .popup-advi.show {
-  visibility: visible;
-  opacity: 1;
+    visibility: visible;
+    opacity: 1;
 }
-
-/* 🧩 กล่องฟอร์ม */
 .popup-content-advi {
-  background: white;
-  padding: 24px 28px;
-  border-radius: 12px;
-  width: 480px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    background: white;
+    padding: 24px 28px;
+    border-radius: 12px;
+    width: 480px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    position: relative;
 }
-
 .popup-content-advi h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
 }
-
-/* 🧾 Form แบบ Grid */
 .form-advi {
-  display: grid;
-  grid-template-columns: 140px 1fr;
-  align-items: center;
-  row-gap: 10px;
-  column-gap: 10px;
-  font-size: 14px;
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    align-items: center;
+    row-gap: 10px;
+    column-gap: 10px;
+    font-size: 18px;
 }
-
 .form-advi label {
-  font-weight: bold;
-  color: #333;
+    font-weight: bold;
+    color: #333;
 }
-
 .form-advi input,
 .form-advi select {
-  padding: 6px 10px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  font-size: 14px;
-  width: 100%;
+    padding: 6px 10px;
+    border-radius: 6px;border: 1px solid #ccc;
+    font-size: 18px;
+    width: 100%;
 }
-
-/* 🔘 ปุ่มบันทึก / ยกเลิก */
 .btn-area-advi {
-  text-align: right;
-  margin-top: 16px;
-  display: flex;
-  justify-content: flex-end;
-  gap: 10px;
+    margin-top: 16px;
+    display: flex;text-align: right;justify-content: flex-end;
+    gap: 10px;
 }
-
 .save-advi, .cancel-advi {
-  border: none;
-  padding: 8px 18px;
-  border-radius: 8px;
-  font-weight: bold;
-  cursor: pointer;
+    border: none;border-radius: 8px;
+    padding: 8px 18px;
+    font-weight: bold;
+    cursor: pointer;
 }
-
 .save-advi {
-  background-color: #FA4616;
-  color: white;
+    background-color: #0DBD00;
+    color: white;
 }
-.save-advi:hover {
-  background-color: #FA4616;
+.save-advi:active {
+    transform: scale(0.98);
+    background-color: #0DBD00;
 }
-
 .cancel-advi {
-  background-color: #ccc;
-  color: #333;
+    background-color: #FA4616;
+    color: white;
 }
-.cancel-advi:hover {
-  background-color: #b3b3b3;
+.cancel-advi:active {
+    transform: scale(0.98);
+    background-color: #FA4616;
 }
-
-/* 🔘 สวิตช์สถานะ */
 .status-toggle-advi {
-  display: flex;
-  align-items: center;
-  gap: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
-
 .status-toggle-advi input {
-  display: none;
+    display: none;
 }
-
 .switch-advi {
-  width: 38px;
-  height: 20px;
-  background-color: #ccc;
-  border-radius: 20px;
-  position: relative;
-  cursor: pointer;
-  transition: 0.3s;
+    width: 38px;height: 20px;
+    background-color: #ccc;
+    border-radius: 20px;
+    position: relative;
+    cursor: pointer;
+    transition: 0.3s;
 }
-
 .switch-advi::after {
-  content: "";
-  width: 16px;
-  height: 16px;
-  background-color: white;
-  position: absolute;
-  top: 2px;
-  left: 2px;
-  border-radius: 50%;
-  transition: 0.3s;
+    content: "";
+    width: 16px;height: 16px;
+    background-color: white;
+    position: absolute;
+    top: 2px;left: 2px;
+    border-radius: 50%;
+    transition: 0.3s;
 }
-
 .status-toggle-advi input:checked + .switch-advi {
-  background-color: #0DBD00;
+    background-color: #0DBD00;
 }
-
-.status-toggle-advi input:checked + .switch-advi::after {
-  transform: translateX(18px);
-}
-
+.status-toggle-advi input:checked + .switch-advi::after {transform: translateX(18px);}
 .status-text-advi {
-  font-weight: bold;
-  color: #0DBD00;
+    font-weight: bold;
+    color: #0DBD00;
+}
+.close {
+    position: absolute;
+    top: 2%; right: 4%;    
+    font-size: 24px; font-weight: bold;
+    color: black;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+.delete-popup-advi {
+    display: none;position: fixed;
+    top: 0;left: 0;
+    width: 100%;height: 100%;
+    background: rgba(0,0,0,0.5);
+    align-items: center; justify-content: center;
+}
+.delete-popup-content-advi {
+    background: #fff;
+    border-radius: 12px;
+    width: 400px;
+    padding: 20px;
+    text-align: center;
+}
+.delete-header-advi {
+    font-size: 18px; font-weight: bold;
+    margin-bottom: 15px;
+}
+.delete-buttons-advi {
+    margin-top: 20px;
+    display: flex; justify-content: space-between;
+}
+.cancel-btn-advi {
+    background: #999;color: white;
+    border: none; border-radius: 8px;
+    padding: 10px 25px;
+    cursor: pointer;
+}
+.cancel-btn-advi:active{
+    transform: scale(0.98);
+    background: #999;
+}
+.confirm-btn-advi {
+    background: #FA4616;
+    color: white;
+    border: none; border-radius: 8px;
+    padding: 10px 25px;
+    cursor: pointer;
+}
+.confirm-btn-advi:active{
+    transform: scale(0.98);
+    background: #FA4616;
 }

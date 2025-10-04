@@ -157,7 +157,10 @@ body{
 }
 
 /* Content */
-.content-project {
+.content-project,
+.content-progress,
+.content-topic,
+.content-exam{
     grid-area: content;
     background-color: #ffffff;
     padding: 20px;
@@ -176,11 +179,11 @@ body{
     display: flex;       /* เรียงแนวนอน */
     gap: 20px;           /* ระยะห่างระหว่างกล่อง */
     flex-wrap: wrap;     /* พับลงบรรทัดใหม่ถ้าหน้าจอเล็ก */
-    justify-content: center;
+    justify-content: center; /* เริ่มชิดซ้าย */
 }
 
 .box-content {
-    width: 45%;
+    width: 31%;
     min-width: 30%;    /* ขนาดเล็กสุดเพื่อ responsive */
     padding: 10px 15px;
     margin: 2px 0;
@@ -199,15 +202,33 @@ body{
     margin: 5px 0 5px 10px;       /* ช่องว่างบรรทัดบน-ล่าง */
 }
 
-.box-content .detail {
-    height: 100%;
+.detail {
+    width: 90px;
     border-radius: 5px;
     background-color: #FA4616;
     color: #ffffff;
     border: none;
     cursor: pointer;
     margin-left: auto;
-    padding: 5px 5px;
+    margin-top: auto;
+}
+
+.pagination-advi {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    gap: 8px;
+}
+.page-btn {
+    background-color: white;
+    border: 1px solid #ccc; border-radius: 8px;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+.page-btn:hover {background-color: #eee;}
+.page-btn.active {
+    background-color: #FA4616; color: white;
+    border: none;
 }
 
 /* Popup ซ่อนโดย default */
@@ -231,6 +252,14 @@ body{
     display: flex;
     gap: 20px;
     position: relative;
+}
+
+.box-content p{
+    color: #555;
+}
+
+.box-content .head-approve {
+    color: #000000;
 }
 
 .box-popup {
@@ -261,14 +290,15 @@ body{
     min-width: 250px;
 }
 
-.label {
+ .label {
     font-weight: bold;
     margin: 10px 0 5px 0;
     color: #333;
+    
 }
 
 .value {
-    margin: 3px 0;
+    margin: 3px 20px;
     font-size: 14px;
     color: #555;
 }
@@ -423,7 +453,7 @@ button.edit{
 }
 
 .main-project .std-project {
-    color: #9F9F9F;
+    color: #555;;
 }
 
 .main-project p {
@@ -445,21 +475,21 @@ button.edit{
 .progress-bar {
     width: 100%;
     background-color: #ddd;
-    margin: 2px 0px 2px 0px; /* เว้นระยะจากข้อความด้านบนและปุ่มด้านล่าง */
-    border-radius: 10px;
+    height: 10px;
+    border-radius: 12px; /* ให้ตรงกับแถบด้านใน */
     overflow: hidden;
+    margin-bottom: 10px; /* เว้นระยะกับส่วนอื่น */
 }
 
 .progress {
-    height: 8px;
+    height: 100%;
+    width: 100%; /* หรือปรับตามเปอร์เซ็นต์ */
     background-color: #FA4616;
-    width: 50%; /* ปรับตามเปอร์เซ็นต์จริง */
+    border-radius: 12px; /* ต้องตรงกับ .progress-bar */
     text-align: center;
     color: white;
-    line-height: 8px;
-    border-radius: 12px;
-    font-size: 12px;
-    font-weight: bold; 
+    line-height: 12px;
+    font-size: 10px;
 }
 
 .btn-project {
@@ -641,5 +671,97 @@ button.submit-comment {
     text-align: center;
     align-items: center;    /* แนวตั้ง*/
     justify-content: center;  /* แนวนอน */
-    
+}
+
+/* ตรวจสอบการสอบหัวข้อ */
+
+.section {
+  flex: 1;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.card {
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  font-size: 16px;
+  background-color: #fff;
+  color: #000000;
+}
+
+.card strong {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.card .number {
+    display: block;
+    font-size: 40px; /* ตัวเลขใหญ่ขึ้น */
+}
+
+/* .total {
+    color: #000000; ทั้งหมด
+}
+
+.pass {
+    color: #0DBD00; ผ่าน
+}
+
+.fail {
+    color: #d90000; ไม่ผ่าน
+}
+
+.revise {
+    color: #EB5406; แก้ไข
+}
+
+.pending {
+ color: #FF8400;รอต่างๆ
+}
+
+.retake {
+    color: #065ef6;สอบใหม่
+} */
+
+.filters {
+  display: flex;
+  justify-content: flex-end;
+  gap: 30px;
+  margin-bottom: 10px;
+  margin-right: 20px;
+}
+
+select {          
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    background-color: #fff;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.content-status {
+  grid-area: content;
+  background-color: #ffffff;
+  padding: 20px;
+  overflow-y: auto; 
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.filters .dropdown-project {
+    font-size: 18px;
+    margin-top: 5px;
 }

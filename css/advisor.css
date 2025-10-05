@@ -186,7 +186,7 @@ body{
     width: 31%;
     min-width: 30%;    /* ขนาดเล็กสุดเพื่อ responsive */
     padding: 10px 15px;
-    margin: 2px 0;
+    margin: 15px 0;
     color: #080808;
     background-color: #ffffff;
     border-radius: 10px;
@@ -248,7 +248,7 @@ body{
     padding: 20px;
     border-radius: 10px;
     width: 55%;
-    height: 70%;
+    height: 80%;
     display: flex;
     gap: 20px;
     position: relative;
@@ -376,11 +376,16 @@ button.edit{
 }
 
 /* ตรวจสอบความก้าวหน้าโครงงาน */
-.content-progress {
-    grid-area: content;
-    background-color: #ffffff;
+
+.popup-progress {
+    background: #fff;
     padding: 20px;
-    overflow-y: auto;
+    border-radius: 10px;
+    width: 55%;
+    height: 70%;
+    display: flex;
+    gap: 20px;
+    position: relative;
 }
 
 .box-progress {
@@ -587,6 +592,7 @@ button.edit{
     margin-left: 10px;
 }
 
+/* อัพเดตเปอร์เซ็นต์ */
 .action {
     margin-top: 10px;
     display: flex;
@@ -633,6 +639,15 @@ button.edit{
     accent-color: green; /* กรอบเขียว */
 }
 
+/* ปุ่มบันทึก */
+.action-buttons {
+    position: absolute; 
+    bottom: 15px;       
+    right: 15px;        
+    text-align: right;  
+    margin: 0;          
+}
+
 button.submit-comment {
     background-color: #FA4616; 
     border: none;
@@ -675,6 +690,33 @@ button.submit-comment {
 
 /* ตรวจสอบการสอบหัวข้อ */
 
+/* สีสถานะ */
+.status-pending {
+    color: #FF8400;
+    font-weight: bold;
+}
+
+.status-rejected {
+    color: #d90000; 
+    font-weight: bold;
+}
+
+.status-approved-edit {
+    color: #EB5406;
+    font-weight: bold;
+}
+
+.status-approved {
+    color: #0DBD00; 
+    font-weight: bold;
+}
+
+.status-new {
+    color: #065ef6;
+    font-weight: bold;
+}
+
+/* สถานะโครงงานทั้งหมด */
 .section {
   flex: 1;
 }

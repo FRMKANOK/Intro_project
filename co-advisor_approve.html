@@ -25,17 +25,17 @@
               <p class="semester">ภาคเรียนที่ 1 ปีการศึกษา 2568</p>  
               <div class="user">
                     <img src="image/person.png" alt="User">
-                    <p>Advisor</p>
+                    <p>Co-Advisor</p>
                     <button id="logout"><a href="index.html">ออกจากระบบ</a></button>
               </div>
         </div>
 
         <div class="sidebar">
                <a href="#" style="background-color: #FA4616;">ตรวจสอบ / อนุมัติหัวข้อโครงงาน</a>
-               <a href="advisor_progress.html">ตรวจสอบความก้าวหน้าโครงงาน</a>
-               <a href="advisor_topic.html">ตรวจสอบการสอบหัวข้อ</a>
-               <a href="advisor_exam.html">ตรวจสอบการสอบจบ</a>
-               <a href="advisor_status.html">สถานะโครงงานทั้งหมด</a>
+               <a href="co-advisor_progress.html">ตรวจสอบความก้าวหน้าโครงงาน</a>
+               <a href="co-advisor_topic.html">ตรวจสอบการสอบหัวข้อ</a>
+               <a href="co-advisor_exam.html">ตรวจสอบการสอบจบ</a>
+               <a href="co-advisor_status.html">สถานะโครงงานทั้งหมด</a>
         </div>
 
         <div class="content-project">
@@ -137,25 +137,28 @@
 
                             <!-- right -->
                             <div class="box-right">
-                                <form>
-                                    <div class="label">แสดงความคิดเห็น</div>
-                                    <textarea id="comment" placeholder="แสดงความคิดเห็นที่นี่..."></textarea>
-                                    <div class="date" id="commentDate"></div>
-                                    <div class="label">สถานะการตรวจสอบ</div>
-                                    <div class="status-choice">
-                                        <select name="approve" required>
-                                            <option value="" selected disabled hidden>-- เลือกสถานะ --</option>
-                                            <option value="yes">อนุมัติ</option>
-                                            <option value="no">ไม่อนุมัติ</option>
-                                        </select>
-                                    </div>
+                                
 
-                                    <!-- button -->
-                                    <div class="action-buttons">
-                                        <button type="submit" class="submit">บันทึก</button>
-                                        <button type="reset"class="edit">ยกเลิก</button>
-                                    </div>
-                                </form>
+                                        <form>
+                                            <div class="label">แสดงความคิดเห็น</div>
+                                            <textarea id="comment" placeholder="แสดงความคิดเห็นที่นี่..."></textarea>
+                                            <div class="date" id="commentDate"></div>
+                                            <div class="label">สถานะการตรวจสอบ</div>
+                                            <div class="status-choice">
+                                                <select name="approve" required>
+                                                    <option value="" selected disabled hidden>-- เลือกสถานะ --</option>
+                                                    <option value="yes">อนุมัติ</option>
+                                                    <option value="no">ไม่อนุมัติ</option>
+                                                </select>
+                                            </div>
+
+                                            <!-- button -->
+                                            <div class="action-buttons">
+                                                <button type="submit" class="submit">บันทึก</button>
+                                                <button type="reset"class="edit">ยกเลิก</button>
+                                            </div>
+                                        </form>
+                                
                             </div>
                         </div>
                     </div>

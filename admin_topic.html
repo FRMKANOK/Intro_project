@@ -33,18 +33,519 @@
         <div class="sidebar">
                <a href="admin_advisor.html" >จัดการข้อมูลอาจารย์</a>
                <a href="admin_project.html">จัดการข้อมูลโครงงาน</a>
-               <a href="#" style="background-color: #FA4616;">ตารางสอบหัวข้อ</a>
-               <a href="admin_exam.html">ตารางสอบจบ</a>
+               <a href="#" style="background-color: #FA4616;">จัดการข้อมูลสอบหัวข้อ</a>
+               <a href="admin_exam.html">จัดการข้อมูลสอบจบ</a>
                <a href="admin_overview.html">รายงานสรุปโครงงาน</a>
         </div>
 
-        <div class="content">
-               
+        <div class="content-admin-topic">
+            <div class="head-admin-topic">สอบหัวข้อ</div>
+            <div class="cont-contain-admin-advisor">
+                <div class="search-filter-advi">
+                <div class="proj">
+                    <input type="text" class="search-topic" placeholder="ค้นหา..." >
+                    <select>
+                        <option>ปีการศึกษา</option>
+                        <option>2568</option>
+                        <option>2567</option>
+                        <option>2566</option>
+                        <option>2565</option>
+                    </select>
+                    <select>
+                        <option>สถานะโครงงาน</option>
+                        <option>รออนุมัติหัวข้อ</option>
+                        <option>รอสอบหัวข้อ</option>
+                        <option>ระหว่างดำเนินงาน</option>
+                        <option>รอสอบจบ</option>
+                        <option>เสร็จสิ้น</option>
+                    </select>
+                </div>
+                <button class="add-btn-advi" onclick="openPopup('popup2')">เพิ่มโครงงาน</button>
+                </div>
+
+            <!-- การ์ดแสดงข้อมูล -->
+            <div class="card-grid-proj">
+                <div class="card-proj">
+                    <h3>ระบบจัดการเครือข่ายองค์กรอัจฉริยะ</h3>
+                    <p>ชื่อนักศึกษา : กานต์ชนก ศรีประเสริฐ</p>
+                    <p>อาจารย์ที่ปรึกษา : รศ.ดร.อนิราช มิ่งขวัญ</p>
+                    <p>วันสอบ : 30 กันยายน 2568</p>
+                    <p>เวลา : 09:00 น.</p>
+                    <p>สถานที่ : ตึกคณะเทคโนฯ B409</p>
+                    <p>สถานะโครงงาน : <span class="status-pending">รอสอบหัวข้อ</span></p>
+                    <div class="card-buttons-advi">
+                        <button class="edit-advi" onclick="openPopup('popup1')">แก้ไข</button>
+                        <button class="delete-advi" onclick="openPopup('deletePopup')">ลบ</button>
+                    </div>
+                </div>
+
+                <div class="card-proj">
+                    <h3>ระบบตรวจจับการบุกรุกเครือข่ายภายในองค์กร</h3>
+                    <p>ชื่อนักศึกษา : ภัทรพล สุวรรณศรี</p>
+                    <p>อาจารย์ที่ปรึกษา : รศ.ดร.ยุพิน สรรพคุณ</p>
+                    <p>วันสอบ : 30 กันยายน 2568</p>
+                    <p>เวลา : 10:00 น.</p>
+                    <p>สถานที่ : ตึกคณะเทคโนฯ B409</p>
+                    <p>สถานะโครงงาน : <span class="status-pending">รอสอบหัวข้อ</span></p>
+                    <div class="card-buttons-advi">
+                        <button class="edit-advi" onclick="openPopup('popup1')">แก้ไข</button>
+                        <button class="delete-advi" onclick="openPopup('deletePopup')">ลบ</button>
+                    </div>
+                </div>
+
+                <div class="card-proj">
+                    <h3>แพลตฟอร์มบริหารระบบคลาวด์และเซิร์ฟเวอร์ส่วนกลาง</h3>
+                    <p>ชื่อนักศึกษา : ชลธิชา แซ่ลี้</p>
+                    <p>อาจารย์ที่ปรึกษา : ผศ.อรบุษป์ วุฒิกมลชัย</p>
+                    <p>วันสอบ : 30 กันยายน 2568</p>
+                    <p>เวลา : 11:00 น.</p>
+                    <p>สถานที่ : ตึกคณะเทคโนฯ B409</p>
+                    <p>สถานะโครงงาน : <span class="status-process">ระหว่างดำเนินงาน</span></p>
+                    <div class="card-buttons-advi">
+                        <button class="edit-advi" onclick="openPopup('popup1')">แก้ไข</button>
+                        <button class="delete-advi" onclick="openPopup('deletePopup')">ลบ</button>
+                    </div>
+                </div>
+
+                <div class="card-proj">
+                    <h3>ระบบตรวจสอบการทำงานของอุปกรณ์เครือข่ายด้วย AI</h3>
+                    <p>ชื่อนักศึกษา : ธนกฤต พิพัฒน์กุล</p>
+                    <p>อาจารย์ที่ปรึกษา : ผศ.สิวาลัย จินเจือ</p>
+                    <p>วันสอบ : 31 กันยายน 2568</p>
+                    <p>เวลา : 09:00 น.</p>
+                    <p>สถานที่ : ตึกคณะเทคโนฯ B409</p>
+                    <p>สถานะโครงงาน : <span class="status-approved">เสร็จสิ้น</span></p>
+                    <div class="card-buttons-advi">
+                        <button class="edit-advi" onclick="openPopup('popup1')">แก้ไข</button>
+                        <button class="delete-advi" onclick="openPopup('deletePopup')">ลบ</button>
+                    </div>
+                </div>
+
+                <div class="card-proj">
+                    <h3>ระบบเฝ้าระวังความปลอดภัยทางไซเบอร์แบบเรียลไทม์</h3>
+                    <p>ชื่อนักศึกษา : อมรรัตน์ สมบูรณ์</p>
+                    <p>อาจารย์ที่ปรึกษา : ผศ.นิมิต ศรีคำทา</p>
+                    <p>วันสอบ : 31 กันยายน 2568</p>
+                    <p>เวลา : 10:00 น.</p>
+                    <p>สถานที่ : ตึกคณะเทคโนฯ B409</p>
+                    <p>สถานะโครงงาน : <span class="status-pending">รอสอบจบ</span></p>
+                    <div class="card-buttons-advi">
+                        <button class="edit-advi" onclick="openPopup('popup1')">แก้ไข</button>
+                        <button class="delete-advi" onclick="openPopup('deletePopup')">ลบ</button>
+                    </div>
+                </div>
+
+                <div class="card-proj">
+                    <h3>โครงข่ายไร้สายอัจฉริยะสำหรับอาคารอัจฉริยะ (Smart Building)</h3>
+                    <p>ชื่อนักศึกษา : วีรภัทร ตั้งจิตเจริญ</p>
+                    <p>อาจารย์ที่ปรึกษา : รศ.ดร.ยุพิน สรรพคุณ</p>
+                    <p>วันสอบ : 31 กันยายน 2568</p>
+                    <p>เวลา : 11:00 น.</p>
+                    <p>สถานที่ : ตึกคณะเทคโนฯ B409</p>
+                    <p>สถานะโครงงาน : <span class="status-pending">รออนุมัติหัวข้อ</span></p>
+                    <div class="card-buttons-advi">
+                        <button class="edit-advi" onclick="openPopup('popup1')">แก้ไข</button>
+                        <button class="delete-advi" onclick="openPopup('deletePopup')">ลบ</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- แถบ Pagination -->
+            <div class="pagination-advi">
+                <button class="page-btn active">1</button>
+                <button class="page-btn">2</button>
+                <button class="page-btn">3</button>
+                <button class="page-btn">4</button>
+            </div>
+            </div>
+
+            <!-- popup box add -->
+            <div class="popup-advi" id="popup2">
+            <div class="popup-content-advi" style="width: 50%;">
+                <h2>แก้ไขรายละเอียดการสอบหัวข้อ</h2>
+                <span class="close" onclick="closePopup('popup2')">&times;</span>
+                <form>
+                    <div class="form-advi">
+                    <label>รหัสโครงงาน :</label>
+                    <input type="text" required>
+
+                    <label>ชื่อโครงงาน(ไทย) :</label>
+                    <input type="text" required>
+
+                    <label>ชื่อโครงงาน(อังกฤษ) :</label>
+                    <input type="text" required>
+
+                    <label>ปีการศึกษา :</label>
+                    <select required>
+                        <option value="" disabled selected>เลือกปีการศึกษา</option>
+                        <option value="">2568</option> 
+                        <option value="">2567</option>
+                        <option value="">2566</option>
+                        <option value="">2565</option>
+                    </select>
+
+                    <label>สมาชิกโครงงาน :</label>
+                    <input type="text" required>
+                    <label>รหัสนักศึกษา อีเมล :</label>
+                    <div class="input-row-topic">
+                        <input type="text" required>
+                        <input type="email" required>
+                    </div>
+
+                    <label>สมาชิกโครงงานคนที่ 2 (ถ้ามี) :</label>
+                    <input type="text">
+                    <label>รหัสนักศึกษา อีเมล :</label>
+                    <div class="input-row-topic">
+                        <input type="text">
+                        <input type="email">
+                    </div>
+
+                    <label>สมาชิกโครงงานคนที่ 3 (ถ้ามี) :</label>
+                    <input type="text" >
+                    <label>รหัสนักศึกษา อีเมล :</label>
+                    <div class="input-row-topic">
+                        <input type="text">
+                        <input type="email">
+                    </div>
+
+                    <label>สมาชิกโครงงานคนที่ 4 (ถ้ามี) :</label>
+                    <input type="text">
+                    <label>รหัสนักศึกษา อีเมล :</label>
+                    <div class="input-row-topic">
+                        <input type="text">
+                        <input type="email">
+                    </div>
+
+                    <label>อาจารย์ที่ปรึกษา :</label>
+                    <input type="text" required>
+
+                    <label>อาจารย์ที่ปรึกษาร่วม :</label>
+                    <input type="text" required>
+
+                    <label>สถานที่สอบ :</label>
+                    <input type="text" required>
+
+                    <label>วัน เวลาสอบ :</label>
+                    <div class="input-row-topic">
+                        <input type="text" required>
+                        <input type="text" required>
+                    </div>
+
+
+                    <label>กรรมการสอบ :</label>
+                    <select required>
+                        <option value="" disabled selected>เลือกกรรมการสอบคนที่ 1</option>
+                        <option value="">รศ.ดร.อนิราช มิ่งขวัญ</option>
+                        <option value="">ผศ.อรบุษป์ วุฒิกมลชัย</option>
+                        <option value="">ผศ.ดร.บีสุดา ดาวเรือง</option>
+                        <option value="">ผศ.ดร.ขนิษฐา นามี</option>
+                        <option value="">อ.ดร.กาญจน ณ ศรีธะ</option>
+                        <option value="">ผศ.นพดล บูรณ์กุศล</option>
+                        <option value="">ผศ.จสต.นพเก้า ทองใบ</option>
+                        <option value="">ผศ.ดร.นิติการ นาคเจือทอง</option>
+                        <option value="">ผศ.ดร.นัฎฐพันธ์ นาคพงษ์</option>
+                        <option value="">ผศ.นิมิต ศรีคำทา</option>
+                        <option value="">อ.ดร.พิทย์พิมล ชูรอด</option>
+                        <option value="">ผศ.ดร.พาฝัน ดวงไพศาล</option>
+                        <option value="">อ.ดร.ประดิษฐ์ พิทักษ์เสถียรกุล</option>
+                        <option value="">ผศ.พีระศักดิ์ เสรีกุล</option>
+                        <option value="">ผศ.สมชัย เชียงพงศ์พันธุ์</option>
+                        <option value="">ผศ.ดร.สุปีติ กุลจันทร์</option>
+                        <option value="">ผศ.สิวาลัย จินเจือ</option>
+                        <option value="">ผศ.ดร.สุพาภรณ์ ซิ้มเจริญ</option>
+                        <option value="">ผศ.ดร.ศรายุทธ ธเนศสกุลวัฒนา</option>
+                        <option value="">อ.ดร.ศิรินทรา แว่วศรี</option>
+                        <option value="">อ.ดร.วัชรชัย คงศิริวัฒนา</option>
+                        <option value="">ผศ.ดร.วันทนี ประจวบศุภกิจ</option>
+                        <option value="">รศ.ดร.ยุพิน สรรพคุณ</option>
+                    </select>
+
+                    <label></label>
+                    <select required>
+                        <option value="" disabled selected>เลือกกรรมการสอบคนที่ 2</option>
+                        <option value="">รศ.ดร.อนิราช มิ่งขวัญ</option>
+                        <option value="">ผศ.อรบุษป์ วุฒิกมลชัย</option>
+                        <option value="">ผศ.ดร.บีสุดา ดาวเรือง</option>
+                        <option value="">ผศ.ดร.ขนิษฐา นามี</option>
+                        <option value="">อ.ดร.กาญจน ณ ศรีธะ</option>
+                        <option value="">ผศ.นพดล บูรณ์กุศล</option>
+                        <option value="">ผศ.จสต.นพเก้า ทองใบ</option>
+                        <option value="">ผศ.ดร.นิติการ นาคเจือทอง</option>
+                        <option value="">ผศ.ดร.นัฎฐพันธ์ นาคพงษ์</option>
+                        <option value="">ผศ.นิมิต ศรีคำทา</option>
+                        <option value="">อ.ดร.พิทย์พิมล ชูรอด</option>
+                        <option value="">ผศ.ดร.พาฝัน ดวงไพศาล</option>
+                        <option value="">อ.ดร.ประดิษฐ์ พิทักษ์เสถียรกุล</option>
+                        <option value="">ผศ.พีระศักดิ์ เสรีกุล</option>
+                        <option value="">ผศ.สมชัย เชียงพงศ์พันธุ์</option>
+                        <option value="">ผศ.ดร.สุปีติ กุลจันทร์</option>
+                        <option value="">ผศ.สิวาลัย จินเจือ</option>
+                        <option value="">ผศ.ดร.สุพาภรณ์ ซิ้มเจริญ</option>
+                        <option value="">ผศ.ดร.ศรายุทธ ธเนศสกุลวัฒนา</option>
+                        <option value="">อ.ดร.ศิรินทรา แว่วศรี</option>
+                        <option value="">อ.ดร.วัชรชัย คงศิริวัฒนา</option>
+                        <option value="">ผศ.ดร.วันทนี ประจวบศุภกิจ</option>
+                        <option value="">รศ.ดร.ยุพิน สรรพคุณ</option>
+                    </select>
+
+                    <label></label>
+                    <select required>
+                        <option value="" disabled selected>เลือกกรรมการสอบคนที่ 3</option>
+                        <option value="">รศ.ดร.อนิราช มิ่งขวัญ</option>
+                        <option value="">ผศ.อรบุษป์ วุฒิกมลชัย</option>
+                        <option value="">ผศ.ดร.บีสุดา ดาวเรือง</option>
+                        <option value="">ผศ.ดร.ขนิษฐา นามี</option>
+                        <option value="">อ.ดร.กาญจน ณ ศรีธะ</option>
+                        <option value="">ผศ.นพดล บูรณ์กุศล</option>
+                        <option value="">ผศ.จสต.นพเก้า ทองใบ</option>
+                        <option value="">ผศ.ดร.นิติการ นาคเจือทอง</option>
+                        <option value="">ผศ.ดร.นัฎฐพันธ์ นาคพงษ์</option>
+                        <option value="">ผศ.นิมิต ศรีคำทา</option>
+                        <option value="">อ.ดร.พิทย์พิมล ชูรอด</option>
+                        <option value="">ผศ.ดร.พาฝัน ดวงไพศาล</option>
+                        <option value="">อ.ดร.ประดิษฐ์ พิทักษ์เสถียรกุล</option>
+                        <option value="">ผศ.พีระศักดิ์ เสรีกุล</option>
+                        <option value="">ผศ.สมชัย เชียงพงศ์พันธุ์</option>
+                        <option value="">ผศ.ดร.สุปีติ กุลจันทร์</option>
+                        <option value="">ผศ.สิวาลัย จินเจือ</option>
+                        <option value="">ผศ.ดร.สุพาภรณ์ ซิ้มเจริญ</option>
+                        <option value="">ผศ.ดร.ศรายุทธ ธเนศสกุลวัฒนา</option>
+                        <option value="">อ.ดร.ศิรินทรา แว่วศรี</option>
+                        <option value="">อ.ดร.วัชรชัย คงศิริวัฒนา</option>
+                        <option value="">ผศ.ดร.วันทนี ประจวบศุภกิจ</option>
+                        <option value="">รศ.ดร.ยุพิน สรรพคุณ</option>
+                    </select>
+
+                    <label>สถานะ :</label>
+                    <select required>
+                        <option value="" disabled selected>เลือกสถานะ</option>
+                        <option value="">ผ่าน</option>
+                        <option value="">ไม่ผ่าน</option>
+                        <option value="">รอสอบ</option>
+                        <option value="">รอผลสอบ</option>
+                    </select>
+
+                    <label>ไฟล์แนบ :</label>
+                    <label for="fileUpload" class="add-file" style="color: blue; text-decoration: underline;">ปริญญานิพนธ์.pdf</label>
+                    <input type="file" id="fileUpload" style="display:none;">
+                    
+
+                    <label></label>
+                    <div class="btn-area-advi" style="width: 100%;">
+                        <button class="cancel-advi" type="reset">รีเซ็ต</button>
+                        <button class="save-advi" type="submit">บันทึก</button>
+                    </div>
+                </form>
+            </div>
+            </div>
+            </div>
+            
+            <!-- popup box 1 -->
+            <div class="popup-advi" id="popup1">
+            <div class="popup-content-advi" style="width: 50%;">
+                <h2>แก้ไขรายละเอียดการสอบหัวข้อ</h2>
+                <span class="close" onclick="closePopup('popup1')">&times;</span>
+                <form>
+                    <div class="form-advi">
+                    <label>รหัสโครงงาน :</label>
+                    <input type="text" placeholder="P001">
+
+                    <label>ชื่อโครงงาน(ไทย) :</label>
+                    <input type="text" placeholder="ระบบจัดการเครือข่ายองค์กรอัจฉริยะ">
+
+                    <label>ชื่อโครงงาน(อังกฤษ) :</label>
+                    <input type="text" placeholder="Intelligent Enterprise Network Management System">
+
+                    <label>ปีการศึกษา :</label>
+                    <select>
+                        <option disabled selected>เลือกปีการศึกษา</option>
+                        <option>2568</option> 
+                        <option>2567</option>
+                        <option>2566</option>
+                        <option>2565</option>
+                    </select>
+
+                    <label>สมาชิกโครงงาน :</label>
+                    <input type="text" placeholder="กานต์ชนก ศรีประเสริฐ">
+                    <label>รหัสนักศึกษา อีเมล :</label>
+                    <div class="input-row-topic">
+                        <input type="text" placeholder="6806000001001">
+                        <input type="text" placeholder="example1@example.com">
+                    </div>
+
+                    <label>สมาชิกโครงงานคนที่ 2 (ถ้ามี) :</label>
+                    <input type="text" placeholder="ธนากร แสงมี">
+                    <label>รหัสนักศึกษา อีเมล :</label>
+                    <div class="input-row-topic">
+                        <input type="text" placeholder="6806000001002">
+                        <input type="text" placeholder="example2@example.com">
+                    </div>
+
+                    <label>สมาชิกโครงงานคนที่ 3 (ถ้ามี) :</label>
+                    <input type="text" placeholder="-">
+                    <label>รหัสนักศึกษา อีเมล :</label>
+                    <div class="input-row-topic">
+                        <input type="text" placeholder="-">
+                        <input type="text" placeholder="-">
+                    </div>
+
+                    <label>สมาชิกโครงงานคนที่ 4 (ถ้ามี) :</label>
+                    <input type="text" placeholder="-">
+                    <label>รหัสนักศึกษา อีเมล :</label>
+                    <div class="input-row-topic">
+                        <input type="text" placeholder="-">
+                        <input type="text" placeholder="-">
+                    </div>
+
+                    <label>อาจารย์ที่ปรึกษา :</label>
+                    <input type="text" placeholder="รศ.ดร.อนิราช มิ่งขวัญ">
+
+                    <label>อาจารย์ที่ปรึกษาร่วม :</label>
+                    <input type="text" placeholder="ผศ.ดร.นิติการ นาคเจือทอง">
+
+                    <label>สถานที่สอบ :</label>
+                    <input type="text" placeholder="ตึกคณะเทคโนฯ ห้อง B409">
+
+                    <label>วัน เวลาสอบ :</label>
+                    <div class="input-row-topic">
+                        <input type="text" placeholder="30 กันยายน 2568">
+                        <input type="text" placeholder="09:00 น.">
+                    </div>
+
+
+                    <label>กรรมการสอบ :</label>
+                    <select>
+                        <option disabled selected>ดร.ยุพิน สรรพคุณ</option>
+                        <option>รศ.ดร.อนิราช มิ่งขวัญ</option>
+                        <option>ผศ.อรบุษป์ วุฒิกมลชัย</option>
+                        <option>ผศ.ดร.บีสุดา ดาวเรือง</option>
+                        <option>ผศ.ดร.ขนิษฐา นามี</option>
+                        <option>อ.ดร.กาญจน ณ ศรีธะ</option>
+                        <option>ผศ.นพดล บูรณ์กุศล</option>
+                        <option>ผศ.จสต.นพเก้า ทองใบ</option>
+                        <option>ผศ.ดร.นิติการ นาคเจือทอง</option>
+                        <option>ผศ.ดร.นัฎฐพันธ์ นาคพงษ์</option>
+                        <option>ผศ.นิมิต ศรีคำทา</option>
+                        <option>อ.ดร.พิทย์พิมล ชูรอด</option>
+                        <option>ผศ.ดร.พาฝัน ดวงไพศาล</option>
+                        <option>อ.ดร.ประดิษฐ์ พิทักษ์เสถียรกุล</option>
+                        <option>ผศ.พีระศักดิ์ เสรีกุล</option>
+                        <option>ผศ.สมชัย เชียงพงศ์พันธุ์</option>
+                        <option>ผศ.ดร.สุปีติ กุลจันทร์</option>
+                        <option>ผศ.สิวาลัย จินเจือ</option>
+                        <option>ผศ.ดร.สุพาภรณ์ ซิ้มเจริญ</option>
+                        <option>ผศ.ดร.ศรายุทธ ธเนศสกุลวัฒนา</option>
+                        <option>อ.ดร.ศิรินทรา แว่วศรี</option>
+                        <option>อ.ดร.วัชรชัย คงศิริวัฒนา</option>
+                        <option>ผศ.ดร.วันทนี ประจวบศุภกิจ</option>
+                        <option>รศ.ดร.ยุพิน สรรพคุณ</option>
+                    </select>
+
+                    <label></label>
+                    <select>
+                        <option disabled selected>ผศ.สิวาลัย จินเจือ</option>
+                        <option>รศ.ดร.อนิราช มิ่งขวัญ</option>
+                        <option>ผศ.อรบุษป์ วุฒิกมลชัย</option>
+                        <option>ผศ.ดร.บีสุดา ดาวเรือง</option>
+                        <option>ผศ.ดร.ขนิษฐา นามี</option>
+                        <option>อ.ดร.กาญจน ณ ศรีธะ</option>
+                        <option>ผศ.นพดล บูรณ์กุศล</option>
+                        <option>ผศ.จสต.นพเก้า ทองใบ</option>
+                        <option>ผศ.ดร.นิติการ นาคเจือทอง</option>
+                        <option>ผศ.ดร.นัฎฐพันธ์ นาคพงษ์</option>
+                        <option>ผศ.นิมิต ศรีคำทา</option>
+                        <option>อ.ดร.พิทย์พิมล ชูรอด</option>
+                        <option>ผศ.ดร.พาฝัน ดวงไพศาล</option>
+                        <option>อ.ดร.ประดิษฐ์ พิทักษ์เสถียรกุล</option>
+                        <option>ผศ.พีระศักดิ์ เสรีกุล</option>
+                        <option>ผศ.สมชัย เชียงพงศ์พันธุ์</option>
+                        <option>ผศ.ดร.สุปีติ กุลจันทร์</option>
+                        <option>ผศ.สิวาลัย จินเจือ</option>
+                        <option>ผศ.ดร.สุพาภรณ์ ซิ้มเจริญ</option>
+                        <option>ผศ.ดร.ศรายุทธ ธเนศสกุลวัฒนา</option>
+                        <option>อ.ดร.ศิรินทรา แว่วศรี</option>
+                        <option>อ.ดร.วัชรชัย คงศิริวัฒนา</option>
+                        <option>ผศ.ดร.วันทนี ประจวบศุภกิจ</option>
+                        <option>รศ.ดร.ยุพิน สรรพคุณ</option>
+                    </select>
+
+                    <label></label>
+                    <select>
+                        <option disabled selected>ผศ.จสต.นพเก้า ทองใบ</option>
+                        <option>รศ.ดร.อนิราช มิ่งขวัญ</option>
+                        <option>ผศ.อรบุษป์ วุฒิกมลชัย</option>
+                        <option>ผศ.ดร.บีสุดา ดาวเรือง</option>
+                        <option>ผศ.ดร.ขนิษฐา นามี</option>
+                        <option>อ.ดร.กาญจน ณ ศรีธะ</option>
+                        <option>ผศ.นพดล บูรณ์กุศล</option>
+                        <option>ผศ.จสต.นพเก้า ทองใบ</option>
+                        <option>ผศ.ดร.นิติการ นาคเจือทอง</option>
+                        <option>ผศ.ดร.นัฎฐพันธ์ นาคพงษ์</option>
+                        <option>ผศ.นิมิต ศรีคำทา</option>
+                        <option>อ.ดร.พิทย์พิมล ชูรอด</option>
+                        <option>ผศ.ดร.พาฝัน ดวงไพศาล</option>
+                        <option>อ.ดร.ประดิษฐ์ พิทักษ์เสถียรกุล</option>
+                        <option>ผศ.พีระศักดิ์ เสรีกุล</option>
+                        <option>ผศ.สมชัย เชียงพงศ์พันธุ์</option>
+                        <option>ผศ.ดร.สุปีติ กุลจันทร์</option>
+                        <option>ผศ.สิวาลัย จินเจือ</option>
+                        <option>ผศ.ดร.สุพาภรณ์ ซิ้มเจริญ</option>
+                        <option>ผศ.ดร.ศรายุทธ ธเนศสกุลวัฒนา</option>
+                        <option>อ.ดร.ศิรินทรา แว่วศรี</option>
+                        <option>อ.ดร.วัชรชัย คงศิริวัฒนา</option>
+                        <option>ผศ.ดร.วันทนี ประจวบศุภกิจ</option>
+                        <option>รศ.ดร.ยุพิน สรรพคุณ</option>
+                    </select>
+
+                    <label>สถานะ :</label>
+                    <select>
+                        <option disabled selected>ผ่าน</option>
+                        <option>ไม่ผ่าน</option>
+                        <option>รอสอบ</option>
+                        <option>รอผลสอบ</option>
+                    </select>
+
+                    <label>ไฟล์แนบ :</label>
+                    <label for="fileUpload" class="add-file" style="color: blue; text-decoration: underline;">ปริญญานิพนธ์.pdf</label>
+                    <input type="file" id="fileUpload" style="display:none;">
+                    
+
+                    <label></label>
+                    <div class="btn-area-advi" style="width: 100%;">
+                        <button class="cancel-advi" type="reset">รีเซ็ต</button>
+                        <button class="save-advi" type="submit">บันทึก</button>
+                    </div>
+                </form>
+            </div>
+            </div>
+            </div>
         </div>
-
-
+        <!-- Popup ยืนยันการลบ -->
+            <div class="delete-popup-advi" id="deletePopup">
+            <div class="delete-popup-content-advi">
+                <div class="delete-header">
+                &#9888; <span>ยืนยันการลบข้อมูล</span>
+                </div>
+                <div class="delete-body-advi">
+                <p>คุณต้องการลบข้อมูลออกจากระบบหรือไม่?</p>
+                <p style="color:#FF4500;">*ข้อมูลที่ถูกลบจะไม่สามารถกู้คืนได้</p>
+                </div>
+                <div class="delete-buttons">
+                <button class="cancel-btn-advi" onclick="closePopup('deletePopup')">ยกเลิก</button>
+                <button class="confirm-btn-advi" onclick="closePopup('deletePopup')">ตกลง</button>
+                </div>
+            </div>
     </div>
 
+    <script>
+        function openPopup(id) {
+            document.getElementById(id).style.display = "flex";
+            }
+
+            function closePopup(id) {
+            document.getElementById(id).style.display = "none";
+            }
+    </script>
     
 </body>
 </html>

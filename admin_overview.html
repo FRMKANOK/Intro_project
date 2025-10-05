@@ -33,16 +33,99 @@
         <div class="sidebar">
                <a href="admin_advisor.html" >จัดการข้อมูลอาจารย์</a>
                <a href="admin_project.html">จัดการข้อมูลโครงงาน</a>
-               <a href="admin_topic.html">ตารางสอบหัวข้อ</a>
-               <a href="admin_exam.html">ตารางสอบจบ</a>
+               <a href="admin_topic.html">จัดการข้อมูลสอบหัวข้อ</a>
+               <a href="admin_exam.html">จัดการข้อมูลสอบจบ</a>
                <a href="#"style="background-color: #FA4616;">รายงานสรุปโครงงาน</a>
         </div>
 
-        <div class="content">
-               
+        <div class="content-over">
+            <div class="head-content-over">โครงงานทั้งหมด</div>
+
+            <div class="filters">
+                    <div class="dropdown-project">ปีการศึกษา</div>
+                    <select>
+                        <option value="" selected disabled>เลือกปีการศึกษา</option>
+                        <option value="">2568</option>
+                        <option value="">2567</option>
+                        <option value="">2566</option>
+                    </select>
+                    <div class="dropdown-project">สาขาวิชา</div>
+                    <select>
+                        <option value="" selected>ทั้งหมด</option>
+                        <option value="">IT</option>
+                        <option value="">ITI</option>
+                        <option value="">INE</option>
+                        <option value="">INET</option>
+                    </select>
+                    </label>
+            </div>
+            <div class="container">
+                <!-- ฝั่งซ้าย: โครงงานสอบหัวข้อ -->
+                <div class="section">
+                    <h3>โครงงาน - สอบหัวข้อ</h3>
+                    <div class="grid">
+                        <div class="card total">
+                            <strong>โครงงานทั้งหมด</strong>
+                            <span class="number">10</span>
+                        </div>
+                        <div class="card pass">
+                            <strong>ผ่าน</strong>
+                            <span class="number">2</span>
+                        </div>
+                        <div class="card fail">
+                            <strong>ไม่ผ่าน</strong>
+                            <span class="number">1</span>
+                        </div>
+                        <div class="card revise">
+                            <strong>ผ่านแบบแก้ไข</strong>
+                            <span class="number">1</span>
+                        </div>
+                        <div class="card pending">
+                            <strong>รออนุมัติหัวข้อ</strong>
+                            <span class="number">2</span>
+                        </div>
+                        <div class="card pending">
+                            <strong>รอสอบหัวข้อ</strong>
+                            <span class="number">4</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ฝั่งขวา: โครงงานสอบจบ -->
+                <div class="section">
+                    <h3>โครงงาน - สอบจบ</h3>
+                    <div class="grid">
+                        <div class="card total">
+                            <strong>โครงงานทั้งหมด</strong>
+                            <span class="number">9</span>
+                        </div>
+                        <div class="card pass">
+                            <strong>ผ่าน</strong>
+                            <span class="number">2</span>
+                        </div>
+                        <div class="card revise">
+                            <strong>ผ่านแบบแก้ไข</strong>
+                            <span class="number">1</span>
+                        </div>
+                        <div class="card fail">
+                            <strong>ไม่ผ่าน</strong>
+                            <span class="number">1</span>
+                        </div>
+                        <div class="card retake">
+                            <strong>สอบใหม่</strong>
+                            <span class="number">3</span>
+                        </div>
+                        <div class="card pending">
+                            <strong>รอผลสอบ</strong>
+                            <span class="number">2</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="padding-top: 1%;">
+                <button class="confirm-btn-advi btn-over">ส่งออกรายงาน</button>
+            </div>
         </div>
-
-
     </div>
 
     

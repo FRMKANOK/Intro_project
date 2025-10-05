@@ -185,8 +185,8 @@ body{
 .box-content {
     width: 31%;
     min-width: 30%;    /* ขนาดเล็กสุดเพื่อ responsive */
-    padding: 10px 15px;
-    margin: 15px 0;
+    padding: 5px 15px;
+    margin: 2px 0;
     color: #080808;
     background-color: #ffffff;
     border-radius: 10px;
@@ -205,12 +205,13 @@ body{
 .detail {
     width: 90px;
     border-radius: 5px;
-    background-color: #FA4616;
+    background-color: #3B90FF;;
     color: #ffffff;
     border: none;
     cursor: pointer;
     margin-left: auto;
     margin-top: auto;
+    padding: 5px;
 }
 
 .pagination-advi {
@@ -242,13 +243,33 @@ body{
     align-items: center;
 }
 
-/* เนื้อหา Popup */
-.popup-content {
+.popup-approve {
     background: #fff;
     padding: 20px;
     border-radius: 10px;
     width: 55%;
-    height: 80%;
+    height: 68%;
+    display: flex;
+    gap: 20px;
+    position: relative;
+}
+
+/* ปุ่มปิด Popup */
+.popup .close {
+    position: absolute;
+    top: 2%; 
+    right: 2%;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* เนื้อหา Popup ของตรวจสอบความก้าวหน้า*/
+.popup-detail {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 55%;
+    height: 66%;
     display: flex;
     gap: 20px;
     position: relative;
@@ -308,21 +329,6 @@ body{
     text-decoration: underline;
 }
 
-.box-right .advisor,
-.box-right .instuctor,
-.box-right .student{
-    width: 95%;
-    padding: 3px;
-    margin: 8px;
-}
-
-.box-right .advisor p,
-.box-right .instuctor p,
-.box-right .student p{
-    padding: 1px 10px 0px 15px; /* top right bottom left */
-    color: #000000;
-}
-
 .box-right .status-choice {
     width: 100%;
     border-radius: 6px;
@@ -345,7 +351,7 @@ body{
 }
 
 button.submit {
-    background-color: #3B90FF; 
+    background-color: #0DBD00; 
     border: none;
     border-radius: 6px;
     padding: 6px 14px;
@@ -356,7 +362,7 @@ button.submit {
 }
 
 button.edit{
-  background-color: #ff9800; /* สีส้ม */
+  background-color: #FA4616; /* สีส้ม */
   color: white;
   border: none;
   padding: 6px 14px;
@@ -364,15 +370,6 @@ button.edit{
   font-size: 14px;
   cursor: pointer;
   margin-left: 10px;
-}
-
-/* ปุ่มปิด Popup */
-.popup .close {
-    position: absolute;
-    top: 2%; 
-    right: 2%;
-    font-size: 24px;
-    cursor: pointer;
 }
 
 /* ตรวจสอบความก้าวหน้าโครงงาน */
@@ -507,17 +504,13 @@ button.edit{
 .btn-project button {
     height: 30px;
     width: 150px;
-    border-radius: 10px;
-    background-color: #EFEFEF;
+    border-radius: 5px;
     color: #000000;
     border: none;
     cursor: pointer;
     padding: 5px;
-    
 }
 
-/* popup หน้าตรวจสอบความก้าวหน้าโครงงาน*/
-/* รายละเอียด */
 .box-right .comm-progress {
     grid-row: 5 / span 3;
     width: 100%; height: 100%;
@@ -649,7 +642,7 @@ button.edit{
 }
 
 button.submit-comment {
-    background-color: #FA4616; 
+    background-color: #0DBD00; 
     border: none;
     border-radius: 6px;
     padding: 6px 14px;
@@ -689,6 +682,17 @@ button.submit-comment {
 }
 
 /* ตรวจสอบการสอบหัวข้อ */
+
+.popup-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 55%;
+    height: 80%;
+    display: flex;
+    gap: 20px;
+    position: relative;
+}
 
 /* สีสถานะ */
 .status-pending {

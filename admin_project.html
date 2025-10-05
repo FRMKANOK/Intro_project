@@ -33,8 +33,8 @@
         <div class="sidebar">
                <a href="admin_advisor.html" >จัดการข้อมูลอาจารย์</a>
                <a href="#" style="background-color: #FA4616;">จัดการข้อมูลโครงงาน</a>
-               <a href="admin_topic.html">ตารางสอบหัวข้อ</a>
-               <a href="admin_exam.html">ตารางสอบจบ</a>
+               <a href="admin_topic.html">จัดการข้อมูลสอบหัวข้อ</a>
+               <a href="admin_exam.html">จัดการข้อมูลสอบจบ</a>
                <a href="admin_overview.html">รายงานสรุปโครงงาน</a>
         </div>
 
@@ -58,14 +58,16 @@
                         <option>โครงงานพิเศษ</option>
                     </select>
                     <select>
-                        <option>สถานะ</option>
+                        <option>สถานะโครงงาน</option>
                         <option>รออนุมัติหัวข้อ</option>
                         <option>รอสอบหัวข้อ</option>
                         <option>ระหว่างดำเนินงาน</option>
                         <option>รอสอบจบ</option>
                         <option>เสร็จสิ้น</option>
                     </select>
+                    
                 </div>
+                <button class="add-btn-advi" onclick="openPopup('popup2')">เพิ่มโครงงาน</button>
                 </div>
             
             <!-- การ์ดแสดงข้อมูล -->
@@ -136,6 +138,8 @@
                     </div>
                 </div>
             </div>
+
+            
 
             <!-- แถบ Pagination -->
             <div class="pagination-advi">
@@ -315,8 +319,8 @@
                         <option>เสร็จสิ้น</option>
                     </select>
 
-                    <label>แนบไฟล์ :</label>
-                    <label for="fileUpload" class="add-file" style="color: blue; text-decoration: underline;">ไฟล์ปริญญานิพนธ์.pdf</label>
+                    <label>ไฟล์แนบ :</label>
+                    <label for="fileUpload" class="add-file" style="color: blue; text-decoration: underline;">ทก.01.pdf</label>
                     <input type="file" id="fileUpload" style="display:none;">
                     
 
@@ -326,6 +330,188 @@
                         <button class="save-advi" type="submit">บันทึก</button>
                     </div>
                 </form>
+            </div>
+            </div>
+            </div>
+
+            <!-- popup box add -->
+            <div class="popup-advi" id="popup2">
+            <div class="popup-content-advi" style="width: 50%;">
+                <h2>แก้ไขรายละเอียดโครงงาน</h2>
+                <span class="close" onclick="closePopup('popup2')">&times;</span>
+                <form>
+                    <div class="form-advi">
+                    <label>รหัสโครงงาน :</label>
+                    <input type="text" required>
+
+                    <label>ชื่อโครงงาน(ไทย) :</label>
+                    <input type="text" required>
+
+                    <label>ชื่อโครงงาน(อังกฤษ) :</label>
+                    <input type="text" required>
+
+                    <label>ประเภทโครงงาน :</label>
+                    <select required>
+                        <option value="" disabled selected>เลือกประเภทโครงงาน</option>
+                        <option value="">โครงงานสหกิจ</option>
+                        <option value="">โครงงานพิเศษ</option>
+                    </select>
+
+                    <label>ปีการศึกษา :</label>
+                    <select required>
+                        <option value="" disabled selected>เลือกปีการศึกษา</option>
+                        <option value="">2568</option> 
+                        <option value="">2567</option>
+                        <option value="">2566</option>
+                        <option value="">2565</option>
+                    </select>
+
+                    <label>สมาชิกโครงงาน :</label>
+                    <input type="text" required>
+
+                    <label>สมาชิกโครงงานคนที่ 2 (ถ้ามี) :</label>
+                    <input type="text">
+
+                    <label>สมาชิกโครงงานคนที่ 3 (ถ้ามี) :</label>
+                    <input type="text">
+
+                    <label>สมาชิกโครงงานคนที่ 4 (ถ้ามี) :</label>
+                    <input type="text">
+
+                    <label>อาจารย์ที่ปรึกษา :</label>
+                    <select required>
+                        <option value="" disabled selected>เลือกอาจารย์ที่ปรึกษา</option>
+                        <option value="">รศ.ดร.อนิราช มิ่งขวัญ</option>
+                        <option value="">ผศ.อรบุษป์ วุฒิกมลชัย</option>
+                        <option value="">ผศ.ดร.บีสุดา ดาวเรือง</option>
+                        <option value="">ผศ.ดร.ขนิษฐา นามี</option>
+                        <option value="">อ.ดร.กาญจน ณ ศรีธะ</option>
+                        <option value="">ผศ.นพดล บูรณ์กุศล</option>
+                        <option value="">ผศ.จสต.นพเก้า ทองใบ</option>
+                        <option value="">ผศ.ดร.นิติการ นาคเจือทอง</option>
+                        <option value="">ผศ.ดร.นัฎฐพันธ์ นาคพงษ์</option>
+                        <option value="">ผศ.นิมิต ศรีคำทา</option>
+                        <option value="">อ.ดร.พิทย์พิมล ชูรอด</option>
+                        <option value="">ผศ.ดร.พาฝัน ดวงไพศาล</option>
+                        <option value="">อ.ดร.ประดิษฐ์ พิทักษ์เสถียรกุล</option>
+                        <option value="">ผศ.พีระศักดิ์ เสรีกุล</option>
+                        <option value="">ผศ.สมชัย เชียงพงศ์พันธุ์</option>
+                        <option value="">ผศ.ดร.สุปีติ กุลจันทร์</option>
+                        <option value="">ผศ.สิวาลัย จินเจือ</option>
+                        <option value="">ผศ.ดร.สุพาภรณ์ ซิ้มเจริญ</option>
+                        <option value="">ผศ.ดร.ศรายุทธ ธเนศสกุลวัฒนา</option>
+                        <option value="">อ.ดร.ศิรินทรา แว่วศรี</option>
+                        <option value="">อ.ดร.วัชรชัย คงศิริวัฒนา</option>
+                        <option value="">ผศ.ดร.วันทนี ประจวบศุภกิจ</option>
+                        <option value="">รศ.ดร.ยุพิน สรรพคุณ</option>
+                    </select>
+
+                    <label>อาจารย์ที่ปรึกษาร่วม :</label>
+                    <select required>
+                        <option value="" disabled selected>เลือกอาจารย์ที่ปรึกษา</option>
+                        <option value="">รศ.ดร.อนิราช มิ่งขวัญ</option>
+                        <option value="">ผศ.อรบุษป์ วุฒิกมลชัย</option>
+                        <option value="">ผศ.ดร.บีสุดา ดาวเรือง</option>
+                        <option value="">ผศ.ดร.ขนิษฐา นามี</option>
+                        <option value="">อ.ดร.กาญจน ณ ศรีธะ</option>
+                        <option value="">ผศ.นพดล บูรณ์กุศล</option>
+                        <option value="">ผศ.จสต.นพเก้า ทองใบ</option>
+                        <option value="">ผศ.ดร.นิติการ นาคเจือทอง</option>
+                        <option value="">ผศ.ดร.นัฎฐพันธ์ นาคพงษ์</option>
+                        <option value="">ผศ.นิมิต ศรีคำทา</option>
+                        <option value="">อ.ดร.พิทย์พิมล ชูรอด</option>
+                        <option value="">ผศ.ดร.พาฝัน ดวงไพศาล</option>
+                        <option value="">อ.ดร.ประดิษฐ์ พิทักษ์เสถียรกุล</option>
+                        <option value="">ผศ.พีระศักดิ์ เสรีกุล</option>
+                        <option value="">ผศ.สมชัย เชียงพงศ์พันธุ์</option>
+                        <option value="">ผศ.ดร.สุปีติ กุลจันทร์</option>
+                        <option value="">ผศ.สิวาลัย จินเจือ</option>
+                        <option value="">ผศ.ดร.สุพาภรณ์ ซิ้มเจริญ</option>
+                        <option value="">ผศ.ดร.ศรายุทธ ธเนศสกุลวัฒนา</option>
+                        <option value="">อ.ดร.ศิรินทรา แว่วศรี</option>
+                        <option value="">อ.ดร.วัชรชัย คงศิริวัฒนา</option>
+                        <option value="">ผศ.ดร.วันทนี ประจวบศุภกิจ</option>
+                        <option value="">รศ.ดร.ยุพิน สรรพคุณ</option>
+                    </select>
+
+                    <label>กรรมการสอบคนที่ 1 :</label>
+                    <select required>
+                        <option disabled selected>กรรมการสอบคนที่ 1</option>
+                        <option value="">รศ.ดร.อนิราช มิ่งขวัญ</option>
+                        <option value="">ผศ.อรบุษป์ วุฒิกมลชัย</option>
+                        <option value="">ผศ.ดร.บีสุดา ดาวเรือง</option>
+                        <option value="">ผศ.ดร.ขนิษฐา นามี</option>
+                        <option value="">อ.ดร.กาญจน ณ ศรีธะ</option>
+                        <option value="">ผศ.นพดล บูรณ์กุศล</option>
+                        <option value="">ผศ.จสต.นพเก้า ทองใบ</option>
+                        <option value="">ผศ.ดร.นิติการ นาคเจือทอง</option>
+                        <option value="">ผศ.ดร.นัฎฐพันธ์ นาคพงษ์</option>
+                        <option value="">ผศ.นิมิต ศรีคำทา</option>
+                        <option value="">อ.ดร.พิทย์พิมล ชูรอด</option>
+                        <option value="">ผศ.ดร.พาฝัน ดวงไพศาล</option>
+                        <option value="">อ.ดร.ประดิษฐ์ พิทักษ์เสถียรกุล</option>
+                        <option value="">ผศ.พีระศักดิ์ เสรีกุล</option>
+                        <option value="">ผศ.สมชัย เชียงพงศ์พันธุ์</option>
+                        <option value="">ผศ.ดร.สุปีติ กุลจันทร์</option>
+                        <option value="">ผศ.สิวาลัย จินเจือ</option>
+                        <option value="">ผศ.ดร.สุพาภรณ์ ซิ้มเจริญ</option>
+                        <option value="">ผศ.ดร.ศรายุทธ ธเนศสกุลวัฒนา</option>
+                        <option value="">อ.ดร.ศิรินทรา แว่วศรี</option>
+                        <option value="">อ.ดร.วัชรชัย คงศิริวัฒนา</option>
+                        <option value="">ผศ.ดร.วันทนี ประจวบศุภกิจ</option>
+                        <option value="">รศ.ดร.ยุพิน สรรพคุณ</option>
+                    </select>
+
+                    <label>กรรมการสอบคนที่ 2 :</label>
+                    <select required>
+                        <option disabled selected>กรรมการสอบคนที่ 2</option>
+                        <option value="">รศ.ดร.อนิราช มิ่งขวัญ</option>
+                        <option value="">ผศ.อรบุษป์ วุฒิกมลชัย</option>
+                        <option value="">ผศ.ดร.บีสุดา ดาวเรือง</option>
+                        <option value="">ผศ.ดร.ขนิษฐา นามี</option>
+                        <option value="">อ.ดร.กาญจน ณ ศรีธะ</option>
+                        <option value="">ผศ.นพดล บูรณ์กุศล</option>
+                        <option value="">ผศ.จสต.นพเก้า ทองใบ</option>
+                        <option value="">ผศ.ดร.นิติการ นาคเจือทอง</option>
+                        <option value="">ผศ.ดร.นัฎฐพันธ์ นาคพงษ์</option>
+                        <option value="">ผศ.นิมิต ศรีคำทา</option>
+                        <option value="">อ.ดร.พิทย์พิมล ชูรอด</option>
+                        <option value="">ผศ.ดร.พาฝัน ดวงไพศาล</option>
+                        <option value="">อ.ดร.ประดิษฐ์ พิทักษ์เสถียรกุล</option>
+                        <option value="">ผศ.พีระศักดิ์ เสรีกุล</option>
+                        <option value="">ผศ.สมชัย เชียงพงศ์พันธุ์</option>
+                        <option value="">ผศ.ดร.สุปีติ กุลจันทร์</option>
+                        <option value="">ผศ.สิวาลัย จินเจือ</option>
+                        <option value="">ผศ.ดร.สุพาภรณ์ ซิ้มเจริญ</option>
+                        <option value="">ผศ.ดร.ศรายุทธ ธเนศสกุลวัฒนา</option>
+                        <option value="">อ.ดร.ศิรินทรา แว่วศรี</option>
+                        <option value="">อ.ดร.วัชรชัย คงศิริวัฒนา</option>
+                        <option value="">ผศ.ดร.วันทนี ประจวบศุภกิจ</option>
+                        <option value="">รศ.ดร.ยุพิน สรรพคุณ</option>
+                    </select>
+
+                    <label>สถานะ :</label>
+                    <select required>
+                        <option value="" disabled selected>เลือกสถานะ</option>
+                        <option value="">รออนุมัติหัวข้อ</option>
+                        <option value="">รอสอบหัวข้อ</option>
+                        <option value="">ระหว่างดำเนินงาน</option>
+                        <option value="">รอสอบจบ</option>
+                        <option value="">เสร็จสิ้น</option>
+                    </select>
+
+                    <label>ไฟล์แนบ :</label>
+                    <label for="fileUpload" class="add-file" style="color: blue; text-decoration: underline;">แนบไฟล์</label>
+                    <input type="file" id="fileUpload" style="display:none;">
+                    
+
+                    <label></label>
+                    <div class="btn-area-advi" style="width: 100%;">
+                        <button class="cancel-advi" type="reset">รีเซ็ต</button>
+                        <button class="save-advi" type="submit">บันทึก</button>
+                    </div>
+                </form>
+            </div>
             </div>
             </div>
         </div>

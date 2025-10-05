@@ -48,17 +48,17 @@ body{
     border: 1px solid white;   /* สีเส้น */
     margin: 15px auto;         /* auto ทำให้เส้นอยู่ตรงกลาง */
     margin-right: 0;
-    width: 64%;
+    width: 75%;
 }
 
 .header-text div {
     margin: 8px 0;  /* ช่องไฟบน-ล่างเท่ากัน */
 }
 .line1 {
-    font-size: 35px;
+    font-size: 30px;
 }
 .line2 {
-    font-size: 35px;
+    font-size: 30px;
 }
 .line3 {
     font-size: 25px;
@@ -546,3 +546,6 @@ select {
     border-radius: 8px;border: 1px solid #ccc;
 }
 .btn-over:active{background-color: #0DBD00;}
+
+
+

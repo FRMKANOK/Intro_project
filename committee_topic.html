@@ -39,49 +39,15 @@
         <div class="content-topic">
              <div class="head">ตรวจสอบการสอบหัวข้อ</div>
                 <div class="filters">
-                    <div class="dropdown-project">เลือกชื่อของท่าน</div>
+                    <div class="dropdown-project">สถานะ</div>
                         <select>
-                            <option value="" selected disabled hidden>กรุณาเลือกชื่อของท่าน</option>
-                            <option value="1">รศ.ดร.อนิราช มิ่งขวัญ</option>
-                            <option value="2">ผศ.อรบุษป์ วุฒิกมลชัย</option>
-                            <option value="3">ผศ.ดร.บีสุดา ดาวเรือง</option>
-                            <option value="4">ผศ.ดร.ขนิษฐา นามี</option>
-                            <option value="5">อ.ดร.กาญจน ณ ศรีธะ</option>
-                            <option value="6">ผศ.นพดล บูรณ์กุศล</option>
-                            <option value="7">ผศ.จสต.นพเก้า ทองใบ</option>
-                            <option value="8">ผศ.ดร.นิติการ นาคเจือทอง</option>
-                            <option value="6">ผศ.ดร.นัฎฐพันธ์ นาคพงษ์</option>
-                            <option value="6">ผศ.นิมิต ศรีคำทา</option>
-                            <option value="6">อ.ดร.พิทย์พิมล ชูรอด</option>
-                            <option value="6">ผศ.ดร.พาฝัน ดวงไพศาล</option>
-                            <option value="6">อ.ดร.ประดิษฐ์ พิทักษ์เสถียรกุล</option>
-                            <option value="6">ผศ.พีระศักดิ์ เสรีกุล</option>
-                            <option value="6">ผศ.สมชัย เชียงพงศ์พันธุ์</option>
-                            <option value="6">ผศ.ดร.สุปีติ กุลจันทร์</option>
-                            <option value="6">ผศ.สิวาลัย จินเจือ</option>
-                            <option value="6">ผศ.ดร.สุพาภรณ์ ซิ้มเจริญ</option>
-                            <option value="6">ผศ.ดร.ศรายุทธ ธเนศสกุลวัฒนา</option>
-                            <option value="6">อ.ดร.ศิรินทรา แว่วศรี</option>
-                            <option value="6">อ.ดร.วัชรชัย คงศิริวัฒนา</option>
-                            <option value="6">ผศ.ดร.วันทนี ประจวบศุภกิจ</option>
-                            <option value="6">รศ.ดร.ยุพิน สรรพคุณ</option>
-                        </select>
-                        </label>
-
-                        <div class="dropdown-project">ปีการศึกษา</div>
-                        <select>
-                            <option value="" selected disabled hidden></option>
-                            <option value="2568">2568</option>
-                            <option value="2567">2567</option>
-                            <option value="2566">2566</option>
-                        </select>
-
-                        <div class="dropdown-project">ประเภทของโครงงาน</div>
-                        <select>
-                            <option value="" selected disabled hidden></option>
+                            <option value="" selected disabled hidden>เลือกสถานะ</option>
                             <option value="1">ทั้งหมด</option>
-                            <option value="2">โครงงานพิเศษ</option>
-                            <option value="3">โครงงานสหกิจ</option>
+                            <option value="2">รออนุมัติหัวข้อ</option>
+                            <option value="3">รอสอบหัวข้อ</option>
+                            <option value="4">ผ่าน</option>
+                            <option value="5">ผ่านแบบแก้ไข</option>
+                            <option value="6">ไม่ผ่าน</option>
                         </select>
                         </label>
                 </div>
@@ -167,7 +133,7 @@
 
                 </div>
 
-                <div class="pagination-advi">
+                <div class="pagination-commit">
                     <button class="page-btn active">1</button>
                     <button class="page-btn">2</button>
                     <button class="page-btn">3</button>
@@ -210,41 +176,37 @@
 
                             <!-- right -->
                             <div class="box-right">
-                                <div class="advisor">
+                                    
+                                <div class="label">กรรมการสอบ</div>
+                                <div class="value">ดร.ยุพิน สรรพคุณ</div>
+                                <div class="value">ผศ.ดร.วันทนี ประจวบศุภกิจ</div>
+                                <div class="value">รศ.ดร.อนิราช มิ่งขวัญ </div>
+                                <div class="value">ผศ.ดร.นิติการ นาคเจือทอง </div>
 
-                                    <div class="label">กรรมการสอบ</div>
-                                    <div class="value">ดร.ยุพิน สรรพคุณ</div>
-                                    <div class="value">ผศ.ดร.วันทนี ประจวบศุภกิจ</div>
-                                    <div class="value">รศ.ดร.อนิราช มิ่งขวัญ </div>
-                                    <div class="value">ผศ.ดร.นิติการ นาคเจือทอง </div>
-
-                                        <form>
-                                            <div class="label">แสดงความคิดเห็น</div>
-                                            <textarea id="comment" placeholder="แสดงความคิดเห็นที่นี่..."></textarea>
-                                            <div class="date" id="commentDate"></div>
-                                            <div class="label">สถานะปัจจุบัน :
-                                                <span class="status-pending">รอสอบหัวข้อ</span>
-                                            </div>
-                                            <div class="label">ระบุสถานะการสอบหัวข้อ</div>
-                                            <div class="status-choice">
-                                                <select name="approve" required>
-                                                    <option value="" selected>-- เลือกสถานะ --</option>
-                                                    <option value="1">ผ่าน</option>
-                                                    <option value="2">ผ่านแก้ไข</option>
-                                                    <option value="3">ไม่ผ่าน</option>
-                                                </select>
-                                            </div>
-
-                                            
-
-                                            <label><input type="checkbox" class="chk-box" required> ลงชื่อรับทราบ</label>
-                                             <!-- button -->
-                                            <div class="action-buttons">
-                                                <button type="submit" class="submit-comment">บันทึก</button>
-                                            </div>
-                                        </form>
+                                    <form>
+                                        <div class="label">แสดงความคิดเห็น</div>
+                                        <textarea id="comment" placeholder="แสดงความคิดเห็นที่นี่..."></textarea>
+                                        <div class="date" id="commentDate"></div>
+                                        <div class="label">สถานะปัจจุบัน :
+                                            <span class="status-pending">รอสอบหัวข้อ</span>
+                                        </div>
+                                        <div class="label">ระบุสถานะการสอบหัวข้อ</div>
+                                        <div class="status-choice">
+                                            <select name="approve" required>
+                                                <option value="" selected>-- เลือกสถานะ --</option>
+                                                <option value="1">ผ่าน</option>
+                                                <option value="2">ผ่านแก้ไข</option>
+                                                <option value="3">ไม่ผ่าน</option>
+                                            </select>
+                                        </div>
+                                        
+                                        <label><input type="checkbox" class="chk-box" required> ลงชื่อรับทราบ</label>
+                                        <!-- button -->
+                                        <div class="action-buttons">
+                                            <button type="submit" class="submit-comment">บันทึก</button>
+                                        </div>
+                                    </form>
                                   
-                                </div>
                             </div>
                         </div>
                     </div>

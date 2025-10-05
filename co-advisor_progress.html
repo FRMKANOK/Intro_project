@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/advisor.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&display=swap" rel="stylesheet">
+    <title>ตรวจสอบความก้าวหน้าโครงงาน</title>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="header">
+            <img src="image/kmutnb.png" alt="โลโก้" class="header-logo">
+                <div class="header-text">
+                    <div class="line1">ระบบการจัดการข้อมูลโครงงานพิเศษและโครงงานสหกิจ</div>
+                    <div class="line2">ภาควิชาเทคโนโลยีสารสนเทศ</div>
+                    <hr><!-- เส้นคั่นระหว่างประโยค  -->
+                    <div class="line3">มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ</div>
+                </div>
+        </div>
+
+        <div class="navbar">
+              <p class="semester">ภาคเรียนที่ 1 ปีการศึกษา 2568</p>  
+              <div class="user">
+                    <img src="image/person.png" alt="User">
+                    <p>Advisor</p>
+                    <button id="logout"><a href="index.html">ออกจากระบบ</a></button>
+              </div>
+        </div>
+
+        <div class="sidebar">
+               <a href="advisor_approve.html">ตรวจสอบ / อนุมัติหัวข้อโครงงาน</a>
+               <a href="#" style="background-color: #FA4616;">ตรวจสอบความก้าวหน้าโครงงาน</a>
+               <a href="advisor_topic.html">ตรวจสอบการสอบหัวข้อ</a>
+               <a href="advisor_exam.html">ตรวจสอบการสอบจบ</a>
+               <a href="advisor_status.html">สถานะโครงงานทั้งหมด</a>
+        </div>
+
+        <div class="content-progress">
+               <div class="head">รายงานความคืบหน้าโครงงานของนักศึกษา</div>
+                    
+                <div class="box-progress">
+                    <div class="project">
+                        <div class="main-project">
+                            <div class="header-project">
+                                <p><strong>ชื่อโปรเจค</strong></p>
+                                <span class="status">กำลังดำเนินการ</span>
+                            </div>
+                                
+                            <div class="student-list">
+                                <p class="std-project">นักศึกษา 1 นางสาวอาภัสรา โกมลภพ รหัส 6806022510001</p>
+                                <p class="std-project">นักศึกษา 2 นายพสิษฐ์ ตั้งมั่น รหัส 6806022510002</p>
+                            </div>
+
+                            <div class="progress-header">
+                                <p>เปอร์เซ็นต์ความก้าวหน้า</p>
+                                <span class="progress-value">50%</span>
+                            </div>
+                                
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 50%;"></div>
+                            </div>
+
+                            <div class="btn-project">
+                                <button class="detail-progress" onclick="openPopup('popup1')">รายละเอียด</button>
+                                <button class="comment-progress" onclick="openPopup('popup2')">ตรวจสอบความก้าวหน้า</button>
+                            </div>
+                            
+                        </div>
+
+                        <div class="main-project">
+                            <div class="header-project">
+                                <p><strong>ชื่อโปรเจค</strong></p>
+                                <span class="status">กำลังดำเนินการ</span>
+                            </div>
+                                
+                            <div class="student-list">
+                                <p class="std-project">นักศึกษา 1 นายภัทรพล อินทร์สุข รหัส 6806022510003</p>
+                                <p class="std-project">นักศึกษา 2 นายณัฐวุฒิ พิทักษ์วงศ์ รหัส 6806022510005</p>
+                            </div>
+
+                            <div class="progress-header">
+                                <p>เปอร์เซ็นต์ความก้าวหน้า</p>
+                                <span class="progress-value">50%</span>
+                            </div>
+                                
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 50%;"></div>
+                            </div>
+
+                            <div class="btn-project">
+                                <button class="detail-progress" onclick="openPopup('popup1')">รายละเอียด</button>
+                                <button class="comment-progress" onclick="openPopup('popup2')">ตรวจสอบความก้าวหน้า</button>
+                            </div>
+                            
+                        </div>
+
+                        <div class="main-project">
+                            <div class="header-project">
+                                <p><strong>ชื่อโปรเจค</strong></p>
+                                <span class="status">กำลังดำเนินการ</span>
+                            </div>
+                                
+                            <div class="student-list">
+                                <p class="std-project">นักศึกษา 1 นางสาวอรัญญา ดวงมณี รหัส 6806022510020</p>
+                                <p class="std-project">นักศึกษา 2 นายศรัณย์ ศรีวัฒน์ รหัส 6806022510022</p>
+                            </div>
+
+                            <div class="progress-header">
+                                <p>เปอร์เซ็นต์ความก้าวหน้า</p>
+                                <span class="progress-value">50%</span>
+                            </div>
+                                
+                            <div class="progress-bar">
+                                <div class="progress" style="width:50%;"></div>
+                            </div>
+
+                            <div class="btn-project">
+                                <button class="detail-progress" onclick="openPopup('popup1')">รายละเอียด</button>
+                                <button class="comment-progress" onclick="openPopup('popup2')">ตรวจสอบความก้าวหน้า</button>
+                            </div>
+                            
+                        </div>
+
+                        <!-- popup รายละเอียด -->
+                        <div id="popup1" class="popup">
+                            <div class="popup-detail">
+                                <span class="close" onclick="closePopup('popup1')">&times;</span>
+                                <div class="box-left">
+                                    <h2>รายละเอียดโครงงาน</h2>
+                                    <div class="label">หัวข้อโครงงาน</div>
+                                    <div class="value">ชื่อโครงงานภาษาไทย : AI ตรวจจับวัตถุแบบเรียลไทม์</div>
+                                    <div class="value">ชื่อโครงงานภาษาอังกฤษ : ...................</div>
+                                    <div class="value">ประเภท : โครงงานสหกิจ</div>
+                                    <div class="value">ปีการศึกษา : 2567  ภาคเรียน : 1</div>
+
+                                    
+                                    <div class="label">ผู้จัดทำโครงงาน</div>
+                                    <div class="value">68060******** นายกอไก เกิดก่อน 092-999-9999</div>
+                                    <div class="value">68060******** นายคอคน เกิกหลัง 092-999-8888</div>
+
+                                    <div class="label">อาจารย์ที่ปรึกษา</div>
+                                    <div class="value">รศ.ดร.อนิราช มิ่งขวัญ  อาจารย์ที่ปรึกษา</div>
+
+                                    <div class="label">อาจารย์ที่ปรึกษาร่วม</div>
+                                    <div class="value">ผศ.ดร.นิติการ นาคเจือทอง  อาจารย์ที่ปรึกษาร่วม</div>
+
+                                    <div class="label">ไฟล์แนบ</div>
+                                    <div class="value"><a href="path/to/file.pdf" target="_blank">รายงานความก้าวหน้ารายสัปดาห์3.pdf</a></div>
+                                </div>
+
+                                <div class="box-right">
+
+                                    <div class="form-comment">
+                                        <div class="label">รายงานความคืบหน้า</div>
+                                            <div class="value comm-instr">
+                                                <div class="box-comm">
+                                                    <div class="value" style="grid-column: 1; grid-row: 1;">...</div>
+                                                    <div class="value" style="grid-column: 2; grid-row: 1; justify-self: right;">ล่าสุด</div>
+                                                    <div class="value" style="grid-column: 2; grid-row: 3; justify-self: right; color: #FA4616;">14 มกราคม 2568</div>
+                                                </div>
+                                            </div>
+
+                                            <div class="label">ความคิดเห็นของอาจารย์ที่ปรีกษา</div>
+                                            <div class="value comm-instr">
+                                                <div class="box-comm">
+                                                    <div class="value" style="grid-column: 1; grid-row: 1;">...</div>
+                                                    <div class="value" style="grid-column: 2; grid-row: 1; justify-self: right;">ล่าสุด</div>
+                                                    <div class="value" style="grid-column: 2; grid-row: 3; justify-self: right; color: #FA4616;">14 มกราคม 2568</div>
+                                                </div>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                             <!-- Popup ตรวจสอบความก้าวหน้า -->
+                        <div id="popup2" class="popup">
+                            <div class="popup-progress">
+                                <span class="close" onclick="closePopup('popup2')">&times;</span>
+                                <div class="box-left">
+                                    <h2>ตรวจสอบความก้าวหน้า</h2>
+                                    <div class="label">หัวข้อโครงงาน</div>
+                                    <div class="value">ชื่อโครงงานภาษาไทย : AI ตรวจจับวัตถุแบบเรียลไทม์</div>
+                                    <div class="value">ชื่อโครงงานภาษาอังกฤษ : ...................</div>
+                                    <div class="value">ประเภท : โครงงานสหกิจ</div>
+                                    <div class="value">ปีการศึกษา : 2567  ภาคเรียน : 1</div>
+                                    
+                                    <div class="label">ผู้จัดทำโครงงาน</div>
+                                    <div class="value">68060******** นายกอไก เกิดก่อน 092-999-9999</div>
+                                    <div class="value">68060******** นายคอคน เกิกหลัง 092-999-8888</div>
+
+                                    <div class="label">อาจารย์ที่ปรึกษา</div>
+                                    <div class="value">รศ.ดร.อนิราช มิ่งขวัญ  อาจารย์ที่ปรึกษา</div>
+
+                                    <div class="label">อาจารย์ที่ปรึกษาร่วม</div>
+                                    <div class="value">ผศ.ดร.นิติการ นาคเจือทอง  อาจารย์ที่ปรึกษาร่วม</div>
+
+                                    <div class="label">ไฟล์แนบ</div>
+                                    <div class="value"><a href="path/to/file.pdf" target="_blank">รายงานความก้าวหน้ารายสัปดาห์3.pdf</a></div>
+                                </div>
+
+                                <div class="box-right">
+
+                                    <div class="form-comment">
+                                        <div class="progress-update">
+                                            <label for="progressInput">อัพเดตเปอร์เซนต์</label>
+                                            <!-- <input type="number" id="progressInput" value="50" min="0" max="100" oninput="updateProgress()"> -->
+
+                                            <div class="progress-box">
+                                                <div class="progress-bar">
+                                                    <div id="progressFill" class="progress-fill" style="width: 50%;"></div>
+                                                </div>
+                                                <span id="progressText">50%</span>
+                                            </div>
+                                                
+                                            <div class="action">
+                                                <button onclick="increaseProgress()">อัพเดต (+10%)</button>
+                                            </div>
+                                        </div>
+
+                                        <div class="label">แสดงความคิดเห็น</div>
+                                            <form>
+                                                <textarea id="comment" placeholder="แสดงความคิดเห็นที่นี่..."></textarea>
+                                                <div class="date" id="commentDate"></div>
+
+                                                <label><input type="checkbox" class="chk-box" required> ลงชื่อรับทราบ</label>
+                                                <!-- button -->
+                                                <div class="action-buttons">
+                                                    <button type="submit" class="submit-comment">บันทึก</button>
+                                                </div>
+                                            </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>  
+
+                       
+                    </div>
+                    
+                    
+                    <div class="report-project">
+                        <p>รายงานสรุป</p>
+                        <div class="report-box1">
+                            โครงงานทั้งหมด : 3
+                        </div>
+
+                        <div class="report-box">
+                            กำลังดำเนินการ : 3
+                        </div>
+
+                        <div class="report-box">
+                            รอสอบหัวข้อ : 0
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+
+    </div>
+
+    <script>
+       function openPopup(id){
+             document.getElementById(id).style.display = 'flex';
+        }
+
+        function closePopup(id){
+            document.getElementById(id).style.display = 'none';
+        }
+
+        // ปิด popup เมื่อคลิกนอกเนื้อหา
+        window.addEventListener("click", (e) => {
+            document.querySelectorAll('.popup').forEach(popup => {
+                if(e.target === popup) popup.style.display = 'none';
+            });
+        });
+
+        // เปอร์เซ็นต์
+        let progressValue = 50; // เริ่มต้นที่ 50%
+
+        function updateProgress() {
+            let fill = document.getElementById("progressFill");
+            let text = document.getElementById("progressText");
+
+            // จำกัดค่าไม่ให้เกิน 0-100
+            progressValue = Math.min(100, Math.max(0, progressValue));
+
+            fill.style.width = progressValue + "%";
+            text.textContent = progressValue + "%";
+        }
+
+        function increaseProgress() {
+            progressValue = Math.min(100, progressValue + 10); 
+            updateProgress();
+        }
+
+        const dateElement = document.getElementById('commentDate');
+        const today = new Date();
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        dateElement.textContent = today.toLocaleDateString('th-TH', options);
+    
+    </script>
+    
+</body>
+</html>

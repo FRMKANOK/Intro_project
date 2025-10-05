@@ -188,6 +188,7 @@ form {
     cursor: pointer;
     transition: 0.3s;
     position: relative;
+    color: #969696;
 }
 
 /* Placeholder ของ select */
@@ -224,9 +225,6 @@ form {
     text-decoration:none;
     font-family: "Noto Sans Thai", sans-serif;
     margin-top: 10px;
-}
-
-.register2-btn {
     background-color: #3B90FF;
     color: white;
 }

@@ -1,8 +1,8 @@
 *{
     box-sizing: border-box;
+    font-family: "Noto Sans Thai", sans-serif;
 }
 body{
-    font-family: "Noto Sans Thai", sans-serif;
     margin: 0;
     background-color: #f5f5f5;
 }
@@ -158,10 +158,279 @@ body{
 }
 
 /* Content */
-.content {
+.content-topic{
     grid-area: content;
     background-color: #ffffff;
     padding: 20px;
-    overflow-y: auto;
-    max-height: calc(100vh - 260px); /* 210+50 = header+navbar */
+    overflow-y: auto; 
 }
+
+/* หัวข้อทุกลิงค์ */
+.head {
+    font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+
+/* ตรวจสอบ / อนุมัติโครงงาน */
+.box {
+    display: flex;       /* เรียงแนวนอน */
+    gap: 20px;           /* ระยะห่างระหว่างกล่อง */
+    flex-wrap: wrap;     /* พับลงบรรทัดใหม่ถ้าหน้าจอเล็ก */
+    justify-content: center; /* เริ่มชิดซ้าย */
+}
+
+.box-content {
+    width: 31%;
+    min-width: 30%;    /* ขนาดเล็กสุดเพื่อ responsive */
+    padding: 10px 15px;
+    margin: 2px 0;
+    color: #080808;
+    background-color: #ffffff;
+    border-radius: 10px;
+    font-weight: 500;
+    display: flex;           /* ทำให้เป็น flex container */
+    flex-direction: column;  /* จัดแนวตั้งสำหรับเนื้อหา */
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.box-content p {
+    line-height: 1.5;    /* ระยะระหว่างบรรทัด */
+    margin: 5px 0 5px 10px;       /* ช่องว่างบรรทัดบน-ล่าง */
+}
+
+.detail {
+    width: 90px;
+    border-radius: 5px;
+    background-color: #FA4616;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    margin-left: auto;
+    margin-top: auto;
+}
+
+.pagination-advi {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    gap: 8px;
+}
+.page-btn {
+    background-color: white;
+    border: 1px solid #ccc; border-radius: 8px;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+.page-btn:hover {background-color: #eee;}
+.page-btn.active {
+    background-color: #FA4616; color: white;
+    border: none;
+}
+
+.filters .dropdown-project {
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+.filters {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-bottom: 10px;
+  margin-right: 20px;
+}
+
+select {        /* ความกว้าง */
+    padding: 2px 1px; /* ความสูง */      
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    background-color: #fff;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/* Popup ซ่อนโดย default */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+/* เนื้อหา Popup */
+.popup-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 55%;
+    height: 70%;
+    display: flex;
+    gap: 20px;
+    position: relative;
+}
+
+.box-content p{
+    color: #555;
+}
+
+.box-content .head-approve {
+    color: #000000;
+}
+
+.box-popup {
+    display: flex;
+    gap: 20px;
+    width: 100%; /* ให้ใช้เต็มพื้นที่ */
+}
+
+.box-left {
+    flex: 1;
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    line-height: 1.5;
+    min-width: 250px;
+}
+
+.box-left h2{
+    margin: 1px;
+}
+
+.box-right {
+    flex: 1;
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    line-height: 1.5;
+    min-width: 250px;
+}
+
+ .label {
+    font-weight: bold;
+    margin: 10px 0 5px 0;
+    color: #333;
+    
+}
+
+.value {
+    margin: 3px 20px;
+    font-size: 14px;
+    color: #555;
+}
+
+.value a {
+    color: #3B90FF;
+    text-decoration: underline;
+}
+
+.box-right .advisor,
+.box-right .instuctor,
+.box-right .student{
+    width: 95%;
+    padding: 3px;
+    margin: 8px;
+}
+
+.box-right .advisor p,
+.box-right .instuctor p,
+.box-right .student p{
+    padding: 1px 10px 0px 15px; /* top right bottom left */
+    color: #000000;
+}
+
+.box-right .status-choice {
+    width: 100%;
+    border-radius: 6px;
+
+}
+
+.box-right .status-choice select {
+    width: 100%;           
+    max-width: 100%;       
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+ textarea {
+    width: 100%;
+    min-height: 100px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    resize: vertical;
+    box-sizing: border-box;
+    resize: none;       /* ❌ ปิดการ resize */
+    overflow: auto;     /* ✅ แสดง scrollbar เมื่อข้อความยาวเกิน */
+    box-sizing: border-box;
+}
+
+.date {
+    font-size: 0.9em;
+    color: #888;
+    text-align: right; /* วันที่อยู่ขวาล่าง */
+}
+
+.chk-box {
+    width: 18px;
+    height: 18px;
+    accent-color: green; /* กรอบเขียว */
+}
+
+button.submit-comment {
+    background-color: #FA4616; 
+    border: none;
+    border-radius: 6px;
+    padding: 6px 14px;
+    font-size: 14px;
+    color: #ffffff;
+    cursor: pointer;
+    margin-right: 10px; 
+}
+
+.action-buttons {
+   text-align: center;
+   margin-top: 40px;
+}
+
+button.submit {
+    background-color: #3B90FF; 
+    border: none;
+    border-radius: 6px;
+    padding: 6px 14px;
+    font-size: 14px;
+    color: #ffffff;
+    cursor: pointer;
+    margin-right: 10px; 
+}
+
+button.edit{
+  background-color: #ff9800; /* สีส้ม */
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+/* ปุ่มปิด Popup */
+.popup .close {
+    position: absolute;
+    top: 2%; 
+    right: 2%;
+    font-size: 24px;
+    cursor: pointer;
+}
+

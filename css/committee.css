@@ -158,7 +158,9 @@ body{
 }
 
 /* Content */
-.content-topic{
+.content-topic,
+.content-exam,
+.content-status{
     grid-area: content;
     background-color: #ffffff;
     padding: 20px;
@@ -184,7 +186,7 @@ body{
     width: 31%;
     min-width: 30%;    /* ขนาดเล็กสุดเพื่อ responsive */
     padding: 10px 15px;
-    margin: 2px 0;
+    margin: 15px 0;
     color: #080808;
     background-color: #ffffff;
     border-radius: 10px;
@@ -270,7 +272,7 @@ select {        /* ความกว้าง */
     padding: 20px;
     border-radius: 10px;
     width: 55%;
-    height: 70%;
+    height: 80%;
     display: flex;
     gap: 20px;
     position: relative;
@@ -310,6 +312,7 @@ select {        /* ความกว้าง */
     border-radius: 8px;
     line-height: 1.5;
     min-width: 250px;
+    position: relative;
 }
 
  .label {
@@ -361,6 +364,10 @@ select {        /* ความกว้าง */
     box-sizing: border-box;
 }
 
+.form {
+    width: 100%;
+}
+
  textarea {
     width: 100%;
     min-height: 100px;
@@ -385,6 +392,15 @@ select {        /* ความกว้าง */
     width: 18px;
     height: 18px;
     accent-color: green; /* กรอบเขียว */
+    margin-top: 20px;
+}
+
+.action-buttons {
+    position: absolute; /* ✅ ให้อยู่ตามตำแหน่งใน .box-right */
+    bottom: 15px;       /* ห่างจากขอบล่าง */
+    right: 15px;        /* ห่างจากขอบขวา */
+    text-align: right;  /* ชิดขวา */
+    margin: 0;          /* เอา margin เดิมออก */
 }
 
 button.submit-comment {
@@ -398,39 +414,129 @@ button.submit-comment {
     margin-right: 10px; 
 }
 
-.action-buttons {
-   text-align: center;
-   margin-top: 40px;
-}
-
-button.submit {
-    background-color: #3B90FF; 
-    border: none;
-    border-radius: 6px;
-    padding: 6px 14px;
-    font-size: 14px;
-    color: #ffffff;
-    cursor: pointer;
-    margin-right: 10px; 
-}
-
-button.edit{
-  background-color: #ff9800; /* สีส้ม */
-  color: white;
-  border: none;
-  padding: 6px 14px;
-  border-radius: 6px;
-  font-size: 14px;
-  cursor: pointer;
-  margin-left: 10px;
-}
-
 /* ปุ่มปิด Popup */
 .popup .close {
     position: absolute;
-    top: 2%; 
+    top: 2%;
     right: 2%;
     font-size: 24px;
     cursor: pointer;
+    z-index: 10; /* ✅ อยู่เหนือทุกชั้น */
 }
 
+/* สีสถานะ */
+.status-pending {
+    color: #FF8400;
+    font-weight: bold;
+}
+
+.status-rejected {
+    color: #d90000; 
+    font-weight: bold;
+}
+
+.status-approved-edit {
+    color: #EB5406;
+    font-weight: bold;
+}
+
+.status-approved {
+    color: #0DBD00; 
+    font-weight: bold;
+}
+
+.status-new {
+    color: #065ef6;
+    font-weight: bold;
+}
+
+.section {
+  flex: 1;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.card {
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  font-size: 16px;
+  background-color: #fff;
+  color: #000000;
+}
+
+.card strong {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.card .number {
+    display: block;
+    font-size: 40px; /* ตัวเลขใหญ่ขึ้น */
+}
+
+/* .total {
+    color: #000000; ทั้งหมด
+}
+
+.pass {
+    color: #0DBD00; ผ่าน
+}
+
+.fail {
+    color: #d90000; ไม่ผ่าน
+}
+
+.revise {
+    color: #EB5406; แก้ไข
+}
+
+.pending {
+ color: #FF8400;รอต่างๆ
+}
+
+.retake {
+    color: #065ef6;สอบใหม่
+} */
+
+.filters {
+  display: flex;
+  justify-content: flex-end;
+  gap: 30px;
+  margin-bottom: 10px;
+  margin-right: 20px;
+}
+
+select {          
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    background-color: #fff;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.content-status {
+  grid-area: content;
+  background-color: #ffffff;
+  padding: 20px;
+  overflow-y: auto; 
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.filters .dropdown-project {
+    font-size: 18px;
+    margin-top: 5px;
+}

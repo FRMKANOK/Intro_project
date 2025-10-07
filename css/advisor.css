@@ -689,6 +689,7 @@ button.submit-comment {
     border-radius: 10px;
     width: 55%;
     height: auto;
+    overflow-y: auto;
     display: flex;
     gap: 20px;
     position: relative;

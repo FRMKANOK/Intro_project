@@ -31,12 +31,16 @@ body{
 
 .image_login img {
     position: absolute;
-    top: 45px;
-    left: 58px;
-    width: 650px;
+    top: clamp(20px, 5vw, 45px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 85%;
+    height: auto;                    
+    max-width: 85vw;                 
     opacity: 0.2;
     z-index: 0;
     filter: brightness(0) invert(1);
+    transition: all 0.25s ease;
 }
 
 .left p {
@@ -241,5 +245,149 @@ form {
 .forgot-pass a:hover {
     text-decoration: underline;
     color: #0056b3;
+}
+
+/* ===== Breakpoints =====
+   ≤1199px: Laptop
+   ≤991px : Tablet
+   ≤767px : Mobile
+=========================*/
+
+/* Laptop (≤1199px) */
+@media (max-width: 1199px) {
+  .left p { font-size: 32px; }
+  form { width: 460px; padding: 28px 40px; }
+}
+
+/* Tablet (≤991px): ซ้อนแถว, จัดภาพ/ฟอร์มกลางหน้า */
+@media (max-width: 991px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'left'
+      'right';
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .left {
+    padding: 48px 24px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  /* ลดขนาดโลโก้ลงอีกนิดบนแท็บเล็ต */
+  .image_login img {
+    top: 28px;
+    width: clamp(300px, 70vw, 520px);
+    max-width: 90vw;
+    opacity: 0.18;
+  }
+
+  .left p {
+    font-size: 28px;
+    margin: 8px 16px;
+    max-width: 680px;
+  }
+
+  .right {
+    padding: 40px 16px;
+    align-items: flex-start;
+  }
+
+  form {
+    width: 520px;
+    max-width: 100%;
+    padding: 24px;
+    margin: 0 auto;
+  }
+
+  .icon img { width: 160px; height: 160px; }
+
+  .form-login label { font-size: 16px; }
+  .input-icon input,
+  .input-icon select {
+    font-size: 16px;
+    padding: 10px 40px 10px 12px;
+  }
+}
+
+/* Mobile (≤767px): ลดภาพ, เลื่อนลงล่างเล็กน้อยกันทับข้อความ */
+@media (max-width: 767px) {
+  body { background-color: #ffffff; }
+
+  .left {
+    padding: 36px 16px 28px;
+    background: #FA4616;
+    text-align: center;
+  }
+
+  .image_login img {
+    top: auto;
+    bottom: -12px;                /* แอบพ้นล่างนิด ๆ เพื่อไม่บังข้อความ */
+    width: min(80vw, 320px);
+    max-width: 90vw;
+    opacity: 0.12;
+  }
+
+  .left p {
+    font-size: 22px;
+    line-height: 1.35;
+    margin: 6px 12px;
+  }
+
+  .right { padding: 20px 12px 40px; }
+
+  form {
+    width: 100%;
+    max-width: 420px;
+    padding: 20px 16px;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  }
+
+  .icon { margin-bottom: 6px; }
+  .icon img { width: 120px; height: 120px; }
+
+  .form-login { gap: 8px; }
+  .form-login label { font-size: 15px; }
+
+  .input-icon input,
+  .input-icon select {
+    font-size: 15px;
+    padding: 10px 38px 10px 12px;
+    border-radius: 10px;
+  }
+
+  .input-icon img {
+    right: 12px;
+    width: 18px;
+    height: 18px;
+  }
+
+  /* ปุ่มวางเป็นคอลัมน์ เพื่อแตะง่าย */
+  .form-login .buttons { flex-direction: column; gap: 8px; }
+  .login-btn, .register-btn, .register2-btn {
+    font-size: 15px; padding: 12px; border-radius: 10px;
+  }
+
+  .right p { font-size: 22px; margin-bottom: 8px; }
+  .forgot-pass a { font-size: 13px; }
+}
+
+/* Mobile จอเล็กมาก (≤360px): กันตัวอักษรล้น */
+@media (max-width: 360px) {
+  .left p { font-size: 20px; }
+  .right p { font-size: 20px; }
+  .icon img { width: 96px; height: 96px; }
+  .input-icon input,
+  .input-icon select { font-size: 14px; }
+}
+
+/* อุปกรณ์ทัช: เพิ่มพื้นที่คลิกให้ไอคอน/เช็กบ็อกซ์ */
+@media (hover: none) and (pointer: coarse) {
+  .form-login label.checkbox-label { gap: 8px; }
+  .input-icon img { width: 22px; height: 22px; }
 }
 

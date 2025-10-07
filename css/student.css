@@ -787,5 +787,204 @@ textarea {
     color: white;
 }
 
+/* ===================== Responsive Design ===================== */
+
+/* Tablet ขนาดกลาง */
+@media (max-width: 1024px) {
+  .grid-container {
+    grid-template-columns: 25% 75%;
+    grid-template-rows: 180px 50px auto;
+  }
+
+  /* Header */
+  .header-text .line1,
+  .header-text .line2 {
+    font-size: 28px;
+  }
+  .line3 {
+    font-size: 20px;
+  }
+
+  /* Navbar */
+  .navbar .semester,
+  .navbar p {
+    font-size: 18px;
+  }
+  .navbar button {
+    width: 120px;
+    font-size: 16px;
+  }
+
+  /* Sidebar */
+  .sidebar a {
+    font-size: 16px;
+    height: 50px;
+  }
+
+  /* Form */
+  .form-section {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px 15px;
+  }
+  .form-section input,
+  .form-section select,
+  textarea {
+    font-size: 16px;
+    padding: 6px 8px;
+  }
+  .inline-inputs {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .save,
+  .cancel,
+  .add-file {
+    font-size: 16px;
+    padding: 6px 10px;
+  }
+}
+
+/* Mobile ขนาดเล็ก */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+      "header"
+      "navbar"
+      "sidebar"
+      "content";
+    height: auto;
+  }
+
+  /* Header */
+  .header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px 20px;
+  }
+  .header img {
+    height: 100px;
+  }
+  .header-text {
+    margin: 10px 0 0 0;
+    text-align: center;
+  }
+  .header-text hr {
+    width: 80%;
+    margin: 10px auto;
+  }
+
+  /* Navbar */
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    text-align: center;
+    padding: 10px 20px;
+  }
+  .navbar .user-logout {
+    flex-direction: column;
+    gap: 5px;
+  }
+  .navbar button {
+    width: 100%;
+    max-width: 200px;
+    font-size: 16px;
+    height: 35px;
+  }
+  .navbar .nav-btn {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  /* Sidebar */
+  .sidebar {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+  }
+  .sidebar a {
+    width: 48%;
+    margin: 5px 1%;
+    font-size: 14px;
+  }
+
+  /* Form */
+  .form-section {
+    grid-template-columns: 1fr;
+    gap: 10px 10px;
+  }
+  .inline-inputs {
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+  }
+  .form-section input,
+  .form-section select,
+  textarea {
+    font-size: 14px;
+    padding: 6px 8px;
+  }
+  .save,
+  .cancel,
+  .add-file {
+    font-size: 14px;
+    padding: 6px 10px;
+    width: 100%;
+  }
+  .address {
+    width: 100%;
+    grid-column: span 1;
+  }
+}
+
+/* Mobile เล็กมาก (ต่ำกว่า 480px) */
+@media (max-width: 480px) {
+  /* Header */
+  .header-text .line1,
+  .header-text .line2 {
+    font-size: 22px;
+  }
+  .line3 {
+    font-size: 16px;
+  }
+
+  /* Navbar */
+  .navbar .semester,
+  .navbar p {
+    font-size: 16px;
+  }
+
+  /* Sidebar */
+  .sidebar a {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  /* Form */
+  .form-section {
+    grid-template-columns: 1fr;
+    gap: 8px 8px;
+  }
+  .form-section input,
+  .form-section select,
+  textarea {
+    font-size: 13px;
+    padding: 5px 6px;
+  }
+  .save,
+  .cancel,
+  .add-file {
+    font-size: 13px;
+    padding: 5px 8px;
+  }
+  .address {
+    width: 100%;
+  }
+}
 
 

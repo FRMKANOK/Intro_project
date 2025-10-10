@@ -248,7 +248,7 @@ body{
     padding: 20px;
     border-radius: 10px;
     width: 55%;
-    height: 68%;
+    height: auto;
     display: flex;
     gap: 20px;
     position: relative;
@@ -269,7 +269,7 @@ body{
     padding: 20px;
     border-radius: 10px;
     width: 55%;
-    height: 66%;
+    height: auto;
     display: flex;
     gap: 20px;
     position: relative;
@@ -379,7 +379,7 @@ button.edit{
     padding: 20px;
     border-radius: 10px;
     width: 55%;
-    height: 70%;
+    height: auto;
     display: flex;
     gap: 20px;
     position: relative;
@@ -688,7 +688,7 @@ button.submit-comment {
     padding: 20px;
     border-radius: 10px;
     width: 55%;
-    height: 80%;
+    height: auto;
     display: flex;
     gap: 20px;
     position: relative;

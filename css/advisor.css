@@ -252,6 +252,7 @@ body{
     display: flex;
     gap: 20px;
     position: relative;
+    overflow-y: auto;
 }
 
 /* ปุ่มปิด Popup */
@@ -273,6 +274,7 @@ body{
     display: flex;
     gap: 20px;
     position: relative;
+    overflow-y: auto;
 }
 
 .box-content p{
@@ -308,7 +310,7 @@ body{
     padding: 15px;
     border-radius: 8px;
     line-height: 1.5;
-    min-width: 250px;
+    min-width: 90px;
 }
 
  .label {
@@ -813,4 +815,290 @@ select {
     margin-top: 5px;
 }
 
+
+/* ===================== Responsive Design ===================== */
+
+/* Tablet ขนาดกลาง */
+@media (max-width: 1024px) {
+  .grid-container {
+    grid-template-columns: 25% 75%;
+    grid-template-rows: 180px 50px auto;
+  }
+
+  /* Header */
+  .header-text .line1,
+  .header-text .line2 {
+    font-size: 28px;
+  }
+  .line3 {
+    font-size: 20px;
+  }
+
+  /* Navbar */
+  .navbar .semester,
+  .navbar p {
+    font-size: 18px;
+  }
+  .navbar button {
+    width: 120px;
+    font-size: 16px;
+  }
+
+  /* Sidebar */
+  .sidebar a {
+    font-size: 16px;
+    height: 50px;
+  }
+}
+
+/* Mobile ขนาดเล็ก */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+      "header"
+      "navbar"
+      "sidebar"
+      "content";
+    height: auto;
+  }
+
+  /* Header */
+  .header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px 20px;
+  }
+  .header img {
+    height: 100px;
+  }
+  .header-text {
+    margin: 10px 0 0 0;
+    text-align: center;
+  }
+  .header-text hr {
+    width: 80%;
+    margin: 10px auto;
+  }
+
+  /* Navbar */
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    text-align: center;
+    padding: 10px 20px;
+  }
+  .navbar .user-logout {
+    flex-direction: column;
+    gap: 5px;
+  }
+  .navbar button {
+    width: 100%;
+    max-width: 200px;
+    font-size: 16px;
+    height: 35px;
+  }
+  .navbar .nav-btn {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  /* Sidebar */
+  .sidebar {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+  }
+  .sidebar a {
+    width: 48%;
+    margin: 5px 1%;
+    font-size: 14px;
+  }
+}
+
+/* Mobile เล็กมาก (ต่ำกว่า 480px) */
+@media (max-width: 480px) {
+  /* Header */
+  .header-text .line1,
+  .header-text .line2 {
+    font-size: 22px;
+  }
+  .line3 {
+    font-size: 16px;
+  }
+
+  /* Navbar */
+  .navbar .semester,
+  .navbar p {
+    font-size: 16px;
+  }
+
+  /* Sidebar */
+  .sidebar a {
+    width: 100%;
+    font-size: 14px;
+  }
+}
+
+
+/* =========================
+   Breakpoint ≤ 1200px
+========================= */
+@media (max-width: 1200px){
+  .box-content{
+    flex: 1 1 calc(50% - 16px);   /* 2 คอลัมน์ */
+    max-width: calc(50% - 16px);
+  }
+  .container{ gap: 24px; }
+}
+
+/* =========================
+   Tablet ≤ 992px
+========================= */
+@media (max-width: 992px){
+  .content-project,
+  .content-progress,
+  .content-topic,
+  .content-exam,
+  .content-status{
+    padding:16px;
+    border-radius:12px;
+  }
+
+  /* รายการโปรเจกต์ → 2 คอลัมน์ */
+  .box-content{
+    flex: 1 1 calc(50% - 14px);
+    max-width: calc(50% - 14px);
+    min-width: 240px;
+  }
+
+  /* ภายในป็อปอัป: ซ้อนแนวตั้งมากขึ้น */
+  .box-popup{
+    flex-direction: column;
+  }
+  .box-left, .box-right{
+    min-width: auto;
+  }
+
+  /* กริดสรุปสถานะ */
+  .grid{
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .report-project{
+    height: auto;
+    padding-bottom: 10px;
+  }
+}
+
+/* =========================
+   Mobile ≤ 768px
+========================= */
+@media (max-width: 768px){
+  /* คอนเทนต์หายใจสะดวก */
+  .content-project,
+  .content-progress,
+  .content-topic,
+  .content-exam,
+  .content-status{
+    padding:14px;
+  }
+
+  /* รายการโปรเจกต์ → 1 คอลัมน์ เต็มความกว้าง */
+  .box{ justify-content: stretch; }
+  .box-content{
+    flex: 1 1 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  /* ปุ่มรายละเอียดเต็มบรรทัด ชิดขวาอัตโนมัติ */
+  .detail{
+    margin-right: 0;
+    margin-top: 10px;
+  }
+
+  /* ป็อปอัปเต็มจอมือถือสวย ๆ */
+  .popup{
+    padding: 10px;
+  }
+  .popup-approve,
+  .popup-detail,
+  .popup-progress,
+  .popup-content{
+    width: 96vw;
+    max-height: 88vh;
+    padding: 16px;
+    overflow-y: auto;
+  }
+  .popup .close{
+    top: 10px; right: 12px;
+  }
+
+  /* กล่องซ้าย/ขวาในป็อปอัปเรียงลง */
+  .box-progress{ flex-direction: column; }
+
+  /* ส่วน progress form */
+  .status-choice select,
+  .box-right .status-choice select{
+    width: 100%;
+  }
+  .box-comm{
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+    gap: 10px;
+  }
+
+  /* กริดสรุปสถานะ → 1 คอลัมน์ */
+  .grid{
+    grid-template-columns: 1fr;
+  }
+
+  /* ฟิลเตอร์/ดรอปดาวน์: เต็มแถวและเว้นระยะ */
+  .filters{
+    justify-content: flex-start;
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+  .filters .dropdown-project{
+    font-size: 16px;
+  }
+
+  /* ปุ่มบันทึกในป็อปอัปชิดล่าง-ขวา → เปลี่ยนเป็นเรียงกลาง */
+  .action-buttons{
+    position: static;
+    margin-top: 16px;
+    text-align: center;
+  }
+
+  /* ปรับขนาดตัวอักษรให้อ่านง่ายขึ้นบนมือถือ */
+  .head, .label{ font-size: 18px; }
+  .value{ font-size: 14px; }
+  .btn-project{ gap: 10px; flex-wrap: wrap; }
+  .btn-project button{
+    width: 100%;
+    height: 40px;
+  }
+}
+
+/* =========================
+   Small Mobile ≤ 480px
+========================= */
+@media (max-width: 480px){
+  .page-btn{ padding: 8px 10px; }
+  .report-project .report-box1,
+  .report-project .report-box{
+    width: 100%;
+    margin: 8px 0;
+    font-size: 16px;
+  }
+  .progress-update{ max-width: 100%; }
+  .progress-box{ gap: 8px; }
+}
 

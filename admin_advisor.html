@@ -161,7 +161,7 @@
                 <input type="email" required placeholder="ป้อนอีเมล">
 
                 <label>เบอร์โทร :</label>
-                <input type="text" required placeholder="ป้อนเบอร์โทร">
+                <input type="text" maxlength="10" required placeholder="ป้อนเบอร์โทร" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
 
                 <label>ภาควิชา :</label>
                 <select required>
@@ -217,7 +217,7 @@
                 <input type="email" placeholder="example1@example.com">
 
                 <label>เบอร์โทร :</label>
-                <input type="text" placeholder="098-999-9999">
+                <input type="text" maxlength="10" placeholder="0989999999" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
 
                 <label>ภาควิชา :</label>
                 <select>
@@ -273,7 +273,7 @@
                 <input type="email" placeholder="example2@example.com">
 
                 <label>เบอร์โทร :</label>
-                <input type="text" placeholder="098-999-9999">
+                <input type="text" maxlength="10" placeholder="0989999999" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
 
                 <label>ภาควิชา :</label>
                 <select>
@@ -329,7 +329,7 @@
                 <input type="email" placeholder="example3@example.com">
 
                 <label>เบอร์โทร :</label>
-                <input type="text" placeholder="098-999-9999">
+                <input type="text" maxlength="10" placeholder="0989999999" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
 
                 <label>ภาควิชา :</label>
                 <select>
@@ -385,7 +385,7 @@
                 <input type="email" placeholder="example4@example.com">
 
                 <label>เบอร์โทร :</label>
-                <input type="text" placeholder="098-999-9999">
+                <input type="text" maxlength="10" placeholder="0989999999" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
 
                 <label>ภาควิชา :</label>
                 <select>
@@ -441,7 +441,7 @@
                 <input type="email" placeholder="example5@example.com">
 
                 <label>เบอร์โทร :</label>
-                <input type="text" placeholder="098-999-9999">
+                <input type="text" maxlength="10" placeholder="0989999999" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
 
                 <label>ภาควิชา :</label>
                 <select>
@@ -497,7 +497,7 @@
                 <input type="email" placeholder="example6@example.com">
 
                 <label>เบอร์โทร :</label>
-                <input type="text" placeholder="098-999-9999">
+                <input type="text" placeholder="0989999999" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
 
                 <label>ภาควิชา :</label>
                 <select>
